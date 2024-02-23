@@ -1,0 +1,38 @@
+Integrator "Packet"  ver. 3.0   Copyright (C) 1990-95 by VULCAN
+SVGA text video modes detector  ver. 1.5   Copyright (C) 1995 by VULCAN & NVS
+
+                     Following text modes are detected:
+
+                    ษอออออัออออออออออออัอออออออออออออออป
+                    บ No. ณ Resolution ณ    Remarks    บ
+                    ฬอออออุออออออออออออุอออออออออออออออน
+                    บ 00h ณ   40x25    ณ Black & white บ
+                    บ 01h ณ   40x25    ณ Color         บ
+                    บ 02h ณ   80x25    ณ Black & white บ
+                    บ 03h ณ   80x25    ณ Color         บ
+                    บ 07h ณ   80x25    ณ Monochrome    บ
+                    วฤฤฤฤฤลฤฤฤฤฤฤฤฤฤฤฤฤลฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤถ
+                    บ 54h ณ  132x43    ณ SuperVGA mode บ
+                    บ 55h ณ  132x25    ณ SuperVGA mode บ
+                    บ 56h ณ  132x25    ณ SuperVGA mode บ
+                    บ 57h ณ  132x25    ณ SuperVGA mode บ
+                    บ 58h ณ  132x25    ณ SuperVGA mode บ
+                    บ 59h ณ  132x25    ณ SuperVGA mode บ
+                    บ 5Ah ณ  132x25    ณ SuperVGA mode บ
+                    บ 5Bh ณ  132x25    ณ SuperVGA mode บ
+                    บ 5Ch ณ  132x25    ณ SuperVGA mode บ
+                    บ 5Dh ณ  132x25    ณ SuperVGA mode บ
+                    บ 5Eh ณ  132x25    ณ SuperVGA mode บ
+                    บ 5Fh ณ  132x25    ณ SuperVGA mode บ
+                    บ 60h ณ  132x25    ณ SuperVGA mode บ
+                    บ 61h ณ  132x25    ณ SuperVGA mode บ
+                    บ 62h ณ  132x25    ณ SuperVGA mode บ
+                    บ 63h ณ  132x25    ณ SuperVGA mode บ
+                    บ 64h ณ  132x25    ณ SuperVGA mode บ
+                    บ 65h ณ  132x25    ณ SuperVGA mode บ
+                    บ 66h ณ  132x25    ณ SuperVGA mode บ
+                    บ 67h ณ  132x25    ณ SuperVGA mode บ
+                    บ 68h ณ  132x25    ณ SuperVGA mode บ
+                    ศอออออฯออออออออออออฯอออออออออออออออผ
+
+         See Your SuperVGA card documentation for more information.

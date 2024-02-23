@@ -1,0 +1,42 @@
+>1 Pack~M~ain...
+   >2 ~1~ Make PackMain
+      bpc /m ..\pas\packmain
+   >2 ~2~ Build PackMain
+      bpc /b ..\pas\packmain
+   >2 ~3~ Make PackMain for PM
+      bpc /v /m /cp /$$g+ ..\pas\packmain
+   >2 ~4~ Build PackMain for PM
+      bpc /v /b /cp /$$g+ ..\pas\packmain
+   >2 ~5~ TD 4 PM
+      tdx ..\bin\packmain
+   >2 ~6~ PKLite PackMain
+      add2exe
+>1 ~P~acket...
+   >2 ~M~ake Packet
+      bpc /m ..\pas\packet
+   >2 ~B~uild Packet
+      bpc /b ..\pas\packet
+   >2 ~P~KLite Packet
+      pklite -e ..\bin\packet
+>1 ~U~tilities...
+   >2 Turbo ~H~elp
+      d:\bp\bin\thelp /w0,0,80,25 /fd:\bp\bin\tvision.tph
+   >2 ~U~nload THelp
+      d:\bp\bin\thelp /u
+   >2 Un~d~elete
+      undelete
+   >2 ~F~astKey
+      fastkey
+>1 Create ~D~istributive
+   ..\..\distrib\distrib
+>1 Full ~R~ebuild
+   @echo off
+   call h
+   call str
+   call engl
+   bpc /b ..\pas\packmain
+   bpc /m ..\pas\packet
+   pklite -e ..\bin\packet
+   call add2exe
+   copy ..\bin\packmain.exe ..\bin\pm286.*
+   bpc /b /cp /$$g+ ..\pas\packmain

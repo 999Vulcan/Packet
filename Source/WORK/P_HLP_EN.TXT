@@ -1,0 +1,4161 @@
+;
+; Integrator "Packet" --- Help Text
+;
+
+.topic Dragging = 1
+The active window is in the move/resize mode.
+
+To change the window' size, it is enough to pull the appropriate field "ÄÙ"
+(it is in a right bottom corner of the window) so long as a window not of
+signs the necessary size.
+The same actions, when the mouse is established on a strip of heading or
+top framework of a window, will result in moving the window on the screen.
+
+To Duplicate resulted operations it is possible from the
+keyboard (that you in the given moment are doing).
+
+It is necessary to press Ctrl+F5.
+Then the keys with arrows will move a window, and the combinations of
+these keys with the Shift key will change the size of a window.
+To accept the new sizes and position of a window press Enter,
+and for a cancellation - Esc.
+
+.topic HelpWindow = 9999
+
+;********************************************************
+;* VVV               Contexts for Hint              VVV *
+;********************************************************
+
+.topic BegShortStatusLine = 10000
+
+.topic Menu
+ Menus Ü
+  ßßßßßß
+It is possible to choose all commands of the {Integrator "Packet":Packet}
+in the menu or by the appropriate hot key.
+
+You can use two types the menu:
+
+1) Main menu, containing all commands of the Integrator, which is
+located in the top line of the screen.
+
+To select this menu it is necessary to press F10 or to
+click the mouse in the top line.
+
+The global menu is organized hierarchically and includes
+following submenus:
+
+  { ð (System menu) :System}
+  { File            :Files}
+  { Contents        :Directories}
+  { Editor          :Edit}
+  { Window          :Windows}
+  { Option          :Options}
+
+2) Local menu, which frequently allows to receive faster access to
+commands necessary for you, as includes only commands, directly related
+to a current status of work.
+
+To call the local menu press Alt+F10 or choose the appropriate command in a
+status line (bottom line of the screen) by the mouse.
+
+.topic System
+ ð (System menu) Ü   (Alt+Space)
+  ßßßßßßßßßßßßßßßß
+The System menu contains the following items:
+
+  { About           :SAbout}
+  { Refresh display :SRefreshDisplay}
+  { Screen rest     :SScreenRest}
+  { Ascii table     :SAsciiTable}
+  { Calendar        :SCalendar}
+  { Calculator      :SCalculator}
+  { Alarm clock     :SAlarmClock}
+
+  See also {Menus:Menu}
+
+.topic SRefreshDisplay
+ ð³Refresh display Ü
+  ßßßßßßßßßßßßßßßßßß
+Redraws contents of the screen in case it is deformed in result of
+work of any nasty resident programs.
+
+  {Submenu "ð":System}
+
+.topic SAbout
+ ð³About... Ü
+  ßßßßßßßßßßß
+Opens a window with the information on the copyrights and number of
+the version of the {Integrator:Packet}.
+
+  {Submenu "ð":System}
+
+.topic SScreenRest
+ ð³Screen rest Ü
+  ßßßßßßßßßßßßßß
+Extinguishes the screen.
+Instead of a choice of this command in the menu you can simply move the
+mouse in the right top corner of the screen.
+
+For return of contents of the screen press a key on the keyboard or
+move the mouse.
+
+Use of this command keeps the screen during breaks in your work.
+
+You can also set time, on expiration of which screen will be switched
+off automatically in case any key on the keyboard or mouse was not pressed
+(use for this purpose the command
+{"Options³Configuration³Preferences":OPreferences}).
+By default this time is equal to 1 minute.
+
+  {Submenu "ð":System}
+
+.topic SCalendar
+ ð³Calendar Ü
+  ßßßßßßßßßßß
+Opens the {Calendar:Calendar}, showing current month and
+allowing to look other months.
+
+  {Submenu "¨":System}
+
+.topic SAsciiTable
+ ð³Ascii table Ü
+  ßßßßßßßßßßßßßß
+Opens the {ASCII table:AsciiTable}.
+
+This window shows a current coding of symbols and allows to look
+through their decimal and hexadecimal codes, and also to copy symbols
+in the editor window.
+
+  {Submenu "ð":System}
+
+.topic SCalculator
+ ð³Calculator Ü
+  ßßßßßßßßßßßßß
+Opens the {Calculator:Calculator}.
+
+The calculator carries out 5 arithmetic actions: addition,
+subtraction, multiplication, division and calculation of percents.
+
+  {Submenu "ð":System}
+
+.topic SAlarmClock
+ ð³Alarm clock... Ü
+  ßßßßßßßßßßßßßßßßß
+This command allows to establish an alarm clock or to reset time
+earlier established on it.
+
+The signal of the alarm clock will be audible not only by work
+directly in the {Integrator:Packet}, but also at start from
+it of any program.
+
+If at the alarm time you will be in environment of the Integrator,
+you will also see a window with the information, which you have
+typed in the input line "Reminder text" at installation of an alarm clock.
+
+Otherwise this window will appear at the first return in the environment
+of the Integrator.
+
+At the exit from the Integrator the alarm clock is switched
+off, therefore in the following session with the Integrator it will
+be necessary to you to establish it anew.
+
+Mean, that if you work on XT, you cannot use an alarm clock. The
+alarm clock not works under OS/2.
+
+{Unregistered:Shareware} users of the Integrator cannot use an
+alarm clock.
+
+  {Submenu "ð":System}
+
+.topic Files
+ File Ü   (Alt+F)
+  ßßßßß
+The submenu "File" contains commands for opening windows of contents
+and text editors, change of the current directory, executing DOS commands,
+exit from the {Integrator:Packet}, etc.
+
+  { New file         :NewFile}
+  { New contents     :NewDir}
+  { Open             :Open}
+  { Save             :Save}
+  { Save as          :SaveAs}
+  { Save all         :SaveAll}
+  { Change directory :ChangeDir}
+  { DOS Shell        :DosShell}
+  { DOS Command      :DosCommand}
+  { User screen      :UserScreen}
+  { Exit             :Exit}
+  { Closed files     :ClosedFile}
+
+  See also {Menus:Menu}
+
+.topic Open
+ File³Open...  (F3) Ü
+  ßßßßßßßßßßßßßßßßßßß
+This command allows to open a window of the {text editor:Editor} or
+{contents:DirWindow}.
+
+The choice of a file name is accomplishing in a special dialog
+window.
+
+The {Open a File:FOFileOpenDBox} dialog box contains:
+
+ þ an {input box:FOName} with a history list
+ þ a {list box:FOFiles} to browse the directory
+ þ the standard {Cancel:CancelBtn} button
+ þ {Open:FOOpenBtn} action button
+ þ an information panel that describes the
+   selected file
+
+  {Submenu "File":Files}
+
+.topic NewFile
+ File³New file  (Shift+F4) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command creates a new window of the {text editor:Editor}. This
+window has the name "Untitled", and is empty.
+
+  {Submenu "File":Files}
+
+.topic NewDir
+ Files³New contents...  (F4) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command creates a new contents file and opens new
+{contents window:DirWindow} with it.
+From you it is required to enter a name of a file of a created
+contents in {Open a File:FOFileOpenDBox} dialog box.
+
+  {Submenu "File":Files}
+
+.topic Save
+ File³Save  (F2) Ü
+  ßßßßßßßßßßßßßßßß
+This command allows you to save the current editor window to a disk
+file. If the window already has a name, the file will be saved under
+this same name. If you wish to save the file under a new name, select
+the {"File³Save As":SaveAs} command instead.
+
+  {Submenu "File":Files}
+
+.topic SaveAll
+ File³Save all Ü
+  ßßßßßßßßßßßßßß
+This command saves on a disk all changed text files.
+
+  {Submenu "Files":Files}
+
+.topic SaveAs
+ Files³Save as... Ü
+  ßßßßßßßßßßßßßßßßß
+This command allows to save a file from active {editor window:Editor}
+with a new name.
+
+  {Submenu "File":Files}
+
+.topic ChangeDir
+ Files ³ To change the directory...
+
+This command makes active a dialogue window, allowing to change current
+active directory.
+
+  {Submenu "File":Files}
+
+.topic DosShell
+ File³DOS Shell Ü
+  ßßßßßßßßßßßßßßß
+With the DOS Shell command, you can leave the {Integrator:Packet}
+temporarily to perform a DOS command or run another program.
+
+To return to Integrator "Packet", type "EXIT" at the DOS prompt.
+
+The current directory on returning in the Integrator will be restored
+automatically.
+
+If it is necessary to you to carry out only one command DOS, use a command
+{"File³DOS Command":DosCommand}.
+
+  {Submenu "File":Files}
+
+.topic DosCommand
+ File³DOS Command...  (F9) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+Using this command, you can carry out one DOS command (including to start
+any program). After it you will again get on environment of the
+{Integrator "Packet":Packet}.
+
+The current directory on returning in the Integrator will be restored
+automatically.
+
+If it is necessary to you to carry out a few DOS commands, use the command
+{"File³DOS Shell":DosShell} or start any DOS shell (for example
+<F9> <N> <C> <Enter> - start Norton Commander, let it name is consecrated in
+centuries of centuries!) and carry out in its environment actions necessary
+for you.
+
+And it is much better - add this environment in your contents and set to it
+a {hot key:How2UseHotKeys}. After it for start of this shell will enough to
+press this hot key.
+
+  {Submenu "File":Files}
+
+.topic UserScreen
+ File³User DOS  (Alt+F5) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+This command shows you the screen DOS, on which there is the fulfilment
+of the programs. For return to work it is necessary to press any key
+on the keyboard or Mouse.
+
+You can also open a special window, constantly displaying the user screen.
+For this purpose use a command {"Window³Output window":OutputWin}.
+
+  {Submenu "File":Files}
+
+.topic Exit
+ File³Exit  (Alt+X) Ü
+  ßßßßßßßßßßßßßßßßßßß
+As it will seem strange, this command finishs work
+of the {Integrator:Packet}.
+
+If you want in the following time to begin work with a current
+arrangement of windows, instead of from the clean screen, use a
+command {"Options³Save desktop":OSaveDesktop}.
+
+Similarly, for preservation of a current configuration of the
+Integrator (colors, modes, language and other) use a command
+{"Options³Save configuration":OSaveConfig}.
+
+If you want, that the configuration and/or the desktop should be
+saved automatically at an exit from the Integrator,
+set the appropriate modes with the help of the command
+{"Options³Configuration³Preferences":OPreferences} and save
+the configuration with the help of the command
+{"Options³Save configuration ":OSaveConfig}.
+
+  {Submenu "File":Files}
+
+.topic ClosedFile
+ Closed file Ü
+  ßßßßßßßßßßßß
+The list of closed text files is displayed below a submenu
+"File".
+
+You can choose any from them to load in the built-in text editor.
+
+  {Submenu "File":Files}
+
+.topic Directories
+ Contents Ü   (Alt+C)
+  ßßßßßßßßß
+The submenu "Contents" contains commands of management by
+contentses, created by the {Integrator "Packet":Packet}.
+
+  { Add items                 :DAddFileItems}
+  { Add subcontents           :DAddSubDirs}
+  { Modify                    :DModifyItems}
+  { Delete items              :DDeleteItems}
+  { Remove items and files    :DRemoveItems}
+  { Move items                :DMoveItems}
+  { Select item               :DSelectItem}
+  { Turn                      :DTranspose}
+  { Add crossreference        :DCrossRef}
+  { Treatment                 :DTreatment}
+  { Hot keys                  :DHotKeys}
+  { Annotate                  :DAnnotate}
+  { Configuration             :DDirConfig}
+  { Disable/enable protection :DSetProtect}
+  { Compress contents         :DCompressDir}
+  { Open a copy               :DOpenCopy}
+
+  See also {Menus:Menu}
+
+All these commands are carried out over the active
+{contents window:DirWindow} and are inaccessible, if the current
+active window of any other type.
+
+To open a window with an already existing contents it is
+possible with the help of a command {"File³Open":Open}.
+Usually the files of contents have extension ".CNT".
+
+The new contents it is possible to create by a command
+{"File³New contents":NewDir}.
+
+.topic DAddFileItems
+ Contents³Add items...  (Ins) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to add items in current subcontents of an active
+contents.
+
+The new items will be added after highlighted item.
+
+For the top item in root subcontents an opportunity to add items
+before it is available.
+
+  {Submenu "Contents":Directories}
+
+.topic DAddSubDirs
+ Contents³Add subcontents...  (F7) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to add new empty subcontentses in current
+subcontents of the active contents.
+
+The new subcontentses will be added after highlighted item.
+
+For the top item in root subcontents an opportunity to add
+subcontentses before it is available.
+
+  {Submenu "Contents":Directories}
+
+.topic DDeleteItems
+ Contents³Delete items  (Del) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to delete items (including subcontentses) from
+current subcontents of the active contents.
+
+The operation of removal is made over highlighted
+item of current subcontents, if in current subcontents there are no
+marked items. Otherwise will be deleted all marked items.
+
+Mean, that the subcontentses will be deleted together with all their items
+and subcontentses.
+
+  {Submenu "Contents":Directories}
+
+.topic DRemoveItems
+ Contents³Remove items and files (Ctrl+Del) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to delete items (including subcontentses)
+and appropriate files from the current subcontents of the active contents.
+
+The operation of removal is made over highlighted
+item of current subcontents, if in current subcontents there are no
+marked items. Otherwise will be deleted all marked items.
+
+Mean, that the subcontentses will be deleted together with all their items
+and subcontentses.
+
+  {Submenu "Contents":Directories}
+
+.topic DMoveItems
+ Contents³Move items...  (Alt+F6) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to move items (including subcontentses) from
+current subcontents of the active contents to other subcontents
+of this contents or on a new place in current subcontents.
+
+This operation is made over highlighted item of current subcontents, if in
+current subcontents there are no marked items. Otherwise will be moved
+all marked items.
+
+The items will be moved in subcontents chosen by you by way of
+their presence in initial subcontents and are inserted after
+item highlighted in dialog window.
+
+For the top item in root subcontents an opportunity to insert items
+before it is available.
+
+This command is intended for move in limits of an active contents.
+
+The more flexible opportunities (including copying and moving between
+contentses and parts of contents) give commands
+{"Mark target":MarkTarget}, {"Copy":Copy} and {"Cut":Cut} from the
+submenu "Editor".
+
+  {Submenu "Contents":Directories}
+
+.topic DModifyItems
+ Contents³Modify...  (Ctrl+F2) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to modify in a special dialog window
+descriptions of items (including of subcontentses) of current subcontents
+of an active contents.
+
+The operation will be made over highlighted item of current
+subcontents, if in current subcontents there are no marked items.
+
+Otherwise you will consecutive modify all marked items.
+
+  {Submenu "Contents":Directories}
+
+.topic DSelectItem
+ Contents³Select item  (Gray Plus) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to select items for group operations (copying, move,
+deleting, modifying and other).
+
+The mark is put on highlighted item of current subcontents of an
+active contents. The repeated fulfilment of this command removes
+a mark from item.
+
+With the help of the mouse it is possible to select item, by clicking
+on its name by the right button. If to press the right button of
+the mouse and, not releasing it, to move the mouse, it is possible to
+select a few items at once.
+
+  {Submenu "Contents":Directories}
+
+.topic DTranspose
+ Contents³Turn  (Shift+Gray /) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows you to turn item to empty subcontents, and
+empty subcontents - to item with the same name and annotation.
+
+  {Submenu "Contents":Directories}
+
+.topic DCrossRef
+ Contents³Add crossreference...  (Alt+F9) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to add in the current subcontents the crossreference
+to the another subcontents.
+
+  {Submenu "Contents":Directories}
+
+.topic DTreatment
+ Contents³Treatment Ü
+  ßßßßßßßßßßßßßßßßßßß
+This submenu contains commands of management by treatment of items
+of contents.
+
+  { Edit file                  :DEditFile}
+  { Collect document           :DCollectDocument}
+  { Edit parameters            :DEditParameters}
+  { Common parameters          :DComParameters}
+  { Co-treatment               :DCreateBatch}
+  { Global extension list edit :DGlobalExt}
+  { Local extension list edit  :DLocalExt}
+
+  {Submenu "Contents":Directories}
+
+.topic DEditFile
+ Contents³Treatment³Edit file  (Alt+F4) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to edit a file, appropriate to highlighted item, in
+the built-in text editor, irrespective of the fact which the
+processor is given for files of such type.
+
+The command is not carried out only for files as .EXE and .COM, to edit
+which in the text editor dangerously for health of your computer.
+
+  {Submenu "Contents³Treatment":DTreatment}
+
+  {Submenu "Contents":Directories}
+
+.topic DCollectDocument
+ Contents³Treatment³Collect document...  (Ctrl+F7) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to construct the linear textual document of the
+hierarchical document, described by contents of the
+{Integrator:Packet}.
+
+The document will be entered by marked items of current
+subcontents of an active contents. If any item is not marked,
+the document will be entered byitem highlighted by the cursor.
+
+Thus an opportunity of automatic breakdown on pages, and also
+automatic construction of a table of contents of the document with the
+indication of numbers of pages is available.
+
+The more detailed information on use of this command is contained in the
+information to a {dialog window:Dialogs}
+{Collect document:MakeDocDlg}.
+
+Pay attention on the some {recommendations:ComRecAboutCollDoc}.
+
+For the complete information address to the User's Guide.
+
+  {Submenu "Contents³Treatment":DTreatment}
+
+  {Submenu "Contents":Directories}
+
+.topic DEditParameters
+ Contents³Treatment³Edit parameters...  (Ctrl+F6) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to edit the list of parameters of highlighted item.
+
+At start of the program or BAT-file with the help of keys Ctrl+Enter
+you can choose necessary parameters from this list, instead of
+to type them manually.
+
+  {Format of the list of parameters:ParListFormat}
+
+  {Submenu "Contents³Treatment":DTreatment}
+
+  {Submenu "Contents":Directories}
+
+.topic DComParameters
+ Contents³Treatment³Common parameters...  (Alt+F2) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to set common parameters of a command line
+for the active contents.
+
+All items of this contents, which there correspond the
+programs or BAT-files, not have of the parameters, will receive
+common parameters at start on a Enter key.
+
+Starting the program or BAT-file with the help of keys Ctrl+Enter,
+you can, nevertheless, to enter other parameters.
+
+  {Submenu "Contents³Treatment":DTreatment}
+
+  {Submenu "Contents":Directories}
+
+.topic DCreateBatch
+ Contents³Treatment³Co-treatment...  (Ctrl+F9) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to select command from the common part of
+the {treaters list:ExtFileFormat} and to execute it for every selected item
+or subcontents.
+
+  {Submenu "Contents³Treatment":DTreatment}
+
+  {Submenu "Contents":Directories}
+
+.topic DGlobalExt
+ Contents³Treatment³Global extension list edit... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to set, which actions will be carried out by default
+at a choice of item of a contents of the {Integrator:Packet}
+depending on expansion or mask of a name of the appropriate file,
+reaction on Ctrl+Enter, and also to define a set of
+actions, which will be offered at a choice of item by keys
+Shift+Enter.
+
+The global list is stored in a file "Packet.Ext" in the same
+directory, in which Integrator is installed, and works for those
+contentses, for which list with the help of a command
+{"Local extension list edit":DLocalExt} is not created.
+
+See also:
+
+  {Format of the list:ExtFileFormat}
+  {Submenu "Contents³Treatment":DTreatment}
+  {Submenu "Contents":Directories}
+
+.topic DLocalExt
+ Contents³Treatment³Local extension list edit... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to set, which actions will be carried out by default
+at a choice of item of a contents of the {Integrator:Packet}
+depending on expansion or mask of a name of the appropriate file,
+reaction on Ctrl+Enter, and also to define a set of
+actions, which will be offered at a choice of item by keys
+Shift+Enter.
+
+The local list is stored in a contents file and
+works only for that table of contents, for which is created.
+
+If you use at once many contentses, it will be more convenient
+to you to use the global list, created with the help of a command
+{"Global extension list edit":DGlobalExt}.
+
+See also:
+
+  {Format of the list:ExtFileFormat}
+  {Submenu "Contents³Treatment":DTreatment}
+  {Submenu "Contents":Directories}
+
+.topic ParListFormat
+ Format of the list of parameters Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+To each parameter there should correspond one line in the list,
+and the part of this line up to a symbol "^" will be be purely
+parameter, and other - comment to it, which will be
+displayed in the list.
+
+The non-significant blanks in parameters are cut automatically.
+
+If in a line there is not enough symbol "^", this line will be
+considered and comment, and purely as parameter.
+
+For example:
+
+  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+  ³/F ^ to treat infected files
+  ³/G ^ to check all files in succession
+  ³/M ^ the Basic coding of cyrillics
+  ³.............
+
+.topic DAnnotate
+ Contents³Annotate...  (Ctrl+F3) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+This command allows to create or to edit the annotation to highlighted item
+of an active table of contents.
+
+For viewing the annotations it is necessary to open a window of the
+annotations with the help of a command
+{"Window³Annotation's window":OpenAnnWin}.
+
+This window will always display the annotation to highlighted item from top
+of contents windows.
+
+  {Submenu "Contents":Directories}
+
+.topic DDirConfig
+ Contents³Configuration... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows you to change a configuration of the active table of
+contents:
+
+- to set the name, which will be displayed on the framework of a
+contents window instead of the name of the appropriate file;
+
+- to set the external text editor for items of the contents;
+
+- to protect the contents from unauthorized change or opening;
+
+- to set the starting directory by default for items of the
+contents.
+
+  {Submenu "Contents":Directories}
+
+.topic DSetProtect
+ Contents³Disable/enable protection...  (Shift+F3) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command is active, if the active contents is protected from
+change. It allows temporarily to take off from it this protection for
+modification in a purely contents or its configuration.
+
+The protection can be restored by repeated fulfilment of this command or
+by exit from the {Integrator:Packet}.
+
+For removal of protection from the contents you will need to
+enter the password, given in a configuration of this table of
+contents.
+
+To change a type of protection of the contents or password you
+can with the help of a command {"Contents³Configuration":DDirConfig}
+(it is natural, after removal of protection).
+
+  {Submenu "Contents":Directories}
+
+.topic DCompressDir
+ Contents³Compress contents  (F8) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+During modification in structure of a contents in the contents file
+the old information does not leave physically, and only is marked as removed.
+Such approach to work with contents files much raises speed of
+work of the {Integrator:Packet}.
+
+In the Integrator a mode of an automatic compression of
+contentses is realized. If you feel delay of work with tables of
+contents, you can switch it off by command
+{"Options³Configuration³Interface":OInterface}.
+
+This command allows to remove from a file of the active contents
+formed unused areas and thus to reduce its size.
+
+  {Submenu "Contents":Directories}
+
+.topic DOpenCopy
+ Contents³Open a copy  (Alt+F8) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows quickly to open an additional window, containing the
+active contents.
+
+  {Submenu "Contents":Directories}
+
+.topic DHotKeys
+ Contents³Hot keys Ü
+  ßßßßßßßßßßßßßßßßßß
+In this submenu are contained commands of installation and viewing of
+hot keys for items of contentses.
+
+  { Set/reset :DSetHotKey}
+  { List      :DHotKeysList}
+
+  {Submenu "Contents":Directories}
+
+.topic DSetHotKey
+ Contents³Hot keys³Set/reset...  (Shift+F2) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+With the help of this command you can choose a hot key, which you want
+to give to highlighted item of current subcontents. It is the key with the
+latin letter or figure.
+
+Subsequently you can use a chosen key for fast access to the
+appropriate item, irrespective of whether subcontents which
+connect this item is current and the contents is active
+(See {use of hot keys:How2UseHotKeys}).
+
+  {Submenu "Contents³Hot keys":DHotKeys}
+
+  {Submenu "Contents":Directories}
+
+.topic DHotKeysList
+ Contents³Hot keys³List...  (Shift+F10) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+With the help of this command you can receive the list of accessible in the
+present moment hot keys for items of open contentses.
+
+  {Submenu "Contents³Hot keys":DHotKeys}
+
+  {Submenu "Contents":Directories}
+
+.topic Edit
+ Editor Ü   (Alt+E)
+  ßßßßßßß
+The submenu "Editor" contains commands for work with blocks of the text
+and fragments of contentses, and also command of undo, search
+and replacement.
+
+  { Undo             :Undo}
+  { Search           :Search}
+  { Cut              :Cut}
+  { Copy             :Copy}
+  { Paste            :Paste}
+  { Insert reference :InsRef}
+  { Clear            :Clear}
+  { Show Clipboard   :ShowClip}
+  { Mark target      :MarkTarget}
+  { Last document    :LastDocument}
+
+  See also {Menus:Menu}
+
+.topic Undo
+ Editor³Undo Alt+Backspace Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+The Undo command allows you to "take back" the last editor action you
+performed.
+
+For example, if the line:
+
+  Moscow is the capital of our Native Land
+
+is changed to:
+
+  Moscow is the capital of your Native Land
+
+the Undo command will become active. Executing the Undo command will
+cause the line to revert back to its original version. Note that
+changes which can be undone are grouped into similar actions, such as
+typing, or deleting characters. Any action type you perform that is
+different than the last action type will cause the Undo information to
+be lost.
+
+  {Submenu "Editor":Edit}
+
+.topic Search
+ Editor³Search Ü
+  ßßßßßßßßßßßßßß
+This submenu contains commands of search and replacement.
+
+  { Find              :Find}
+  { Replace           :Replace}
+  { Search again      :SearchAgain}
+  { Go to line number :GoToLine}
+
+  {Submenu "Editor":Edit}
+
+.topic Find
+ Editor³Search³Find... Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+This command allows to find a given textual string in a current window of
+the text editor.
+
+  {Submenu "Editor³Search":Search}
+
+  {Submenu "Editor":Edit}
+
+.topic Replace
+ Editor³Search³Replace...  (Alt+F7) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to find a given textual string in a current window of
+the text editor and to replace it on other.
+
+It is also used for fulfilment of contextual replacement of the
+information about selected items of the active contents. If
+the selected items are not present, information on highlighted item
+is replaced. If the reference to subcontents is selected, the
+replacement is made also in this subcontents and its
+subcontentses.
+
+  {Submenu "Editor³Search":Search}
+
+  {Submenu "Editor":Edit}
+
+.topic SearchAgain
+ Editor³Search³Search again...  (Ctrl+L) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command repeats action of the last command
+{"Editor³Search³Find":Find} or {"Editor³Search³Replace ":Replace}.
+
+  {Submenu "Editor³Search":Search}
+
+  {Submenu "Editor":Edit}
+
+.topic GoToLine
+ Editor³Search³Go to line number...  (F7) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to establish the cursor by the beginning of a line
+with given number in the current window of the text editor.
+
+  {Submenu "Editor³Search":Search}
+
+  {Submenu "Editor":Edit}
+
+.topic Cut
+ Editor³Cut  (Shift+Del) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+
+If this command is chosen from a window of the text editor
+it removes the selected text and places it on the
+Clipboard. Text cut from the editor may be immediately replaced by selecting
+the {"Editor³Undo":Undo} command before moving the cursor.
+
+If this command is chosen from the contents window, it moves
+highlighted group (or, if the highlighted elements are not
+present, current item) in the contents, chosen by a command
+{"Editor³Mark target":MarkTarget}.
+
+  {Submenu "Editor":Edit}
+
+.topic Copy
+ Editor³Copy  (Ctrl+Ins) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+If this command is chosen from a window of the text editor, it
+places a copy of the selected text on the Clipboard.
+The selected information is left unchanged.
+
+If this command is chosen from the contents window, it
+copies highlighted group (or, if the highlighted elements are not
+present, current item) in the contents, chosen by a command
+{"Editor³Mark target":MarkTarget}.
+
+  {Submenu "Editor":Edit}
+
+.topic Paste
+ Editor³Paste  (Shift+Ins) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command inserts a the contents of the Clipboard into the
+current editor window at the cursor position. The contents of the
+Clipboard remain unchanged. If any text is selected in the current
+editor window, the highlighted text is replaced by the text coming from
+the Clipboard. Information pasted into an editor may be removed
+immediately by using the {"Editor³Undo":Undo} command before moving the
+cursor.
+
+  {Submenu "Editor":Edit}
+
+.topic InsRef
+ Editor³Insert reference...  (Ctrl+F8) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+This command allows conveniently to insert into a textual file the
+reference to item of the document.
+
+  {Submenu "Editor":Edit}
+
+.topic ShowClip
+ Editor³Show Clipboard Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+This command shows contents of a Clipboard in a special window of the text
+editor.
+
+Note, that commands {"Editor³Cut":Cut} and {"Editor³Paste":Paste} are
+inaccessible, if the Clipboard window is active.
+
+  {Submenu "Editor":Edit}
+
+.topic MarkTarget
+ Editor³Mark target  (Shift+F5) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows you to mark a contents window, in
+which will be copied and to be moved fragments of contentses on
+commands {"Editor³Copy":Copy} and {"Editor³Cut":Cut}.
+
+On these commands copying and moving will come true in current
+subcontents of a labelled window. The new items will be inserted
+after item highlighted in this window. For the top item in root
+subcontents an opportunity to add items before it is available.
+
+The target contents is marked by a symbol "" below
+frameworks of the window. At installation of a mark on other window the
+old mark is removed. To remove a mark from a window, not
+establishing a new mark, choose this command, when the labelled window
+is active.
+
+Pay attention on the fact, that there are no unreasonable
+restrictions for use of commands "Cut" and "Copy".
+
+You can carry out these commands as for a pair of various
+contentses, and for one contents, loaded in a pair of windows
+(for move and copying of the information in limits of one of a table
+of contents), and even, by marking an active window, to duplicate
+items in one subcontents.
+
+The sole quite natural restriction - it is impossible to copy or
+to transfer subcontents to it subcontents.
+
+For carry of fragments of a table of contents in limits of an active
+contents you can also use a command {"Contents³Move items":DMoveItems}.
+
+  {Submenu "Editor":Edit}
+
+.topic Clear
+ Editor³Clear  (Ctrl+Del) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßß
+This command removes any selected text from the current editor
+without placing a copy of the text on the clipboard.
+
+The effects of this command may be reversed by selecting
+{"Editor³Undo":Undo} before moving the cursor.
+
+  {Submenu "Editor":Edit}
+
+.topic LastDocument
+ Editor³Last document  (Shift+F9) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command opens a window of the editor for the last document,
+constructed by a command
+{"Contents³Treatment³Collect document":DCollectDocument}.
+
+If the document is too large to be edited by the built-in editor (it
+it is more than 64K), external editor from top of contents windows
+will be loaded.
+
+  {Submenu "Editor":Edit}
+
+.topic Windows
+ Window Ü   (Alt+W)
+  ßßßßßßß
+This submenu contains commands of closing, moving and other
+commands of management by windows.
+
+  { Vertical tile       :VerticalTile}
+  { Horizontal tile     :HorisontalTile}
+  { Cascade             :Cascade}
+  { To close all        :CloseAll}
+  { Renumber            :Renumber}
+  { Size/Move           :Resize}
+  { Zoom                :Zoom}
+  { Next                :Next}
+  { Previous            :Previous}
+  { Close               :Close}
+  { Annotation's window :OpenAnnWin}
+  { Output window       :OutputWin}
+  { List                :WinList}
+
+  See also
+
+  {Window:WindowsHelp}
+
+  {Menus:Menu}
+
+.topic Resize
+ Window³Size/Move  (Ctrl + F5) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Choose this command to change the size or position of the active
+window.
+
+ ÜÜÜÜÜÜ
+  Size
+ ßßßßßß
+If you press Shift while you use the arrow keys, you can change
+the size of the active window. Once you've adjusted its size or
+position, press Enter.
+
+If a window has a Resize corner, you can drag that corner to
+resize the window.
+
+ ÜÜÜÜÜÜ
+  Move
+ ßßßßßß
+When you choose Window³Size/Move, the active window moves in
+response to the arrow keys. Once you've moved the window to where
+you want it, press Enter.
+
+You can also move a window by dragging its title bar with the
+mouse.
+
+  {Submenu "Window":Windows}
+
+.topic Zoom
+ Window³Zoom  (F5) Ü
+  ßßßßßßßßßßßßßßßßßß
+Choose Zoom to resize the active window to the maximum size. If
+the window is already zoomed, you can choose this command to
+restore it to its previous size.
+
+You can also double-click anywhere on the window's title bar
+(except where an icon appears) to zoom or unzoom the window.
+
+  {Submenu "Window":Windows}
+
+.topic VerticalTile
+ Window³Vertical tile Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+This command has all open windows on the screen like a tile:
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ ÉÍÍÍÍÍÍÍÍÍÍÍÍ1ÍÍ»ÚÄÄÄÄÄÄÄÄÄÄÄÄ2ÄÄ¿ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ º               º³               ³ ³
+ ³ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  {Submenu "Window":Windows}
+
+.topic HorisontalTile
+ Window³Horizontal tile Ü
+  ßßßßßßßßßßßßßßßßßßßßßßß
+This command has all open windows on the screen like a tile:
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ1ÍÍ» ³
+ ³ º                                º ³
+ ³ º                                º ³
+ ³ º                                º ³
+ ³ º                                º ³
+ ³ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ ³
+ ³ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ2ÄÄ¿ ³
+ ³ ³                                ³ ³
+ ³ ³                                ³ ³
+ ³ ³                                ³ ³
+ ³ ³                                ³ ³
+ ³ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  {Submenu "Window":Windows}
+
+.topic Cascade
+ Window³Cascade Ü
+  ßßßßßßßßßßßßßßß
+This command has all open windows on the screen one after another:
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ1Ä¿
+ ³ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ2Ä¿
+ ³³ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ3Ä¿
+ ³³³ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ4Í»
+ ³³³º                         º
+ ³³³º                         º
+ ³³³º                         º
+ ³³³º                         º
+ ³³³º                         º
+ ÀÀÀÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+  {Submenu "Window":Windows}
+
+.topic Next
+ Window³Next  (F6) Ü
+  ßßßßßßßßßßßßßßßßßß
+This command makes active the window following on the order.
+
+  {Submenu "Window":Windows}
+
+.topic Previous
+ Window³Previous  (Shift+F6) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command makes active previous under the order a window.
+
+  {Submenu "Window":Windows}
+
+.topic Close
+ Window³Close  (Alt+F3) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßß
+
+This command closes the active window.
+
+You can also click the mouse on an icon of closing ([þ])
+to close the active window.
+
+  {Submenu "Window":Windows}
+
+.topic CloseAll
+ Window³Close all Ü
+  ßßßßßßßßßßßßßßßßß
+This command closes all open windows.
+
+  {Submenu "Window":Windows}
+
+.topic OpenAnnWin
+ Window³Annotation's window  (Ctrl+F4) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command opens the {Annotation;s window:AnnWindow}, if it not yet
+open, or moves it on a foreground, if it already open.
+
+  {Submenu "Window":Windows}
+
+.topic OutputWin
+ Window³Output windows  (Ctrl+F10) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command opens the {Output window:OutputWindow}, if it not yet
+open, or moves it on a foreground, if it already open.
+
+This window will display contents of the user screen.
+
+To see the user screen in a full-screen mode, choose the
+command {"File³User screen":UserScreen}.
+
+  {Submenu "Window":Windows}
+
+.topic Renumber
+ Window³Renumber Ü
+  ßßßßßßßßßßßßßßßß
+This command changes numbers of open windows so that they went in
+succession. It allows to remove blanks in their numberings, formed in
+result of closing of a part of open windows.
+
+  {Submenu "Window":Windows}
+
+.topic WinList
+ Window³List...  (Alt+0) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+This command opens the {Windows List:WindowList} dialog
+box, which lists all the windows currently
+open.
+
+When you choose a file that's already open
+from the list, {Integrator:Packet} brings that
+window to the front and makes it active.
+
+Recently closed files appear in the list under
+the {"File" menu:Files}.
+
+For a full rundown of how to manage windows,
+go to the Help screen on {Windows of the Integrator:WindowsHelp}.
+
+  {Submenu "Window":Windows}
+
+.topic Options
+ Options Ü   (Alt+O)
+  ßßßßßßßß
+
+This submenu contains commands of changing, saving and
+reading of a configuration, palettes of the screen and other.
+
+  { Macro                  :OMacro}
+  { Configuration          :OConfig}
+  { Save configuration     :OSaveConfig}
+  { Retrieve configuration :ORetrieveConfig}
+  { Save desktop           :OSaveDesktop}
+  { retrieve desktop       :ORetrieveDesktop}
+  { Save palette           :OSavePalette}
+  { Retrieve palette       :ORetrievePalette}
+  { Last desktop           :OLastDesktop}
+  { Desktops' stack        :ODesktopStack}
+
+  See also {Menus:Menu}
+
+.topic OMouse
+ Options³Configuration³Mouse... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allow you to change some mouse properties.
+
+  {Submenu "Options³Configuration":OConfig}
+
+  {Submenu "Options":Options}
+
+.topic OMacro
+ Options³Macro Ü
+  ßßßßßßßßßßßßßß
+This submenu contains commands for record and reproduction of
+keyboard macros.
+
+  { Create     :m_CreateMacro}
+  { Stop       :m_StopMacro}
+  { Play       :m_PlayMacro}
+  { Remove     :m_RemoveMacro}
+  { Delete all :m_DeleteMacros}
+
+  {Submenu "Options":Options}
+
+.topic m_CreateMacro
+ Options³Macro³Create...  (Alt+Equal) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to nominate a keyboard macro to one of 10
+combinations of keys Ctrl+Shift+F1..Ctrl+Shift+F10 and to
+begin its recording.
+
+For end of record the macro press Alt+Minus.
+To not include in a macro superfluous keys don't use for this
+purpose appropriate menu command.
+
+Record the macro is made in the desktop file of the Integrator,
+therefore it is recommended to use a mode of auto record of
+desktop, established on command
+{"Options³Configuration³Preferences":OPreferences}.
+
+  { Submenu "Macro"   :OMacro}
+  { Submenu "Options" :Options}
+
+.topic m_StopMacro
+ Options³Macro³Stop  (Alt+Minus) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command stops record of the macros.
+
+To not include in a macro superfluous keys don't use for this
+purpose appropriate menu command.
+
+Record the macro is made in the desktop file of the Integrator,
+therefore it is recommended to use a mode of auto record of
+desktop, established on command
+{"Options³Configuration³Preferences":OPreferences}.
+
+  { Submenu "Macro"   :OMacro}
+  { Submenu "Options" :Options}
+
+.topic m_PlayMacro
+ Options³Macro³Play...  (Ctrl+P) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to choose a macro for reproduction from the list
+being available.
+
+  { Submenu "Macro"   :OMacro}
+  { Submenu "Options" :Options}
+
+.topic m_RemoveMacro
+ Options³Macro³Remove... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to choose a macro for removal from the
+list being available.
+
+  { Submenu "Macro"   :OMacro}
+  { Submenu "Options" :Options}
+
+.topic m_DeleteMacros
+ Options³Macro³Delete all... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command deletes all saved macros.
+
+  { Submenu "Macro"   :OMacro}
+  { Submenu "Options" :Options}
+
+.topic OConfig
+ Options³Configuration Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+This submenu contains commands of change of the configuration of
+the {Integrator "Packet":Packet}.
+
+  { Preferences    :OPreferences}
+  { Interface      :OInterface}
+  { Mouse          :OMouse}
+  { Colors         :OColors}
+  { Language       :OLanguage}
+  { Work directory :OWorkDir}
+
+.topic OPreferences
+ Options³Configuration³Preferences... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to establish:
+
+ þ modes of operations of the editor
+ þ modes of autosave
+ þ screen mode
+ þ time before the screen rest
+ þ which additional elements (shadow, hours, volume
+   of free memory in a heap) it is necessary to display
+   on the screen
+ þ which sound signals to use
+
+  {Submenu "Options³Configuration":OConfig}
+
+  {Submenu "Options":Options}
+
+.topic OInterface
+ Options³Configuration³Interface... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to set up some subtleties of the interface
+of the {Integrator:Packet} on your taste.
+
+  {Submenu "Options³Configuration":OConfig}
+
+  {Submenu "Options":Options}
+
+.topic OColors
+ Options³Configuration³Colors... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to establish pleasant for you colours of various
+elements of the screen.
+
+You can also use ready palettes, included in a complete distributive
+of the {Integrator "Packet":Packet}, by choosing a command
+{"Options³Retrieve palette":ORetrievePalette}.
+
+If you want to use a read or changed palette constantly, save the
+configuration of the Integrator with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+You can also save the current palette in a separate file with the
+help of the command {"Options³Save palette":OSavePalette} for the
+subsequent reading.
+
+  {Submenu "Options³Configuration":OConfig}
+
+  {Submenu "Options":Options}
+
+.topic OLanguage
+ Options³Configuration³Language... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to choose a file, from which the
+{Integrator "Packet":Packet} will read out textual lines,
+included in elements of the interface (menus, dialog windows and other).
+
+If you want to use built-in in the file "PackMain.Exe" textual lines
+in Russian, press the button "Clear" in the dialog window.
+
+  {Submenu "Options³Configuration":OConfig}
+
+  {Submenu "Options":Options}
+
+.topic OWorkDir
+ Options³Configuration³Work directory... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to set the working directory, in which the
+{Integrator:Packet} will place the temporary files.
+
+This directory should without fail be on a disk, not protected from
+record.
+
+By default the current directory will be used as the working.
+
+  {Submenu "Options³Configuration":OConfig}
+
+  {Submenu "Options":Options}
+
+.topic OSaveDesktop
+ Options³Save desktop... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to keep in a file a current arrangement of
+windows and histories of {input lines:InputLines}.
+
+This file can be subsequently read on the command
+{"Options³retrieve desktop":ORetrieveDesktop}.
+
+At a load of the {Integrator:Packet} attempt to restore the desktop
+from the file "Packet.Dsk" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+Start of the Integrator with parameters "/c <file name>"
+results in reading the configuration and desktop from files
+with the specified name and extensions ".CNF" and ".DSK" accordingly.
+
+If you want, that the configuration and/or the desktop should be
+saved automatically at the exit from the Integrator,
+establish the appropriate modes with the help of the command
+{"Options³Configuration³Preferences":OPreferences} and save the
+configuration with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+  {Submenu "Options":Options}
+
+.topic ORetrieveDesktop
+ Options³Retrieve desktop... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to restore an arrangement of windows and histories
+of {input lines:InputLines} from a file, created on a command
+{"Options³Save desktop":OSaveDesktop}.
+
+At a load of the {Integrator:Packet} attempt to restore the desktop
+from the file "Packet.Dsk" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+Start of the Integrator with parameters "/c <file name>"
+results in reading the configuration and desktop from files
+with the specified name and extensions ".CNF" and ".DSK" accordingly.
+
+  {Submenu "Options":Options}
+
+.topic OSaveConfig
+ Options³Save configuration... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to keep in a file the configuration of the
+{Integrator:Packet}, established by commands from the submenu
+{"Options³Configuration":OConfig}.
+
+This file can be subsequently read on the command
+{"Options³Retrieve configuration":ORetrieveConfig}.
+
+At a load of the {Integrator:Packet} attempt to restore the configuration
+from the file "Packet.Cnf" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+Start of the Integrator with parameters "/c <file name>"
+results in reading the configuration and desktop from files
+with the specified name and extensions ".CNF" and ".DSK" accordingly.
+
+If you want, that the configuration and/or the desktop should be
+saved automatically at the exit from the Integrator,
+establish the appropriate modes with the help of the command
+{"Options³Configuration³Preferences":OPreferences} and save the
+configuration with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+  {Submenu "Options":Options}
+
+.topic ORetrieveConfig
+ Options³Retrieve configuration... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to restore the configuration of the
+{Integrator:Packet} from a file, created on the command
+{"Options³Save configuration":OSaveConfig}.
+
+At a load of the {Integrator:Packet} attempt to restore the configuration
+from the file "Packet.Cnf" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+Start of the Integrator with parameters "/c <file name>"
+results in reading the configuration and desktop from files
+with the specified name and extensions ".CNF" and ".DSK" accordingly.
+
+  {Submenu "Options":Options}
+
+.topic ORetrievePalette
+ Options³Retrieve palette... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to read a palette of the {Integrator:Packet}
+from a file, created on the command
+{"Options³Save palette":OSavePalette}, or included in complete set of
+delivered palettes.
+
+The palette can also be changed on your taste with the help of a
+command {"Options³Configuration³Colors":OColors}.
+
+If you want to use a read or changed palette constantly, save the
+configuration of the Integrator with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+  {Submenu "Options":Options}
+
+.topic OSavePalette
+ Options³Save palette... Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to save in a file a current palette of the
+{Integrator:Packet}.
+
+This file can be subsequently read on the command
+{"Options³Retrieve palette":ORetrievePalette}.
+
+The palette can also be changed on your taste with the help of the
+command {"Options³Configuration³Colors":OColors}
+
+If you want to use a read or changed palette constantly, save the
+configuration of the Integrator with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+  {Submenu "Options":Options}
+
+.topic OLastDesktop
+ Options³Last desktop  (Shift+F7) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to return to the previous loaded desktop.
+
+  {Submenu "Options":Options}
+
+.topic ODesktopStack
+ Options³Desktops' stack...  (Shift+F8) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This command allows to see names of the last ten desktop files
+and to choose one from them for a load.
+
+  {Submenu "Options":Options}
+
+.topic About, Packet
+ °° F5 - Zoom help °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ °ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»°°°°
+ °º ú  ÉÍÍÍÍÍÍÍÍÍÍ¸          I N T E G R A T O R                      ú º²²°°
+ °º    º  ÚÄÄÄÄ·  ³ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ ÉÍ¸ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ ÉÍ¸ TM     º²²°°
+ °º    º  ³    º  ³  ÉÍÍÍÍÍÍ¸  ÉÍÍÍÍÍÍ¸  º ³  ÉÍ¸  ÉÍÍÍÍÍÍ¸  º ³        º²²°°
+ °º    º  ÔÍÍÍÍ¼  ³  º ÚÄÄ· ³  º ÚÄÄÄÄÙ  º ³ÉÍ¼ ³  º ÚÄÄÄÄÙ É¼ Ô¸       º²²°°
+ °º    º  ÚÄÄÄÄÄÄÄÙ  º ³  º ³  º ³       º Ô¼ ÚÄÙ  º ÔÍÍ¸   Ó· ÚÙ       º²²°°
+ °º    º  ³          º ÔÍÍ¼ ³  º ³       º Ú· ÔÍ¸  º ÚÄÄÙ    º ³        º²²°°
+ °º    º  ³          º ÚÄÄ· ³  º ÔÍÍÍÍ¸  º ³ÓÄ· ³  º ÔÍÍÍÍ¸  º ÔÍÍ¸     º²²°°
+ °º    ÓÄÄÙ          ÓÄÙ  ÓÄÙ  ÓÄÄÄÄÄÄÙ  ÓÄÙ  ÓÄÙ  ÓÄÄÄÄÄÄÙ  ÓÄÄÄÄÙ     º²²°°
+ °º    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ     º²²°°
+ °º                               Version 4.1                           º²²°°
+ °º     ÕÍÍÍÍ¸                                                          º²²°°
+ °º   ÖÄÔÑÍÍÑ¾Ä·            Copyright (C) 1990-97 by                    º²²°°
+ °º   º  ³  ³  º               Michael Dolinsky &                       º²²°°
+ °º   ÓÄÄÅÄÄÅÄÄ½               Constantine Vulakh                       º²²°°
+ °º      ³  ³            { Copyright                  :Copyright}                   º²²°°
+ °º     ÕÏÍÍÏ¸           { Thanks                     :Thanks}                   º²²°°
+ °º     ÔÍÍÍÍ¾           { What does it mean "Packet" :Title}                   º²²°°
+ °º                      { The guidebook to the help  :Index}                   º²²°°
+ °º ú                    { Menus of Integrator        :Menu}                 ú º²²°°
+ °ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼²²°°
+ °°°²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²°°
+
+.topic Index
+ The guidebook to the help Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+   1. {Change of the configuration of the Integrator:OConfig}
+      1.1. {Preferences:OPreferences}
+      1.2. {Mouse:OMouse}
+      1.3. {Installation of colors:OColors}
+      1.4. {Transition to other languages:OLanguage}
+      1.5. {Working directory:OWorkDir}
+   2. Interface with the user
+      2.1. {Menus:Menu}
+      2.2. {Multiwindowing:WindowsHelp}
+      2.3. {Dialog windows:Dialogs}
+         2.3.1. {Action buttons:Buttons}
+         2.3.2. {Check boxes:CheckBoxes}
+         2.3.3. {Radio buttons:RadioButtons}
+         2.3.4. {Input lines:InputLines}
+         2.3.5. {Lists:Lists}
+         2.3.6. {File open dialog box:FOFileOpenDBox}
+   3. {Work with contents windows:DirWindow}
+   4. {Creation and updating of contentses:Directories}
+      4.1. {Opening of contents and creation of the new contents:NewDir}
+      4.2. {Change of the configuration of the contents:DDirConfig}
+      4.3. {Access to the protected contents:DSetProtect}
+      4.4. Formation and updating of structure of the contents
+         4.4.1. {Addition of subcontentses:DAddSubDirs}
+         4.4.2. {Addition of items:DAddFileItems}
+         4.4.3. {Mutual transformation of subcontentses and items:DTranspose}
+         4.4.4. {Modifying of the item:DModifyItems}
+         4.4.5. {Removal of subcontentses and items:DDeleteItems}
+         4.4.6. {Copying and carry of subcontentses and items:DMoveItems}
+         4.4.7. {Contextual replacement on a subtree:Replace}
+      4.5. {Compression of the contents file:DCompressDir}
+   5. Annotations
+      5.1. {Annotation's window:OpenAnnWin}
+      5.2. {Creation and editing of the annotations:DAnnotate}
+   6. Parameters
+      6.1. {Parameters of item by default:ItemParamsIL}
+      6.2. {Common parameters by default:DComParameters}
+      6.3. {Lists of parameters:DEditParameters}
+   7. {Hot keys:DHotKeys}
+      7.1. {Installation of hot keys:DSetHotKey}
+      7.2. {Start of the programs on hot keys:How2UseHotKeys}
+      7.3. {List of hot keys:DHotKeysList}
+   8. Processing extensions and masks of file name
+      8.1. {Global processing:DGlobalExt}
+      8.2. {Local processing:DLocalExt}
+      8.3. {Format of the list of expansions and masks processing:ExtFileFormat}
+   9. {The built-in text editor:Editor}
+  10. {Construction of the hierarchical textual documents:DCollectDocument}
+  11. About a configuration of the Integrator in details
+     11.1. {Autosave:Autosave}
+     11.2. {Use of SuperVGA-modes:ScreenSize}
+     11.3. {Management of subtleties of the interface:OInterface}
+  12. Additional opportunities of the Integrator
+     12.1. {Number of the version of the Integrator:SAbout}
+     12.2. {Screen rest:SScreenRest}
+     12.3. {Temporary exit in DOS:DosShell}
+     12.4. {Fulfilment of one DOS command:DosCommand}
+     12.5. {The user screen:UserScreen}
+     12.6. {Change of the current directory:ChangeDir}
+     12.7. {The calculator:SCalculator}
+     12.8. {The calendar:SCalendar}
+     12.9. {The ASCII table:SAsciiTable}
+    12.10. {The alarm clock:SAlarmClock}
+
+.topic Thanks
+ Thanks Ü
+  ßßßßßßß
+The authors express sincere gratitude to Vitaly Novitsky and to
+Alex Novikov, by efforts of which in the {Integrator:Packet}
+the emulation of graphic mouse is realized, to Igor Shpungin,
+completed window of viewing of the help, and to Oleg Zubarev,
+realized recording and reproduction of keyboard macros and forced
+to work normally the history of file name input lines.
+
+We are very grateful to {beta-testers:Testers} of the Integrator of
+versions 3.XX, whose remarks and the offers have put the
+advantage at a stage of a coming into being the Integrator and
+continue to render it and until now.
+
+Separate thank to Igor Ziselman for a constant nourishing by new
+ideas.
+
+Thank also all to the {registered users:Shareware} of the Integrator,
+without which it could not simply exist.
+
+.topic Testers
+ Beta-testers of the Integrator Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+  Spartak Bosack
+  Andrew Galatyn
+  Igor Ziselman
+  Stas Zobnin
+  Oleg Zubarev
+  Vladimir Korotkevich
+  Vjacheslav Kravtsov
+  Denis Kurlukov
+  Vitaly Novitsky
+  Jury Pukhov
+  Igor Shpungin
+
+ HUGE thank for the help and support to all !
+
+.topic Copyright
+ Copyright Ü
+  ßßßßßßßßßß
+þ All Copyrights to the Integrator "Packet" belong to Michael Dolinsky and
+Constantine Vulakh, Gomel Fr. Skoryna state university, faculty of
+mathematical problems of management. Any applications of the third persons
+on possession by the Copyrights to the Integrator are desinformation and
+infringement of the Copyrights.
+
+þ The Integrator "Packet" is {Shareware:Shareware}.
+
+           To all registered users the authors wish
+
+             ÄÄÄÄÄÍÍÍÍÍÍ pleasant work ÍÍÍÍÍÍÄÄÄÄÄ
+
+.topic Shareware
+ The Integrator "Packet" is Shareware !!! Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+It means, that you can free-of-charge use it only 30 days. On
+expiration of this term you are obliged to register it or to
+refuse further use of the Integrator and to remove all files of the
+distribution kit from your disk.
+
+          ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+          ³  After registration additional functions ³
+          ³   of the Integrator become accessible !  ³
+          ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+It is possible to distribute distributive archive of the Integrator,
+in no event not changing it, and only in the event that at
+distribution commercial profit is not extracted.
+
+The order of registration is described in the file "How2Use.Txt",
+included in a complete set of delivery of the Integrator.
+
+If you disagree with these conditions of use and distribution of the
+Integrator, it is better for you to remove all files, unpacked from the
+distribution kit.
+
+On registration of the {Integrator "Packet":Packet}, concerning found
+out errors, and also on use of the Integrator (only for the
+registered users) address to the author:
+
+                Constantine Vulakh
+
+           Ph.: +375-232-53-7911
+          Fido: 2:452/35
+        E-mail: c.vulakh@usa.net
+
+.topic Title
+The name "{Packet}" is an abbreviation of English words
+      Powerful
+      Administrator
+      Calculator
+      Keeper
+      Editor and
+      Taunt
+
+For mudslingers alternate decoding of the name is offered:
+      Piteous
+      Abominable
+      Crazy
+      Knavish
+      Extravagant
+      Thought
+
+.topic EndShortStatusLine
+; ********************************************************
+; * ^ ^ ^               Contexts for Hint          ^ ^ ^ *
+; ********************************************************
+
+.topic AnnotateWin
+Enter the annotation to highlighted item of the active contents.
+
+Then choose a command "Done" the status line or press F2.
+
+For removal of the annotation to highlighted item choose a
+command "Delete".
+
+See also {commands of the editor:Editor}.
+
+.topic EditParamListDlg
+Enter the list of parameters to highlighted item of the active contents.
+
+Then choose a command "Done" the status line or press F2.
+
+For removal of the list of parameters to highlighted item
+choose a command "Delete".
+
+See also:
+
+  {Format of the list of parameters:ParListFormat}
+  {Command of the editor:Editor}
+
+.topic EditLocalExtWin
+ Local processing of extensions and masks Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+The list of processors allows to set, which actions will be carried
+out by default at a choice of item of Integrator's contents depending on
+extension or mask of the appropriate file name, reaction on
+Ctrl+Enter, and also to define a set of actions, which will
+be offered at a choice of item by keys Shift+Enter.
+
+The local list is stored in a file of contents and
+works only for that table of contents, for which is created.
+
+If you use at once many contentses, it will be more convenient
+to you to use the global list, created with the help of a command
+{"Global extension list edit":DGlobalExt}.
+
+For preservation of changes in the list choose a command "Done"
+in the status line or press F2.
+
+For remova of the local list of processors choose a
+command "Delete".
+
+ See also:
+
+ {Format of the list:ExtFileFormat}
+ {Command of the editor:Editor}
+
+.topic Editor = 10
+ The text editor Ü
+  ßßßßßßßßßßßßßßßß
+The text editor allows to edit contents of a textual file. Opening a
+window of the editor comes true on a command
+{"File³Open":Open}.
+
+You can use the following commands:
+
+  {Cancellation of the last action:Undo}: Alt + Backspace
+
+         Commands of cursor moving
+
+ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+ º       Key       º      Action                  º
+ ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+ º   Left  ()     º On a char to the left        º
+ º   Right ()     º On a char to the right       º
+ º   Up    ()     º On a line upwards            º
+ º   Down  ()     º On a line downwards          º
+ º   Home          º In a beginning of the line   º
+ º   End           º In the end of the line       º
+ º   PgUp          º On page upwardsàå            º
+ º   PgDn          º On page downwards            º
+ º   Ctrl+Left     º On a word to the left        º
+ º   Ctrl+Right    º On a word to the right       º
+ º   Ctrl+PgUp     º In a beginning of the file   º
+ º   Ctrl+PgDn     º In the end of the file       º
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+    {Commands of work with blocks of the text:Edit}
+
+ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+ º      Key      º          Action             º
+ ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+ º Shift+arrows  º Mark block                  º
+ º Shift+Del     º Move block to Clipboard     º
+ º Ctrl+Ins      º Copy block to Clipboard     º
+ º Shift+Ins     º Paste block from Clipboard  º
+ º Ctrl+Del      º Delete block                º
+ º Ctrl+Y        º Delete the current line     º
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+    {Commands of search and replacement:Search}
+
+ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+ º      Key      º     Action                      º
+ ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+ º Ctrl+Q+F      º To find                         º
+ º Ctrl+Q+A      º To find and to replace          º
+ º Ctrl+L        º To repeat search or replacement º
+ º F7            º Go to line number               º
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+Many of above mentioned commands is possible to duplicate by
+the choice in the submenu {"Editor":Edit} or in the local menu (Alt+F10).
+
+  See also {Window:WindowsHelp}
+
+.topic Clipboard
+ Clipboard Ü
+  ßßßßßßßßßß
+This {editor:Editor} window allows to see and to
+edit contents of the Clipboard, through which there is copying blocks of
+the text in the built-in text editor.
+
+Using a command {"File³Save as":SaveAs}, you can save
+contents of the Clipboard on a disk.
+
+.topic Calculator
+ Calculator Ü
+  ßßßßßßßßßßß
+The calculator is a simple four-function calculator with add, subtract,
+multiply, and divide. To operate the calculator you can either use the
+keyboard or press the buttons on the calculator with the mouse. The 'C'
+key clears the calculator, the '' key will erases the last character
+typed, and the 'ñ' key toggles the value from positive to negative (the
+keyboard equivalent of 'ñ' is '_').
+
+Instead of a key "=" on the keyboard it is possible to press Enter.
+
+  See also {Window:WindowsHelp}
+
+.topic Calendar
+ Calendar Ü
+  ßßßßßßßßß
+The calendar displays the current month, highlighting todays date. The
+next and previous months can be viewed using the '+' or '-' keys
+respectivly. The mouse can also be used to change the month by pressing
+the  or  icons.
+
+  See also {Window:WindowsHelp}
+
+.topic AsciiTable
+ ASCII Table Ü
+  ßßßßßßßßßßßß
+The ASCII table displays the entire IBM PC character set. The current
+character is marked by a blinking block cursor, and the hexadecimal and
+decimal ASCII values of the character are displayed below the chart. A
+new character is selected by pressing it on the keyboard, by clicking
+the mouse on it in the chart, or by moving the cursor using the cursor
+keys.
+
+Using a key Enter or double click, it is possible to
+send the char to the top window under the table.
+
+  See also {Window:WindowsHelp}
+
+.topic DirWindow
+ Contents window Ü
+  ßßßßßßßßßßßßßßßß
+In this window the CONTENTS, created with the help of the
+{Integrator "Packet":Packet}, is displayed. It refers to as ACTIVE.
+
+The contents, created by the Integrator, have hierarchical
+structure.
+
+The subcontents, displayed in a contents window in the
+given moment of time, refers to as CURRENT.
+
+You can open so much windows of tables of contents, how many allows
+the size of free memory. Including you can open a few windows with
+one contents. In each of them you can work with any part of the
+contents.
+
+For creation of a new table of contents choose the command
+{"File³New contents":NewDir}.
+
+The commands of management by windows are concentrated in the submenu
+{"Window":Windows}, and command of management by contents - in the submenu
+{"Contents":Directories} and partly in the submenu {"Editor":Edit}.
+
+"Trip" on subcontentses you can carry out with the help of the
+keyboard and with the help of the mouse.
+
+1) The cursor arrows change highlighted item.
+
+2) The key Enter causes an entrance in highlighted subcontents
+or processing of highlighted item according to extension (start for
+the programs, editing for textual files, etc.).
+
+3) The key Ctrl+Enter allows to set parameters for the started
+program or to edit a file by the external text editor.
+
+The reaction on Enter and Ctrl+Enter is possible is to redefine
+by commands {"Global extension list edit":DGlobalExt} and
+{"Local extension list edit":DLocalExt}.
+
+4) The key Shift+Enter opens the list of processors for a
+highlighted file. The list is defined by the same
+commands.
+
+5) The key Esc causes return in the top subcontents. The same action
+makes a choice by the mouse or from the keyboard of item "..", but the
+key Esc makes it in one touch.
+
+6) The combinations of keys Ctrl+Home and Ctrl+"\" cause return
+in root subcontents.
+
+The double click by the left button of the mouse on item works as a
+key Enter, if on the keyboard a key Ctrl or Shift is not pressed, and
+as Ctrl+Enter or Shift+Enter, if on the keyboard one of these
+keys accordingly is pressed.
+
+You can also use {hot keys:How2UseHotKeys}, established
+on a command {"Contents³Hot keys³Set/reset":DSetHotKey},
+for fast access to the appropriate item, irrespective of,
+whether subcontents in which this item is current and
+the contents is active.
+
+.topic AnnWindow
+ Annotation's window Ü
+  ßßßßßßßßßßßßßßßßßßßß
+This window displays the annotation to highlighted item from the top of
+{contents windows:DirWindow}.
+
+For viewing the annotation it is possible to use cursor arrows, and also
+scroll bar with the help of the mouse.
+
+Besides an opportunity of a scrolling of the annotation directly from the
+contents window with the help the cursor arrow in a combination with
+the key Shift is available.
+
+For editing the annotation to highlighted item of the active
+contents use a command {"Contents³Annotate":DAnnotate}.
+
+  See also {Window:WindowsHelp}
+
+.topic OutputWindow
+ Output window Ü
+  ßßßßßßßßßßßßßß
+This window displays contents of the user screen.
+
+To see the user screen in a full-screen mode, choose the
+command {"File³User screen":UserScreen}.
+
+  See also {Window:WindowsHelp}
+
+;******************* End of the block of contexts with fixed numbers
+
+.topic BackgrCtx
+
+         Welcome to the Integrator "{Packet}" !
+
+For transition in the menu press a key F10.
+
+Do not neglect the help and hereinafter! Press F1 as soon as to you
+anything will be unintelligible, and we shall understand together!
+
+Press Esc, to close a window of the help, or Enter, and then F5 to
+find out more about the Integrator.
+
+Pleasant work to you!
+
+.topic EditGlobalExt
+ Global extensions list Ü
+  ßßßßßßßßßßßßßßßßßßßßßßß
+The list of processors allows to set, which actions will be carried
+out by default at a choice of item of the {Integrator's:Packet} contents
+depending on extension or mask of appropriate file name,
+reaction on Ctrl+Enter, and also to define a set of actions, which
+will be offered at a choice of item by keys Shift+Enter.
+
+The global list is stored in a file "Packet.Ext" in the same
+directory, in which Integrator is installed, and works for those
+contentses, for which list with the help of a command
+{"Local extension list edit":DLocalExt} is not created.
+
+ See also:
+
+ {Format of the list:ExtFileFormat}
+ {Command of the editor:Editor}
+
+.topic ExtFileFormat
+ Format of the list Ü
+  ßßßßßßßßßßßßßßßßßßß
+To each extension or mask in the list of processors the separate
+block, beginning with the symbol '>' and following for them
+without a blank the mask of a file name is allocated.
+
+Further in the same line through one or several blanks it is possible
+to specify name of a program-processor or command MS DOS, being a processor
+by default (on a key Enter) for files with a name, satisfying to a mask.
+The name of a processable file is substituted in the end of a line
+automatically at its choice, if the name of a processor does not contain
+any of the following macros:
+
+  !   - name of a processable file
+  !.! - name with extension of a processable file
+  !\  - directory of a processable file (without the finishing symbol "\")
+  !!  - exclamation mark
+
+If there is one of these macros, macro is carried out, and the file name
+in the end of the line is not substituted.
+
+If the processor by default is not specified, the file will be loaded
+in the built-in text editor.
+
+If you want, that on a key Ctrl+Enter instead of a load in the
+external text editor there was the call of any other program,
+the line, beginning with a symbol '#', should follow. After this
+symbol (it is possible without a blank) it is necessary to specify
+name of a program-processor or DOS command.
+
+Further up to the following line, beginning with '>', there is the
+list of processors, which will be offered for files with a name,
+satisfying to a mask.
+
+To each processor there should correspond one line in the list,
+and the part of this line up to a symbol '^' will be be purely name
+of a processor, and other is the name, which will be shown
+in the list at pressing Shift+Enter.
+
+If there is not enough symbol '^' in a line, this line will be
+considered as name, and purely as name of a processor.
+
+At desire you can allocate under one letter in the names with symbols
+'~' from two parties. Then at a choice from the list you can use hot
+keys.
+
+The line, containing only a symbol "-", inserts into the list a
+divider.
+
+Empty lines and lines, beginning with ";", are ignored.
+
+The same list can be in the beginning of the description of
+processors. It is the common list. It will be added in a
+beginning of the list, given out on Shift+Enter, for each type of
+files.
+
+For example:
+
+  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+  ³ ; The example of the list
+  ³ ; The common list
+  ³ aidstest   ^~C~heck on a virus
+  ³ more<      ^~T~ype
+  ³ -
+  ³ ; ‘¯¨áª¨ ¯® ¬ áª ¬
+  ³ >.txt me
+  ³   printfx   ^~P~rint
+  ³   lexicon   ^~L~exicon
+  ³   -
+  ³   del       ^~D~elete
+  ³
+  ³ >pack*.pas
+  ³   #me !.!
+  ³   tpc /m !  ^C~o~mpile
+  ³
+
+.topic OCColorsDBox
+ Help on the Colors dialog box Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+The Colors dialog box consists of two list boxes, a text display
+area, the standard OK, Cancel, and Help buttons, and one of the
+following:
+
+ þ On color and black-and-white systems, it
+   also contains two color palettes.
+ þ On monochrome systems, it contains a set
+   of radio buttons instead of the palettes.
+
+This dialog box is where you can change the colors of different
+parts of this program.
+
+ ÚÄ Group ÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³   Desktop          ³
+ ³   Menus            þ³
+ ³   Dialogs          ±³
+ ³    ...             ±³
+ ³                    ±³
+ ³                    ±³
+ ³                    ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+The Group list box contains the names of the different regions of
+the program that you can customize.
+
+ ÚÄ Item ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³   Color            ³
+ ³                    þ³
+
+When you select a group from the Group list, the Item list box
+displays the names of the different views in that region.
+
+ Ú Foreground ÄÄ¿   Ú Background ÄÄ¿
+ ³   °°°±±±²²² ³   ³    °°°±±±²²² ³
+ ³ ±±±²²²°°°ÛÛÛ ³   ³ ±±±²²²°°°ÛÛÛ ³
+ ³    °°°±±±²²² ³   ³    °°°±±±²²² ³
+ ³ ±±±²²²°°°ÛÛÛ ³   ³ ±±±²²²°°°ÛÛ ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+On color and black-and-white systems, you use the Foreground and
+Background palettes to modify colors.
+
+ Ú Colors ÄÄÄÄÄÄÄÄ¿
+ ³  () Normal    ³
+ ³  ( ) Bright    ³
+ ³  ( ) Underline ³
+ ³  ( ) Inverse   ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+On monochrome systems, you use the Colors set of radio buttons
+systems to modify the character attributes.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ °°°° Text °°°° ³
+ ³ °°°° Text °°°° ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+On all systems, the display text shows the current color or
+attribute settings.
+
+Changes do not take effect on the desktop until you close the
+Colors dialog box by choosing OK.
+
+  See also {dialog windows:Dialogs}
+
+.topic FOFileOpenDBox
+ Help on Open a File Dialog Box Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+The Open a File dialog box contains an input box, a {file list:FOFiles},
+a file information panel, the standard button {Cancel:CancelBtn},
+one other action button ({Open:FOOpenBtn}), plus a history list
+that's attached to the {Name inputbox:FOName}.
+
+.topic FOName
+ ÚÄ Name ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                                 ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+The Name input box is where you enter the name of the file to
+load, or the file-name mask to use as a filter for the Files list
+box (for example, *.*).
+
+.topic FOFiles
+ Ú Files ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                                 ³
+ ³  FILENM01.TXT  ³  FILENM09.TXT  ³
+ ³  FILENM02.TXT  ³  FILENM10.TXT  ³
+ ³  FILENM03.TXT  ³  FILENM11.TXT  ³
+ ³  FILENM04.TXT  ³  FILENM12.TXT  ³
+ ³  FILENM05.TXT  ³  ..            ³
+ ³  FILENM06.TXT  ³  \MOREXAMP     ³
+ ³  FILENM07.TXT  ³  \TOURS        ³
+ ³  FILENM08.TXT  ³  \ANSWERS.DIR  ³
+ ³  ±±±þ±±±±±±±±±±±±±±±±±±±±±±   ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+The Files list box lists the names of files in the current
+directory that match the file-name mask in the Name input box,
+plus the parent directory and all subdirectories.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ C:\PACKET\DOC\*.*                        ³
+ ³ HELLO.PAS       52  Jul 14,1990  12:00pm ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+The File information panel shows the path name, file name, date,
+time, and size of the selected file.
+
+None of the items on this information panel are selectable.
+
+  See also {dialog windows:Dialogs}
+
+.topic FOOpenBtn
+ ÚÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [ Open ] ³
+ ÀÄÄÄÄÄÄÄÄÄÄÙ
+The Open button opens a new editor or contents window and places
+the selected file in that window.
+
+.topic CancelBtn
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [ Cancel ] ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+If you choose Cancel, nothing changes and no action occurs, and
+the dialog box is put away.
+
+(Esc always cancels a dialog box, even if a Cancel button does
+not appear.)
+
+.topic FCChDirDBox
+ Help on the Change Directory dialog box Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+The Change Directory dialog box consists of an input box, a list
+box, the standard OK and Help buttons, and two other buttons
+(Chdir and Revert).
+
+ Ú Directory Name ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                                     ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+The Directory Name input box is where you type in the path of the
+new directory.
+
+ Ú Directory Tree ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³   A: B: C: ...                      ³
+ ³   ÀÄÂC:\                            ³
+ ³     ÀÄÂPACKET                       ³
+ ³       ÀÄÄDOC                        ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+The Directory Tree list box enables you to navigate directories
+by using the selecting bar and pressing Enter.
+
+If you're using the keyboard, press Enter to make the selected
+directory be the current directory, then choose OK or press Esc
+to exit the dialog box.
+
+ ÚÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [Chdir ] ³
+ ÀÄÄÄÄÄÄÄÄÄÄÙ
+The Chdir button changes the current directory once you've
+selected or typed in a directory name.
+
+ ÚÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [Revert] ³
+ ÀÄÄÄÄÄÄÄÄÄÄÙ
+The Revert button goes back to the previous directory, as long as
+you haven't yet exited the dialog box.
+
+  See also {dialog windows:Dialogs}
+
+.topic OMMouseDBox
+ Help on the Mouse Options dialog box Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+This dialog box consists of one check box, one slider bar, and
+the standard buttons OK and Cancel.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ Mouse Double Click       ³
+ ³ Fast     Medium     Slow ³
+ ³ ±±±±±±±±±±±þ±±±±±±±±±± ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+The Mouse Double Click slider bar adjusts the double-click speed of
+your mouse.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [X] Reverse Mouse Buttons ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+Reverse Mouse Buttons makes the right mouse button take on the
+normal functions of the left--and vice versa.
+
+You also can to choose one from two possible modes of operations of
+the mouse - the smooth mouse, wich emulate the graphic cursor of
+the mouse in a text mode, or usual textual mouse.
+
+The mode of the smooth Mouse works only at presence of the
+videoadapter as EGA, VGA or SVGA. On all other videoadapters the
+usual textual mouse, irrespective of an established here mode will
+join.
+
+If in a mode of the smooth mouse you will find out any unpleasant
+effects owing to the conflict to your videoadapter or driver of the
+mouse, switch in a mode of the usual mouse or change the driver on
+standard. However the probability of occurrence of such conflict is
+close to zero, therefore it is by no means not necessary to
+disconnect this remarkable mode from precaution.
+
+The smooth mouse can also be disconnected, by starting the Integrator
+with parameter '/NM'.
+
+Have to the point in a kind, that by work in some modes of the
+adapter SVGA use of the smooth mouse is the sole
+possible variant, as the majority of mouse drivers
+incorrectly behave in such modes and exclude use of the standard
+textual Mouse.
+
+.topic WindowList
+ Window list Ü
+  ßßßßßßßßßßßß
+You can make an active any window by one of several ways:
+
+ þ by choosing its name in the list and
+   by pressing Enter
+ þ by choosing its name in the list and
+   by pressing the button "OK"
+ þ by double clicking by a mouse under
+   the name of a window
+ þ if the window has number - by pressing
+   a key with figure
+
+To close a window also it is possible for one of several ways:
+
+ þ by choosing its name in the list and
+   by pressing a key Delete
+ þ by choosing its name in the list and
+   by pressing the button "Close"
+
+  See also {dialog windows:Dialogs}
+
+.topic SaveDesktop
+ Save desktop window Ü
+  ßßßßßßßßßßßßßßßßßßßß
+Choose a name of a file, in which you want to save the current desktop.
+
+  See {Window of input of a file name:FOFileOpenDBox}
+
+At a load of the {Integrator:Packet} attempt to restore the desktop
+from the file "Packet.Dsk" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+.topic RetrieveDesktop
+ Retrieve desktop window Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Choose the file name, from which you want to read the desktop.
+
+  See {Window of input of a file name:FOFileOpenDBox}
+
+At a load of the {Integrator:Packet} attempt to restore the desktop
+from the file "Packet.Dsk" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+.topic SaveConfig
+ Save configuration window Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+Choose the file name, in which you want to save the current
+configuration {of the Integrator:Packet}.
+
+  See {Window of input of a file name:FOFileOpenDBox}
+
+At a load of the {Integrator:Packet} attempt to restore the configuration
+from the file "Packet.Cnf" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+.topic RetrieveConfig
+ Retrieve configuration window Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Choose the file name, from which you want to read a configuration
+{of the Integrator:Packet}.
+
+  See {Window of input of a file name:FOFileOpenDBox}
+
+At a load of the {Integrator:Packet} attempt to restore the configuration
+from the file "Packet.Cnf" is always made. At first the file is
+searched in the current directory, and then, if in the current
+directory such file is not present, in the directory, in which
+there is the Integrator.
+
+.topic SavePalette
+ Save palette window Ü
+  ßßßßßßßßßßßßßßßßßßßß
+Choose the file name, in which you want to save the current
+palette of the {Integrator:Packet}.
+
+You can also use ready palettes, included in a complete distributive kit
+of the Integrator, by choosing the command
+{"Options³retrieve palette":ORetrievePalette}.
+
+If you want to use a read or changed palette constantly, save the
+configuration of the Integrator with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+  See {Window of input of a file name:FOFileOpenDBox}
+
+.topic RetrievePalette
+ Retrieve palette window Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Choose the file name, from which you want to read the palette of
+the {Integrator:Packet}.
+
+  See {Window of input of a file name:FOFileOpenDBox}
+
+The palette can also be changed on your taste with the help of a
+command {"Options³Configuration³Colors":OColors}.
+
+If you want to use a read or changed palette constantly, save the
+configuration of the Integrator with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+You can also save the current palette in a separate file with the
+help of the command {"Options³Save palette":OSavePalette} for the
+subsequent reading.
+
+.topic DosCmdDlg
+ Run DOS command Ü
+  ßßßßßßßßßßßßßßßß
+In this window you can enter a DOS command, and it will be
+immediately executed. After it you will again get on
+environment of the {Integrator:Packet}.
+
+If it is necessary to you to carry out a few DOS commands, use the command
+{"File³DOS Shell":DosShell} or start any DOS shell (for example
+<F9> <N> <C> <Enter> - start Norton Commander, let it name is consecrated in
+centuries of centuries!) and carry out in its environment actions necessary
+for you.
+
+And it is much better - add this environment in your contents and set to it
+a {hot key:How2UseHotKeys}. After it for start of this shell will enough to
+press this hot key.
+
+  See also
+
+  {Dialog windows:Dialogs}
+  {Window of input of a file name:FOFileOpenDBox}
+
+.topic SaveAsDlg
+ "Save as" dialog Ü
+  ßßßßßßßßßßßßßßßßß
+Enter a name, under which you want to save the file.
+
+ See also
+
+  {Dialog windows:Dialogs}
+  {Window of input of a file name:FOFileOpenDBox}
+
+.topic ChangeLanguage
+ Change language file Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+Choose a file, from which the {Integrator:Packet} will read out
+textual lines, included in elements of the interface (the menu,
+dialog windows and other).
+
+If you want to use built-in in the file "PackMain.Exe" textual lines
+in Russian, press the button "Clear" in the dialog window.
+
+ See also
+
+  {Dialog windows:Dialogs}
+  {Window of input of a file name:FOFileOpenDBox}
+
+.topic ChangeWorkDir
+ Change work directory Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+Choose a name of the working directory, in which the
+{Integrator:Packet} will place the temporary files.
+
+This directory should without fail be on a disk, not protected from
+record.
+
+By default as the worker the current directory will be used.
+
+This window behaves almost the same as
+{Change Directory dialog box:FCChDirDBox}.
+
+  See also {dialog windows:Dialogs}
+
+.topic LngReadError
+Error of reading of the language file, caused by an incorrect or
+spoiled file of language.
+
+If this error has arisen at a load of the {Integrator:Packet},
+textual lines in Russian built-in in the file "PackMain.Exe" are
+hereinafter used.
+
+If it has arisen at attempt to change the language file name with
+the help of a command {"Options³Configuration³Language":OLanguage},
+the same language, as earlier is hereinafter used.
+
+.topic ErrorCreateFile
+At attempt of creation of the file there was the error.
+
+Convince, that on a disk there is enough space for creation of the
+file, and that the file name is given correctly.
+
+The error can also arise at attempt to change the file, protected from
+record.
+
+.topic ErrorOpenFile
+At attempt of opening of the file there was the error.
+
+Convince, that the file name is given correctly.
+
+.topic ErrorReadFile
+At attempt of reading of the file there was the error.
+
+It can mean, that integrity of the file is broken, or you use the
+configuration, desktop, palette or language file from the old version
+of the {Integrator:Packet}.
+
+.topic InvFile
+Incorrect format or integrity of the file is broken.
+
+.topic AskQuit
+Work a little more!
+
+If you want in the following time to begin work with a current
+arrangement of windows, instead of from the clean screen, use the
+command {"Options³Save destop":OSaveDesktop}.
+
+Similarly, for preservation of a current configuration of the
+Integrator (colour, modes, language and other) use a command
+{"Options³Save configuration":OSaveConfig}.
+
+If you want, that the configuration and/or the desktop should be
+saved automatically at the exit from the Integrator,
+establish the appropriate modes with the help of the command
+{"Options³Configuration³Preferences":OPreferences} and save the
+configuration in the file "Packet.Cnf" with the help of the command
+{"Options³Save configuration":OSaveConfig}.
+
+.topic NoMemory
+There is not enough memory to complete this operation.
+
+Close a part of windows of the text editor to release a part
+of memory.
+
+This error can also arise at attempt to open a window of the editor
+with a file, size of which exceeds 64K, or at achievement by an
+edited file of this size.
+
+One more probable reason of this error - overflow of the
+Clipboard by intensive work with blocks of the texts. You can open a
+window of a Clipboard with the help of the command
+{"Editor³Show Clipboard":ShowClip} and to remove from the Clipboard
+the unnecessary to you text.
+
+The Clipboard is automatically cleared at the exit from the
+{Integrator:Packet} or at start from it of any program.
+
+.topic ErrReadTxtFile
+Error reading of a textual file or contents.
+Convince, that the file name is given correctly.
+
+.topic ErrWriteTxtFile
+Error of record of a textual file.
+Convince, that the file name is given correctly.
+
+.topic SaveModified
+The file was changed.
+
+If you wish to keep brought in changes, answer "Yes",
+and if don't wish - "No".
+
+To the point, using a command
+{"Options³Configuration³Preferences":OPreferences},
+you can establish a mode of creation of a copy of old
+variant of a file at each record.
+
+.topic SaveUntitled
+The new file is not saved.
+
+If you wish to keep it, answer "Yes", otherwise - "No".
+
+To the point, using a command
+{"Options³Configuration³Preferences":OPreferences},
+you can establish a mode of creation of a copy of old
+variant of a file at each record.
+
+.topic StringNotFound
+The required string not found.
+
+And can, it is not present?
+
+.topic TooManyFiles
+There was not enough free memory and it is impossible to read all
+file names.
+
+Close windows unnecessary you.
+
+.topic InvFileName
+Inadmissible name of a file.
+In a name of a file the following symbols are inadmissible:
+;,=+<>³"[] \
+          ^
+          ³
+          À "Space"
+
+.topic InvDriveOrDir
+Incorrect name of subdirectory or disk.
+
+You have entered an incorrect path to a file.
+
+.topic InvLineNum
+Invalid line number.
+
+.topic ContReplDlg
+Enter a sample of the text for search and replacing.
+The search will be made on all marked items and subcontentses.
+
+You can choose, which just the information will be replaced, and
+whether a difference in the register will be taken into account by
+search (only for the latin letters; the Russian letters of the
+different registers are always different).
+
+  See also {dialog windows:Dialogs}
+
+.topic ReplaceDlg
+Enter a sample of the text for search and replacing.
+The search will be made downwards from position of the cursor.
+
+You can establish the following modes of replacement:
+
+ þ Case sensitive:
+    When this mode is switched on the large and small
+    latin letters will be considered as different
+    symbols, when it is switched off - as the identical
+    one. The large and small Russian letters are
+    different symbols irrespective of a mode.
+
+ þ Whole words only:
+    At an switched on mode the text concurrent to a
+    sample is replaced, if this text is not a part
+    of a word. At a switched off mode the text
+    concurrent to a sample is replaced in any case.
+
+ þ Prompt on replace:
+    Before replacement of a found fragment of the
+    text a dialogue window for confirmation of
+    necessity will be given to make replacement.
+
+ þ Replace all:
+    At an switched on mode will be replaced of all
+    entry of the replaceable text, at switched off -
+    only the first entry.
+
+  See also {dialog windows:Dialogs}
+
+.topic FindDlg
+Enter a sample of the text for search. The search will be made
+downwards from a position of the cursor.
+
+You can establish the following modes of search:
+
+ þ Case sensitive:
+    When this mode is switched on the large and small
+    latin letters will be considered as different
+    symbols, when it is switched off - as the identical
+    one. The large and small Russian letters are
+    different symbols irrespective of a mode.
+
+ þ Whole words only:
+    At an switched on mode the text concurrent to a
+    sample is replaced, if this text is not a part
+    of a word. At a switched off mode the text
+    concurrent to a sample is replaced in any case.
+
+  See also {dialog windows:Dialogs}
+
+.topic ReplaceRequest
+In a dialogue window {"Replace":ReplaceDlg} was established
+Mode "Prompt on replace".
+
+To do replacement of a found fragment of the text
+it is necessary to choose the button "Yes".
+
+.topic Look
+ Look & sound Ü
+  ßßßßßßßßßßßßß
+This set of buttons allows to switch on and to switch off display
+of current, volume of free memory and shadow from windows, and
+also sound signals: in the beginning of each hour and
+in other situations (error, removal of protection from a
+contents and other) separately.
+
+  See also {"Preferences" dialog:PrefDialog}
+
+.topic ScreenSize
+ Screen mode Ü
+  ßßßßßßßßßßßß
+This set of buttons and input lines allows to choose one from
+screen modes - 25 or 43/50 lines, and also to establish
+a videomode of the high resolution for SVGA-adapters.
+
+The mode 43/50 lines is inaccessible on some old models of
+videoadapters (CGA and other), and the SVGA modes are specific for
+various videocards.
+
+You can use the utility ChkModes, delivered in a complete set of the
+{Integrator:Packet}, for determination of numbers and
+characteristics of textual videomodes, supported by your
+videoadapter.
+
+If your videoadapter supports SuperVGA-modes, you can use them,
+working in the Integrator. For this purpose enter in the input line
+"SVGA mode 1" and/or "SVGA mode 2" hexadecimal number of
+one/two videomodes and choose the appropriate videomode in group of
+dependent buttons "Screen mode".
+
+If at transition in SVGA-modes, revealed by the program ChkModes,
+there will be any problems, address to the documentation on your
+videoadapter for the more detailed information.
+
+The integrator does not supervise a correctness of a choice of
+SVGA-mode number.
+
+  See also {"Preferences" dialog:PrefDialog}
+
+.topic EditorModes
+ Editor Ü
+  ßßßßßßß
+This set of buttons allows to switch on and to switch off modes of the
+autoindent and creation of the copy of the old version of a file in a
+file with extension ".bak" at save it on a disk.
+
+  See also {"Preferences" dialog:PrefDialog}
+
+.topic ScreenRest
+ Screen rest Ü
+  ßßßßßßßßßßßß
+This set of buttons allows to choose time, on expiration of which
+clearing the screen will be made, if you did not move the mouse and
+did not work with the keyboard.
+
+You can also extinguish the screen at any moment, by choosing a
+command {"ð|Screen rest":SScreenRest} in the menu or by moving
+the mouse in the right top corner of the screen.
+
+  See also {"Preferences" dialog:PrefDialog}
+
+.topic Autosave
+ Autosave Ü
+  ßßßßßßßßß
+This set of buttons allows to establish modes of automatic saving of
+the configuration and desktop.
+
+  See also {"Preferences" dialog:PrefDialog}
+
+.topic PrefDialog
+ Preferences Ü
+  ßßßßßßßßßßßß
+This dialog window contains the following elements:
+
+ þ{ Look & sound :Look}
+ þ{ Screen mode  :ScreenSize}
+ þ{ Editor       :EditorModes}
+ þ{ Screen rest  :ScreenRest}
+ þ{ Autosave     :Autosave}
+
+  See also {dialog windows:Dialogs}
+
+.topic InterfaceDlg
+ Interface Ü
+  ßßßßßßßßßß
+This {dialog window:Dialogs} allows to set up some subtleties of
+the interface of the {Integrator:Packet} on your taste.
+
+It contains following {check boxes:CheckBoxes}:
+
+ þ The inquiry on confirmation of the exit
+ þ Closing of the editor window by Esc
+ þ Closing of the contents windows by Esc
+   (when current subcontents is root)
+ þ Show the window of confirmation of fulfilment
+   of operation at updating and addition of item
+   of contents
+ þ Inquiry on confirmation of addition of the
+   nonexistent file
+ þ Storing of a position of the cursor in closed
+   windows of the built-ineditor. Positions of the
+   cursor for the last ten closed files are
+   remembered.
+ þ Switching-off of an automatic compression
+   of contentses. If you feel delay of work
+   with contentses, you can switch off an automatic
+   compression and to carry out compression at any
+   moment by a command {"Contents³Compress contents":DCompressDir}.
+ þ Use Alt for transition in the menu
+ þ Use Ctrl and Shift for display of the day of a
+   week and date on hours
+ þ Necessity of change of the current directory on
+   the starting directory of the contents at a choice
+   of a contents window
+
+.topic CreateDirDlg
+Enter a file name, in which created contents will be saved.
+
+  See also
+    {Dialog windows:Dialogs},
+    {Window of input of a file name:FOFileOpenDBox}
+
+By default the new contents file will have extension ".CNT".
+
+The further operations over this contents come true
+with the help of commands the submenu {"Contents":Directories}.
+
+.topic FileExist
+The file already exists.
+
+.topic AskDeleteItems
+The operation of removal is made over highlighted
+item of current subcontents, if in current subcontents there are no
+marked items. Otherwise all marked items will be removed.
+
+If you wish to delete, answer "Yes", otherwise - "No".
+Pressing a key Esc is equivalent to a refusal.
+
+Mean, that the subcontentses will be removed together with all items and
+subcontentses.
+
+.topic GoToLineDialog
+Enter number of the line of the text, on which you want to establish
+the cursor.
+
+  See also {dialog windows:Dialogs}
+
+.topic ErrorOpenDirFile
+Incorrect or absent contents file.
+
+.topic AddFileItems
+ Add item Ü
+  ßßßßßßßßß
+In this dialog window you can enter the information on item, which
+you want to add in current subcontents of the active contents.
+
+The window of addition of item contains the following input lines
+and buttons:
+
+ þ{ a input line for the item's title             :ItemTitleIL}
+ þ{ a input line for the items's file name        :ItemFileNameIL}
+ þ{ a input line for command line parameters      :ItemParamsIL}
+ þ{ a input line for the starting directory       :ItemStartDirIL}
+ þ{ buttons for the setting the item's attributes :ItemAttrCB}
+ þ buttons "Add", "Files", "Directories", "End" and "Help"
+
+After establishing all fields in required to you values,
+press Enter or button "Add". After you will add in the contents
+all items, which wanted, press Esc or button "End".
+
+Pay attention to presence of {combined history buttons:CombHist}
+at {input lines:InputLines} of file names,
+directories and parameters. They allow you to choose an entered string
+from the list of the previous values, and also from the
+list of files or directories (according to specifity of data in
+a particular input line).
+
+  See also {dialog windows:Dialogs}
+
+.topic ItemTitleIL
+ Title Ü
+  ßßßßßß
+In this field you enter a textual line, which will
+represent item in the contents.
+
+If you will not specify the title of item, as a title of item a name of
+a file, appropriate to item, will be accepted.
+
+ See also {"Add item" dialog:AddFileItems}
+
+.topic ItemFileNameIL
+ File name Ü
+  ßßßßßßßßßß
+In this field you enter the file name,
+appropriate to added item. Thus you can specify both complete name,
+and relative path from the current directory.
+
+For the programs and BAT-files, being in directories, included in a
+PATH environment variable, you can specify only the file name
+with extension (without a path).
+
+But thus search of the program before start will occur a
+little bit slowly. To switch off search of the program before start
+you can by removal of the appropriate item attribute.
+
+Pay attention to presence of the {combined history button:CombHist}
+at {input line:InputLines} of file name. It allows you to choose an
+entered string from the list of the previous values, and also from
+the list of files.
+
+ See also {"Add item" dialog:AddFileItems}
+
+.topic ItemParamsIL
+ Parameters Ü
+  ßßßßßßßßßßß
+For the programs and BAT-files in this field you can specify parameters,
+which will be transferred to them at start on a key Enter.
+
+You can transfer them another parameters with the help of a key
+Ctrl+Enter.
+
+Pay attention to presence of the {combined history button:CombHist}
+at {input line:InputLines} of parameters. It allows you to choose an
+entered string from the list of the previous values, and also from
+the list of files.
+
+ See also {"Add item" dialog:AddFileItems}
+
+.topic ItemStartDirIL
+ Start directory Ü
+  ßßßßßßßßßßßßßßßß
+In this field you can specify, which directory make current
+before start of the program or BAT-file, appropriate to item.
+
+By default the starting directory of a table of contents undertakes
+which is possible to set by the command
+{"Contents³Configuration":DDirConfig}.
+
+After fulfilment of the program or BAT-file, appropriate to item,
+the current directory will be restored, if at item the appropriate
+attribute is established.
+
+Pay attention to presence of the {combined history button:CombHist}
+at {input line:InputLines} of start directory. It allows you to choose an
+entered string from the list of the previous values, and also from
+the list of directories.
+
+ See also {"Add item" dialog:AddFileItems}
+
+.topic ItemAttrCB
+ Attributes Ü
+  ßßßßßßßßßßß
+Changing attributes established by default of item, you can operate a
+set of additional operations, made at a choice of item.
+
+ þ{ Search before run                   :SearchBeforeProcess}
+ þ{ Enter = Ctrl+Enter                  :Enter_CtrlEnter}
+ þ{ Restore current directory           :RestCurrDir}
+ þ{ Delay screen                        :ScreenDelay}
+ þ{ Clear keyboard buffer               :ClearKbd}
+ þ{ Autosave editor files               :AutoSaveEdFiles}
+ þ{ Do not number item in the document  :DontNumberItem}
+ þ{ Do not put in the table of contents :DontPutInContents}
+
+ See also {"Add item" dialog:AddFileItems}
+
+.topic SearchBeforeProcess
+ Search before run Ü
+  ßßßßßßßßßßßßßßßßßß
+If this attribute is established, before start of the program the
+{Integrator:Packet} will search for it in the directory. If you
+are sure that the program appropriate to item always is on a disk,
+you can take off this attribute. It will raise speed of start
+of the programs on machines with the slow HD or by work with
+diskettes, and also will allow to set a way of search of the program
+not from current but from the starting directory.
+
+ See also {Attributes:ItemAttrCB}
+          {"Add item" dialog:AddFileItems}
+
+.topic Enter_CtrlEnter
+ Enter = Ctrl+Enter Ü
+  ßßßßßßßßßßßßßßßßßßß
+If this attribute is established, pressing of a key Enter on item (or
+equivalent to a key Enter the choice with the help a mouse or hot
+key) causes action, as pressing Ctrl+Enter. For the programs it
+results in an inquiry of parameters before start, and for
+textual files causes editing by the external text editor (if it
+is given in {configuration of contents:DDirConfig}).
+
+ See also {Attributes:ItemAttrCB}
+          {Window of addition of items:AddFileItems}
+
+.topic RestCurrDir
+ Restore current directory Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+If this attribute is established, after fulfilment of the program the
+directory which was current before its start will be restored.
+The otherwise current directory will not be restored (including, in
+case the starting directory for the program was given).
+
+ See also {Attributes:ItemAttrCB}
+          {"Add item" dialog:AddFileItems}
+
+.topic ScreenDelay
+ Delay screen Ü
+  ßßßßßßßßßßßßß
+If this attribute is established, after fulfilment of the program
+activization of the {Integrator:Packet} will be stopped before
+pressing any key, that enables to see results of work of
+the program, not pressing Alt+F5.
+
+ See also {Attributes:ItemAttrCB}
+          {"Add item" dialog:AddFileItems}
+
+.topic ClearKbd
+ Clear keyboard buffer Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+If on closing-up of the started program there are the pressing
+unnecessary you of keys in the keyboard buffer, establish this
+attribute, and the buffer will be cleared before return in the
+{Integrator:Packet}.
+
+ See also {Attributes:ItemAttrCB}
+          {Window of addition of items:AddFileItems}
+
+.topic AutoSaveEdFiles
+ Autosave editor files Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+If the attribute is established, at a choice of item the command
+{"File³Save all":SaveAll} is automatically carried out.
+
+ See also {Attributes:ItemAttrCB}
+          {"Add item" dialog:AddFileItems}
+
+.topic DontNumberItem
+ Do not number item in the document Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+If the attribute is established, at construction of the document by the
+command {"Contents³Treatment³Collect document":DCollectDocument}
+the appropriate item will enter in the table of contents without number
+and will not be underlined in the text.
+
+ See also {Attributes:ItemAttrCB}
+          {"Add item" dialog:AddFileItems}
+
+.topic DontPutInContents
+ Do not put in the table of contents Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+If the attribute is established, at construction of the document by the
+command {"Contents³Treatment³Collect document":DCollectDocument}
+the appropriate item will not be included in the table of contents.
+
+ See also {Attributes:ItemAttrCB}
+          {"Add item" dialog:AddFileItems}
+
+.topic AddItem_FileNotFound
+File, whose name is specified in the
+{file name input line:InputLines}, is not found.
+
+Confirm the intention to add in subcontents this item (or to replace
+by it), by pressing the key Enter, or press Esc and enter a
+correct file name. Thus you can choose a file name from the list
+of files, by pressing the key Up in the file name input line.
+
+For moving between input lines use keys Tab (forward) and
+Shift+Tab (backward).
+
+The key Enter means the end of input of the information about item.
+
+To disconnect an inquiry on confirmation of addition of a nonexistent
+file you can with the help of the command
+{"Options³Configuration³Interface":OInterface}.
+
+.topic AddItem_EmptyTitle
+The item title is not given.
+
+If you will not specify the name of item, as a name of item the file name,
+appropriate to item, will be accepted, if it is a usual file,
+or name of the contents, if the contents file with exptesion ".CNT"
+is chosen.
+
+Confirm the intention to add in subcontents this item (or to replace
+by it), by pressing the key Enter, or press Esc and enter the title.
+
+For moving between input lines use keys Tab (forward) and
+Shift+Tab (backward).
+
+The key Enter means the end of input of the information about item.
+
+.topic AddSubDirs
+ Add subcontents Ü
+  ßßßßßßßßßßßßßßßß
+In this dialog window you can enter the information on subcontents,
+which you want to create in current subcontents of the active contents.
+
+  See {dialog windows:Dialogs}
+
+.topic AddSubDir_EmptyTitle
+The subcontents title is not given.
+
+Confirm the intention to add this subcontents (or to replace by
+it), by pressing the key Enter, or press Esc and enter the
+title.
+
+For moving between input lines use keys Tab (forward) and
+Shift+Tab (backward).
+
+The key Enter means the end of input of the information about subcontents.
+
+.topic ModifyFileItems
+ Modify item Ü
+  ßßßßßßßßßßßß
+In this dialog window you can edit the information on modified item.
+
+This window works practically the same as the
+{window of addition of items:AddFileItems},
+but it has the button "Replace" instead of the button "Add".
+
+  See {dialog windows:Dialogs}
+
+.topic ModifySubDirs
+ Modify subcontents Ü
+  ßßßßßßßßßßßßßßßßßßß
+In this dialogue window you can edit the title of modified subcontents.
+
+This window works practically the same as the
+{window of addition of subcontentses:AddSubDirs},
+but it has the button "Replace" instead of the button "Add".
+
+  See {dialog windows:Dialogs}
+
+.topic SelectFile
+Choose the file, whose name you want to substitute in the input line.
+
+See also {dialog windows:Dialogs},
+         {Open a File dialog box:FOFileOpenDBox}.
+
+.topic SelectStartDir
+Choose subdirectory, which will be made current each time at
+start of the program, appropriate to added item.
+
+See also {dialog windows:Dialogs},
+         {Change Directory dialog box:FCChDirDBox}.
+
+.topic SelectDir
+Choose subdirectory, whose name you want to substitute in
+the {input line:InputLines}.
+
+See also {dialog windows:Dialogs},
+         {Change Directory dialog box:FCChDirDBox}.
+
+.topic CompressError
+There was the error of compression of the contents.
+Probably, the disk is write-protected or there is not enough space
+on it.
+
+The work will be continued with the not compressed contents.
+
+.topic AskSave
+If you wish to keep brought in changes, answer "Yes",
+otherwise - "No".
+
+To continue editing, press Esc or "Cancel" button.
+
+.topic Dialogs
+ Dialog windows Ü
+  ßßßßßßßßßßßßßßß
+By one of versions of windows in the {Integrator "Packet":Packet}
+so-called dialog windows act. They are intended for management
+of work of various commands of the Integrator. For all lines of the
+menu, where after the name of a command is specified a designation
+"...", presence of the window of dialogue is meant.
+
+The dialog window is always in an active condition on the screen,
+and it differs it from usual windows. It is quite clear, that for
+continuation of work it should be closed.
+It causes use of a key Esc as of an additional opportunity for closing
+such windows.
+
+Inside a window of dialogue is stipulated five basic types of
+elements of management:
+
+  þ{ action buttons     :Buttons}  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+  þ{ check boxes        :CheckBoxes}  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ ³
+  þ{ radio buttons      :RadioButtons}                     ³ ³
+  þ{ input lines        :InputLines}  <ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ ³ ³
+  þ{ lists              :Lists}                   ³ ³ ³
+                                          ³ ³ ³
+ ÉÍ[þ]ÍÍÍÍÍÍÍÍÍÍÍ Replace ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ» ³ ³ ³
+ º                                      º ³ ³ ³
+ º  Text to find                        º ³ ³ ³
+ º  ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÞÝ  º ³ ³ ³
+ º                ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÙ ³ ³
+ º  New text      ³                     º   ³ ³
+ º  ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÞÝ  º   ³ ³
+ º                                      º   ³ ³
+ º   [ ] Case sensitive      Ä¿         º   ³ ³
+ º   [ ] Whole words only     ³         º   ³ ³
+ º   [X] Prompt on replace    ÃÄÄÄÄÄÄÄÄÄ×ÄÄÄÙ ³
+ º   [ ] Replace all         ÄÙ ÚÄÄÄÄÄÄÄ×ÄÄÄÄÄÙ
+ º                 ÚÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄ¿º
+ º                 ³  OK   Ü   Cancel Ü³º
+ º                  ßßßßßßßß   ßßßßßßßß º
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+On the screen from them groups are formed which given
+the appropriate headings - label.
+
+At active group the label is marked by the appropriate colour. The
+transition from one group to other can be carried out with the help
+of the mouse, or pressing the key Tab (forward) or Shift+Tab (backward),
+or by pressing the key with the marked letter of the label.
+
+.topic Buttons
+ Action buttons Ü
+  ßßßßßßßßßßßßßßß
+Pressing on any such button results in fulfilment of
+certain actions.
+
+So, the "OK" button is reserved for the installation of brought in changes
+and transition to fulfilment of a command.
+
+The {"Cancel":CancelBtn} button is intended for end of work of
+the dialog window with an ignoring of all changes.
+
+Pressing the "Help" button opens the help window for a current
+dialog window.
+
+The listed buttons carry out these standard actions for all dialog windows
+of the {Integrator:Packet}.
+
+Some dialog windows have also buttons specific only for them.
+
+For pressing the button it is necessary to click on this button
+the mouse, or to press on the keyboard the key with the marked letter
+of the button (it is possible in a combination to the key Alt), or to
+make the button active with the help of keys Tab (forward) or Shift+Tab
+(backward) and to press Enter.
+
+If any of buttons in the given moment is not active, the pressing of
+a key Enter will entail pressing the so-called "default button",
+which is marked by the special colour.
+
+  See also {dialog windows:Dialogs}
+
+.topic CheckBoxes
+ Check boxes Ü
+  ßßßßßßßßßßßß
+Any dialog window can contain the greater or smaller
+quantity of check boxes as far as it is necessary for
+fulfilment of the command.
+
+The independent buttons are always used for the assignment of conditions
+with a strictly limited choice of initial meanings: actively or inactively.
+
+Designation '[X]' specifies on the fact, that the given condition is in
+an active condition.
+
+When the group of independent buttons on the screen is active, the
+moving on lines can be carried out with the help of arrow keys or
+mouse.
+
+If you wish to change a condition of the particular button,
+you should press the Space or marked letter in the line of the condition
+name.
+
+  See also {dialog windows:Dialogs}
+
+.topic RadioButtons
+ Radio buttons Ü
+  ßßßßßßßßßßßßßß
+The dependent buttons as against independent are intended for the
+assignment of conditions with a plenty of possible meanings.
+
+Each group answers for installation only one conditions, the name of
+which is carried out in the group heading.
+
+The current meaning in group is designated on the screen '()'.
+
+If you wish to establish new value, you should make
+the group active and to make in it the choice with the help of the
+mouse, arrow keys or marked letters.
+
+  See also {dialog windows:Dialogs}
+
+.topic InputLines
+ Input lines Ü
+  ßßßßßßßßßßßß
+In many dialog windows you could be necessary to enter the text for
+the assignment of the specific condition of fulfilment of the command.
+With this purpose input lines are used. To make active the input line is
+possible by a usual way, thus in a field there will be the cursor.
+
+You can use any symbolical keys, Home, End, Backspace, Del, Ins and
+some other for input of a necessary line.
+
+If further to press Enter, it will result in closing a window
+of dialogue and subsequent fulfilment of a command. Therefore if it
+is necessary to you to set in a dialog window any another information,
+it is necessary to finish input of a line by pressing of the key Tab.
+
+If to the right of a field of input the special button of a history
+is displayed 'ÞÝ', it specifies an opportunity of the
+manipulation to the list of the previous values for the given
+field. In this list all lines are remembered which ever were entered in a
+field of input and which can use at any moment. Due to this convenient
+opportunity easily to get rid of unnecessary practice of recurrence of input
+from the keyboard of earlier entered lines.
+
+To open a window with the list of the previous values,
+it is enough, being in the input line, to press the key Dn
+or to click any key of the mouse on the button 'ÞÝ'.
+
+With the help of keys of moving of the cursor or double click of the
+mouse it is possible to easily choose any value from
+the list, then the window will be closed, and the chosen line will be
+displayed in a field of input.
+
+ Attention !!!
+ ~~~~~~~~~~~~~
+Some dialogue windows have {combined history buttons:CombHist},
+which look so: 'ÞÝ'.
+
+  See also {dialog windows:Dialogs}
+
+.topic CombHist
+ Combined history buttons Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßß
+Some dialog windows have combined buttons of a history, which look
+so: 'ÞÝ'.
+
+They differ from usual history buttons. Click on them by
+the right button of the mouse or pressing of a key Up in the input line
+entail opening the list of files, parameters or directories
+depending on specifity of the information entered in the line.
+
+To open a window with the list of the previous values,
+it is necessary, being in the input line, to press the key Dn or to
+click the left key of the mouse on the button 'ÞÝ'.
+
+  See also {input lines:InputLines}
+           {dialog windows:Dialogs}
+
+.topic Lists
+ Lists Ü
+  ßßßßßß
+The lists are intended for a choice of various necessary
+values (names of files and subdirectories, names of
+windows and other) from listed set.
+
+The current value in the list is always marked by
+the appropriate colour. To make active the list, it is enough to
+establish the mouse on any site of the window and to press the button
+or to use the key Tab. On the screen there will be the cursor in the
+line with current value, moving which with the help of the mouse or
+keys with arrows, it is possible to choose any new
+value and to press Enter or double click the mouse.
+
+  See also {dialog windows:Dialogs}
+
+.topic WindowsHelp
+ Windows of the Integrator Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+Most of what you see and do in the {Integrator "Packet":Packet}
+environment happens in a window.
+
+A window is a bordered screen area that you can move, resize, zoom,
+rearrange, close, and open.
+
+Integrator makes it easy to spot the active window; it always has a
+double-lined border around it, and it always has these elements:
+
+     Close                  Zoom
+      box                    box
+       ³                      ³
+       V                      V
+    ÉÍ[þ]ÍÍÍÍÍ Title Bar ÍÍÍÍ[³]Í»
+    º                            ±
+    º                            ±
+    º                            ±
+    º                            þ
+    º                            ±
+    º                            ±<ÄÄÄÄ¿
+    º                            ±     ³
+    ÈÍ±±þ±±±±±±±±±±±±±±±±±±±±±±ÍÍ¼     ³
+                     ^                 ³
+                     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+                                       ³
+                                 Scroll Bars
+
+You can have any number of windows open in Borland Pascal (memory allowing),
+but only one window can be active at any time. The active window is the one
+that you're currently working in.
+
+Generally, any command you choose or text you type applies only to the
+active window.
+
+If your windows overlap, the active window is always the topmost one (the
+one on top of all the others).
+
+The first nine windows you open in Integrator display a window number in
+the title bar.
+
+Alt-0 brings up the Window List dialog box, which lists all opened
+windows.
+
+To make a window active (topmost), press Alt and the window number.
+
+Edit windows also show the cursor's position (the current line and column
+number) as YY:XX in the bottom of the Edit window frame, where YY is the
+line number and XX is the column number.
+
+About work with dialog windows - see {Dialog windows:Dialogs}.
+
+.topic RunWithParams
+ Start with parameters Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+Enter parameters, which you want to transfer to the started program.
+
+You can choose them from the {list of files:FOFileOpenDBox} or
+from the {list of parameters:ParamList}.
+
+Choice from these lists on the key Enter will result in
+immediate start of the program with transfer to it of
+parameters. For copying parameters from the list in
+the {input line:InputLines} use a combination of keys Shift+Enter.
+
+At a choice by the mouse the key Shift works similarly.
+
+  See also {Dialog windows:Dialogs}
+
+.topic WrongPalette
+The colour palette cannot be used in a black-and-white or monochrome
+videomode.
+
+This error arises at attempt to read from the configuration file
+or the palette file a colour palette, when the monitor works in a
+black-and-white or monochrome videomode.
+
+.topic ParamList
+ List of parameters Ü
+  ßßßßßßßßßßßßßßßßßßß
+Choice from this list on the key Enter will result in immediate
+start of the program with transfer to it of parameters. For
+copying parameters from the list in the {input line:InputLines} use
+a combination of keys Shift+Enter.
+
+At the choice by the mouse the key Shift works similarly.
+
+To edit the list of parameters to item it is possible with the help
+of the command {"Edit parameters":DEditParameters}.
+
+  See also {dialog windows:Dialogs}
+
+.topic FileItemNotFound
+File, appropriate to chosen item, is not found, or file name is not given.
+
+You can use a command {"Contents³Modify":DModifyItems} for modifying
+the item description.
+
+.topic CommonParameters
+ Common parameters Ü
+  ßßßßßßßßßßßßßßßßßß
+Type a command line, which you want to transfer
+to the programs of the current active contents at start by default.
+
+Using the key Ctrl+Enter for start of the program, the command
+line, given by default, will be possible to edit.
+
+  See also {dialog windows:Dialogs}
+
+.topic AskReload4Mouse
+You have changed the mode of work of the mouse with usual on graphic.
+This change will conceive effect only after a reloading of the
+{Integrator:Packet}.
+
+If you want to reload the Integrator now, press Enter,
+otherwise press Esc.
+
+In the second case the graphic Mouse will join after a repeated load
+of the module "PackMain", which occurs after run of any program
+from the Integrator and in the beginning of each session to the
+Integrator.
+
+.topic MoveItemsDlg
+ Move items Ü
+  ßßßßßßßßßßß
+Choose subcontents, in which you want to transfer marked items and press
+the button "OK" with the help of the mouse, or, by making its
+active pressing of the key Tab, press Enter, or press a key <K>
+(latin).
+
+The items will be transferred in subcontents chosen by you by way of
+their presence in initial subcontents and are inserted after
+item highlighted in this dialog window.
+
+For the top item in root subcontents an opportunity to insert items
+before it is available.
+
+  See also {dialog windows:Dialogs}
+
+.topic ErrorProcessDirFile
+Error by work with contents file.
+
+Most likely it is caused by failure of the disk drive or spoiled
+contents file.
+
+.topic AskInsertBefore
+If you want to insert items or subcontentses before the top item of
+root subcontents, answer "Yes".
+
+If you want, as it is usual, to insert after highlighted item, answer
+"No".
+
+If you don't know, what do you want, press Esc.
+
+  See also {dialog windows:Dialogs}
+
+.topic Ask4OverwriteHK
+This hot key already is given to other item of the contents.
+
+.topic SetHKDlg
+ Set a hot key Ü
+  ßßßßßßßßßßßßßß
+Choose a hot key, which you want to give to highlighted
+item of current subcontents. It is the key with the latin letter or
+figure.
+
+For a cancellation of the earlier nominated hot key press the button
+"Delete".
+
+Subsequently you can use a chosen key for fast access to the
+appropriate item, irrespective of, whether subcontents, in which
+this item is situated, is current, and the contents is active
+(See {use of hot keys:How2UseHotKeys}).
+
+  See also {dialog windows:Dialogs}
+
+.topic How2UseHotKeys
+ How to use hot keys Ü
+  ßßßßßßßßßßßßßßßßßßßß
+You can use a hot key (if it is established) for fast access to
+the appropriate item, irrespective of, whether subcontents, in
+which this item is situated, is current, and the contents is active.
+
+For this purpose it is necessary to you to press keys Ctrl and Alt in
+a combination with the hot key established by you. The current register
+of the keyboard thus has not importance.
+
+Thus the search of item occurs in all open tables of contents, since
+top on the screen.
+
+If you want to transfer to the program, started on a hot key,
+parameters, use a combination of keys Shift and Alt with an
+established hot key. For a textual file this combination of keys will
+start the external text editor.
+
+In case the contents window, in which there is the
+required item, is active, you can press a hot key, not
+pressing keys Ctrl and Alt. As well as earlier, to be switched on the
+latin register it is not certain. Thus the search will occur only in
+an active table of contents, and the hot keys of tables of contents,
+being in inactive windows, are ignored.
+
+Care of parameters to the started program or editing of a textual
+file in the external text editor press a hot key in a combination to
+a key Shift.
+
+If you want nevertheless to search for item on a hot key in all
+tables of contents, use a combination of a hot key to keys Ctrl and
+Alt (or Shift and Alt - see above).
+
+The list of accessible hot keys you can receive by the command
+{"Contents³Hot keys³List":DHotKeysList}.
+
+.topic HotKeysList
+ Hot keys list Ü
+  ßßßßßßßßßßßßßß
+In this {dialog window:Dialogs} you can see the list
+of accessible in the present moment hot keys for items of contentses.
+
+Choice of item from this list you can carry out by set of various ways:
+
+þ To choose necessary item by cursor arrows and to press Enter for
+usual processing and Shift+Enter for start of the program with an
+inquiry of parameters or editing of a file by the external text
+editor.
+
+þ To double click the mouse on necessary item for usual
+processing or all the same, but at a pressed key Shift - for start of the
+program with an inquiry of parameters or editing of a file by the external
+text editor.
+
+þ To press the hot key appropriate to item for usual processing or,
+but in a combination with a key Shift - for start of the program with
+an inquiry of parameters or editing of a file by the external text
+editor.
+
+It is possible to effectively use hot keys without using the
+list - see {use of hot keys:How2UseHotKeys}.
+
+.topic DirConfDialog
+ Contents' configuration Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+This window allows you to establish a configuration of an active
+table of contents and includes the following elements:
+
+ þ{ Title                     :DirTitle}
+ þ{ Protection type           :ProtType}
+ þ{ Password                  :Password}
+ þ{ External text editor      :ExtEditor}
+ þ{ Start directory           :StartDir}
+ þ{ Random file name template :RndNameTpl}
+
+  See also {dialog windows:Dialogs}
+
+.topic InputPWDlg
+ Input password Ü
+  ßßßßßßßßßßßßßßß
+The contents is protected. It is necessary to enter the password to
+work with it.
+
+Type of protection of the contents and the password for access
+is possible to change by the command {"Contents³Configuration":DDirConfig}.
+
+.topic InvPassword
+ Invalid password Ü
+  ßßßßßßßßßßßßßßßßß
+As you already, probably, have guessed, you were mistaken at input of
+the password. If you know the password, try once again.
+
+If you have forgotten the password, try it to recollect, because there is no
+other way to receive access to a protected contents.
+
+.topic AskSetProtect
+If you are sure, that you want to restore write protection of the active
+contents, press Enter, otherwise press Esc.
+
+Irrespective of, whether carry out you this command, at the following
+start of the {Integrator:Packet} the protection of the active
+contents will be established.
+
+The enemy will not pass !
+
+.topic ExtEditorNotFound
+The external text editor is not given or is given incorrectly.
+
+If you want to edit by the built-in editor (that too quite not
+bad), press Enter, otherwise press Esc.
+
+To change a name of the external text editor it is possible with the
+help of the command {"Contents³Configuration":DDirConfig}.
+
+.topic DirTitle
+ Title Ü
+  ßßßßßß
+In this {input line:InputLines} you can set the title of the
+contents, which will be shown on a framework of the
+{contents window:DirWindow} instead of the name of the
+appropriate contents file.
+
+  See also {Contents' configuration:DirConfDialog}
+
+.topic ProtType
+ Protection type Ü
+  ßßßßßßßßßßßßßßßß
+With the help of this {radio buttons:RadioButtons} you can choose a
+protection type of the active contents.
+
+þ None - the contents is not protected.
+
+þ Write protection - the contents freely opens, but is modified
+under the password. For updating such contents it is
+necessary previously to carry out the command
+{"Contents³Disable/enable protection":DSetProtect}.
+
+þ Full protection - for opening a table of contents it is required to enter
+the password. The password is also required to be entered and at
+restoration of {contents window:DirWindow} from a desktop file
+at a load of the Integrator or on the command
+{"Options³Retrieve desktop":ORetrieveDesktop}, so you can be quite sure,
+that anybody except you can not receive access to your information.
+
+  See also {Contents' configuration:DirConfDialog}
+
+.topic Password
+ Password Ü
+  ßßßßßßßßß
+In this {input line:InputLines} you can set the password,
+which will be used for protection of the active contents.
+
+Mean, that the lower case and capital letters in the password are
+considered different.
+
+  See also {Contents' configuration:DirConfDialog}
+
+.topic ExtEditor
+ External text editor Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+In this {input line:InputLines} you can set the file name of the
+external text editor, which will be used for editing items of the
+active contents, appropriate to textual files, at their
+choice with the help of keys Ctrl+Enter (or Shift+Enter).
+
+  See also {Contents' configuration:DirConfDialog}
+
+.topic RndNameTpl
+ Random file name template Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+In this {input line:InputLines} you can set the template for
+automatically generated file names for added items.
+
+  See also {Contents' configuration:DirConfDialog}
+
+.topic StartDir
+ The starting directory Ü
+  ßßßßßßßßßßßßßßßßßßßßßßß
+In this {input line:InputLines} you can set the starting
+directory for the contents. This starting directory will
+increase to a way of all items, for which own starting directory is
+not given.
+
+You can enter "*" in this input line to specify that the starting
+directory is the directory, in which there is the contents file situated.
+
+  See also {Contents' configuration:DirConfDialog}
+
+.topic TargetIsntSpecified
+It is necessary previously to specify the target contents window
+with the help of the command {"Editor³Mark target":MarkTarget}
+for fulfilment of this command.
+
+.topic CantCopy2Itself
+It is impossible to copy or to transfer subcontents to it
+subcontents.
+
+Logically, isn't it ?
+
+.topic MakeDocDlg
+ Collect document Ü
+  ßßßßßßßßßßßßßßßßß
+In this dialog window you can set the information, managing process
+of construction of the linear textual document from the hierarchical
+document, described by contents of the {Integrator:Packet}.
+
+The document will be entered with marked items of current
+subcontents of the active contents. If any item is not marked,
+the document will be entered with item highlighted by the cursor.
+
+Thus you will use the following elements of management:
+
+ þ{ document file name input line                               :MDDocName}
+ þ{ title page file name input line                             :MDTitlePage}
+ þ{ buttons of management by numbering of pages                 :MDPageNumbers}
+ þ{ buttons of management by the annotations output             :MDAnnot}
+ þ{ margins width input lines                                   :MDMargins}
+ þ{ buttons of management by formation of the table of contents :MDContents}
+ þ{ buttons of management by other modes                        :MDOtherButtons}
+ þ{ page size input line                                        :MDPageSize}
+ þ{ the table of contents indents width input line              :MDIndentWidth}
+ þ{ top fields size input line                                  :MDUpMargin}
+ þ{ heading underline types input line                          :MDUnderlines}
+ þ{ initial page number input line                              :MDPageBeg}
+ þ{ initial heading number input line                           :MDNumBeg}
+
+  See also {dialog windows:Dialogs}
+
+.topic MDDocName
+ Target document file name Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+In this input line you should specify the file in which
+generated document will be saved.
+
+Pay attention to presence of {combined history button:CombHist}
+at {input line:InputLines}. It allows you to choose an entered string
+from the list of the previous values, and also from the
+list of files.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDTitlePage
+ Title page file name Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+In this input line you may specify the in which
+title page of your document is contained.
+
+If you will enter here file name, the contents of this file will
+be written down in the beginning of the document file.
+
+Pay attention to presence of {combined history button:CombHist}
+at {input line:InputLines}. It allows you to choose an entered string
+from the list of the previous values, and also from the
+list of files.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDPageNumbers, _pn1, _pn2
+ Page numbers Ü
+  ßßßßßßßßßßßßß
+With the help of this set of {radio buttons:RadioButtons} you
+may choose one from two ways of page numbering - from above or
+from below of a sheet - or to refuse numbering.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDAnnot, _a1, _a2
+ Annotations Ü
+  ßßßßßßßßßßßß
+With the help of this set of {radio buttons:RadioButtons} you
+may choose one from two ways of the output of the annotations to
+items of the {Integrator:Packet} contents in a formed
+document file or to refuse the output of the annotations.
+
+The annotations can be written down in the table of contents of the
+document, and it is possible - in the text of the document directly
+before the text of the appropriate item.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDMargins
+ Margins Ü
+  ßßßßßßßß
+In these {input lines:InputLines} you can specify the sizes of
+the left and right margins of your document.
+
+These values of margins will be taken into account by
+the {Integrator:Packet} at formation of the document.
+
+Pay attention on the fact, that the Integrator does not make
+alignment of the  document. It only takes into account, that the
+elements of your document have the margins specified by you and
+appropriate amount formats the table of contents of the document, numbers
+of pages and texts of headings.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDContents, _c1, _c2
+ Contents Ü
+  ßßßßßßßßß
+With the help of this set of {radio buttons:RadioButtons} you
+may choose a place in the document, in which the table of contents of the
+document will be placed - after a title sheet (if it is not
+specified, in the beginning of the document) or at the end of the
+document.
+
+You can also refuse inclusion of the table of contents in the document.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDOtherButtons, _o1, _o2, _o3, _o4, _o5, _o6
+ Other modes Ü
+  ßßßßßßßßßßßß
+With the help of this set of {radio buttons:CheckBoxes} you
+may specify, whether number on the first page will be printed,
+whether headings will be centred, and whether auto numbering
+of headings will conduct.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDPageSize
+ Page size Ü
+  ßßßßßßßßßß
+In this {input line:InputLines} you can specify the page size
+of your document.
+
+If you will enter 0 in this field, division on pages
+will not be carried out.
+
+If you will specify different from zero value (not too small, certainly),
+the document will be broken on pages of the given size.
+
+Thus symbols of the end of page, included in the text of elements of
+the hierarchical document and the title sheet, are taken into account
+also.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDIndentWidth
+ Indents width Ü
+  ßßßßßßßßßßßßßß
+In this {input line:InputLines} you can specify width of
+indents, which will be added to headings of subchapters in a table of
+contents of the document.
+
+The indents make the table of contents of the document more evident.
+
+Specify 0 in this field, if you want to refuse indents.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDUnderlines
+ Underlines Ü
+  ßßßßßßßßßßß
+In this {input line:InputLines} you can specify symbols,
+which will underline headings of a various level in the text of the
+document.
+
+The first symbol in the input line concerns to top level,
+second - to second, etc. If for any level the type of a underline
+is not specified, or blank, headings of this level
+will not be underlined, and will be separated from the text by an
+empty line.
+
+If you want completely to refuse underlines, enter one blank in this
+input line.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDUpMargin
+ Upper indent Ü
+  ßßßßßßßßßßßßß
+In this {input line:InputLines} you can specify, how many
+empty lines will be left in the beginning of each page at formation
+of the document.
+
+These lines are not taken into account at calculation of page length.
+
+This opportunity is convenient, if at a printing of the document it will
+be necessary to you to have fields of the identical size in the
+beginning of each page.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDPageBeg
+ Pages from Ü
+  ßßßßßßßßßßß
+In this {input line:InputLines} you can specify, which
+number will be received by the first page of the generated
+document.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic MDNumBeg
+ Numbers with Ü
+  ßßßßßßßßßßßßß
+In this {input line:InputLines} you can specify, which
+number will receive the first heading of the generated document.
+
+  See also {"Collect document" dialog:MakeDocDlg}
+
+.topic InvValue
+Incorrect value in the input line.
+
+Press ESC and enter value from the specified range.
+
+.topic ErrorCreateDoc
+Error at creation of the doxument file.
+
+Convince that you have correctly set the file name, and also that
+there is enough free space on the disk.
+
+.topic SetAlarm
+ Set alarm clock Ü
+  ßßßßßßßßßßßßßßßß
+The time is necessary for specifying in a format "HH:MM", not
+missing leading zero, for example, "09:11".
+
+The signal of the alarm clock will be audible not only by work
+directly in the {Integrator:Packet}, but also at start from
+it of any program.
+
+If at the moment of operation of the alarm clock you will be in
+environment of the Integrator, you will also see a window
+with the information, which you have typed in the input line
+"Reminder text" at installation of the alarm clock.
+
+Otherwise this window will appear at the first after
+operation of the alarm clock return in the environment of the
+Integrator.
+
+For a switching off of the alarm clock press the button "Reset".
+
+At the exit from the Integrator the alarm clock is switched
+off automatically, therefore in the following session with the
+Integrator it will be necessary to you to establish it anew.
+
+Mean, that if you work on XT, you cannot use an alarm clock. The
+alarm clock not works under OS/2.
+
+  See also {dialog windows:Dialogs}
+
+.topic AlarmInfo
+Well, what to you is unintelligible ?
+You have started an alarm clock - here it has rung out.
+
+.topic MenuByExt
+ The menu on extension Ü
+  ßßßßßßßßßßßßßßßßßßßßßß
+Choose necessary action and press Enter.
+
+Esc = refusal.
+
+With the help of commands {"Global extension list edit":DGlobalExt}
+and {"Local extension list edit":DLocalExt} you can modify the menu
+for each extension or mask of a file name.
+
+.topic DskListDlg
+ Desktops' stack Ü
+  ßßßßßßßßßßßßßßßß
+In the desktops' list you can see names of the last ten
+desktop files and to choose any from them for a load.
+
+  See also {dialog windows:Dialogs}
+
+.topic CantEditAnn
+The size of the annotation exceeds as much as possible allowable for
+this version of the Integrator. Editing the annotation is impossible.
+
+Use the DPMI-version of the Integrator.
+
+.topic AskTransposeFile
+To item a file is connected. If you will transform item to
+subcontents, you will lose the reference to this file and
+{the list of parameters:ParamList} (if it is).
+
+.topic CantTranspFullDir
+The non-empty subcontents cannot be transformed into item.
+
+.topic ItemHasntName
+The item hasn't a name.
+
+The item name is set in the first line of the annotation to this item
+by a line of a kind:
+
+  .Name ItemName
+
+.topic InsRefDlg
+Choose item, reference on which you want to insert, and press the
+"OK" button with the help of the mouse, or, by making its active
+pressing of the key Tab, press Enter, or press a key <K> (latin).
+
+.topic ComRecAboutCollDoc
+ The recommendations for construction of the documents Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+At construction of the documents it is possible to mark in the text a
+beginning and end of a drawing, to prevent its break on pages.
+Insert into the text a line ".db" and ".de" for the
+indication of a beginning and the end of a drawing accordingly.
+
+The Integrator supports automatic numbering of drawings and reference
+to them and to items of the document.
+
+Drawing or the item of the document, on which in the document it is
+necessary to refer, should have the unique identifier. The
+identifiers of drawings are set by the second word after a key word
+".db", the identifiers of items of the document are set in the first
+line of the annotation to this item by the second word after a key word
+".name". The identifier can contain any symbols, except a blank. The
+large and small latin letters do not differ.
+
+The reference to a drawing or item is made out in the document as
+follows:
+
+           [  ]:Identifier
+
+Here Identifier - identifier of item or drawing. At construction of
+the document it together with a previous colon and following for
+it blank will be removed from the text, and the space between
+opening and closing square brackets will be allocated under
+number of a drawing or item of the document (the square brackets can
+too be engaged by number and in the document do not join).
+
+       Example 1:
+
+     For this purpose it is necessary simply to use opportunities on
+  copying blocks of the text through Clipboard (See []: IntEd ).
+
+                     < End of an example 1>
+
+       Example 2:
+
+   .db Examp
+
+        < Drawing or table >
+
+       Fig. [ ]:Examp - window of installation of colours
+   .de
+                     < End of an example 2>
+
+Lines, beginning with ";", will not be transformed, but initial ";"
+is rejected.
+
+Each drawing automatically receives the serial number.
+
+To not give number to any fragment of the text, made
+between the lines ".db" and ".de", specify as the identifier of a
+drawing "-" (minus).
+
+For a fast and convenient insert of the reference on item in a
+textual file in a window of the built-in editor, press Ctrl+F8 or
+choose the command {"Editor³Insert reference":InsRef}.
+
+At construction of the document it is recommended to include the
+"Show protocol" mode for duly detection of the unresolved references.
+
+.topic Macro_Nothing2Del
+There is no saved macros.
+
+.topic Macro_ExistanceMacro
+To chosen combination of keys is already nominated a macro.
+You can replace it on new or to refuse.
+
+.topic m_WinCreateMacro
+ Record macro Ü
+  ßßßßßßßßßßßßß
+Press a combination of keys, which you want to put in conformity a macros.
+
+It can be one of combinations Ctrl+Shift+F1..Ctrl+Shift+F10.
+
+.topic m_WinPlayMacro
+ Play macro Ü
+  ßßßßßßßßßßß
+Choose a combination of keys and press Enter for reproduction of the
+macro appropriate to it.
+
+.topic m_WinRemoveMacro
+ Delete macro Ü
+  ßßßßßßßßßßßßß
+Choose a combination of keys and press Enter for removal of
+the macro appropriate to it.
+
+.topic Macro_WarnDelMac
+If you really want to remove all saved macro, press Enter,
+otherwise press Esc.
+
+.topic MaxUnregDocSize
+The maximum size of the constructed document in the unregistered version of
+the {Integrator "Packet":Packet} cannot exceed 13K.
+
+To use ALL opportunities of the Integrator, become
+{the registered user:Shareware}.
+
+.topic SelSD4CrossRef
+Choose subcontents for installation of the reference.
+
+.topic UseWinClip
+Windows Clipboard is used.
+Use the appropriate windows application to view
+the contents of the clipboard.

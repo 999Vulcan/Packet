@@ -1,0 +1,1501 @@
+;
+; Copyright (C) 1994-96 by VULCAN
+;
+; Интегратор "Packet"
+;
+; Файл сообщений на английском языке
+;
+
+; ***************************************************
+; * При переводе на другой язык не менять сигнатуру *
+; * и порядок следования фраз                       *
+; ***************************************************
+
+; Префикс 'C' - для управляющих строк ( строк с тильдой - '~' )
+
+
+.Sign Integrator "Packet". Version 4.1. Language File.
+
+; *******************************************************
+; *                  Имя файла помощи                   *
+; *******************************************************
+.Phrase HelpFileName
+P_HLP_EN.HLP
+
+; *******************************************************
+; *                Соответствие клавиш                  *
+; *******************************************************
+
+.Phrase LatUp
+QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./~
+.Phrase CyrUp
+ЙЦУКЕНГШЩЗХ]ФЫВАПРОЛДЖЭЯЧСМИТЬБЮ/Ъ
+.Phrase CyrLow
+йцукенгшщзх]фывапролджэячсмитьбю/ъ
+;.Phrase AltKeys
+;ЙЦУКЕНГШЩЗХЪ  ФЫВАПРОЛДЖЭ   ЯЧСМИТЬ
+
+; *******************************************************
+; *                  Названия клавиш                    *
+; *******************************************************
+
+.Phrase KF1
+F1
+.Phrase KF2
+F2
+.Phrase KF3
+F3
+.Phrase KF4
+F4
+.Phrase KF5
+F5
+.Phrase KF6
+F6
+.Phrase KF7
+F7
+.Phrase KF8
+F8
+.Phrase KF9
+F9
+.Phrase KF10
+F10
+
+.Phrase KAltF1
+Alt+F1
+.Phrase KAltF2
+Alt+F2
+.Phrase KAltF3
+Alt+F3
+.Phrase KAltF4
+Alt+F4
+.Phrase KAltF5
+Alt+F5
+.Phrase KAltF6
+Alt+F6
+.Phrase KAltF7
+Alt+F7
+.Phrase KAltF8
+Alt+F8
+.Phrase KAltF9
+Alt+F9
+.Phrase KAltF10
+Alt+F10
+
+.Phrase KAlt0
+Alt+0
+
+.Phrase KAltBksp
+Alt+Bksp
+.Phrase KAltEqual
+Alt+Equal
+.Phrase KAltMinus
+Alt+Minus
+
+.Phrase KCtrlF1
+Ctrl+F1
+.Phrase KCtrlF2
+Ctrl+F2
+.Phrase KCtrlF3
+Ctrl+F3
+.Phrase KCtrlF4
+Ctrl+F4
+.Phrase KCtrlF5
+Ctrl+F5
+.Phrase KCtrlF6
+Ctrl+F6
+.Phrase KCtrlF7
+Ctrl+F7
+.Phrase KCtrlF8
+Ctrl+F8
+.Phrase KCtrlF9
+Ctrl+F9
+.Phrase KCtrlF10
+Ctrl+F10
+
+.Phrase KCtrlP
+Ctrl+P
+
+.Phrase KShiftF1
+Shift+F1
+.Phrase KShiftF2
+Shift+F2
+.Phrase KShiftF3
+Shift+F3
+.Phrase KShiftF4
+Shift+F4
+.Phrase KShiftF5
+Shift+F5
+.Phrase KShiftF6
+Shift+F6
+.Phrase KShiftF7
+Shift+F7
+.Phrase KShiftF8
+Shift+F8
+.Phrase KShiftF9
+Shift+F9
+.Phrase KShiftF10
+Shift+F10
+.Phrase KShiftIns
+Shift+Ins
+.Phrase KShiftDel
+Shift+Del
+.Phrase KCtrlIns
+Ctrl+Ins
+.Phrase KCtrlDel
+Ctrl+Del
+.Phrase KCtrlQF
+Ctrl+Q+F
+.Phrase KCtrlQA
+Ctrl+Q+A
+.Phrase KCtrlL
+Ctrl+L
+.Phrase KAltX
+Alt+X
+.Phrase KShift
+Shift
+.Phrase KEnter
+Enter
+.Phrase KEsc
+Esc
+.Phrase KIns
+Ins
+.Phrase KDel
+Del
+.Phrase KGrayPlus
+Gray Plus
+.Phrase KCtrlAlt
+Ctrl+Alt
+.Phrase KShiftSlash
+Shift+/
+
+.Phrase Days
+Su Mo Tu We Th Fr Sa
+
+.Phrase January
+January
+.Phrase February
+February
+.Phrase March
+March
+.Phrase April
+April
+.Phrase May
+May
+.Phrase June
+June
+.Phrase July
+July
+.Phrase August
+August
+.Phrase September
+September
+.Phrase October
+October
+.Phrase November
+November
+.Phrase December
+December
+
+; *******************************************************
+; *                   Пункты меню                       *
+; *******************************************************
+.Phrase M_
+~Ё~
+.Phrase MAbout
+~A~bout
+.Phrase MRefreshDisplay
+~R~efresh display
+.Phrase MScreenRest
+~S~creen rest
+.Phrase MAsciiTab
+Ascii ~t~able
+.Phrase MCalculator
+~C~alculator
+.Phrase MCalendar
+Ca~l~endar
+.Phrase MAlarmClock
+Alar~m~ clock
+
+.Phrase MFiles
+~F~ile
+.Phrase MNewFile
+New ~f~ile
+.Phrase MNewDir
+New ~c~ontents
+.Phrase MOpen
+~O~pen
+.Phrase MOpenLoc
+O~p~en
+.Phrase MSave
+~S~ave
+.Phrase MSaveLoc
+Sa~v~e
+.Phrase MSaveAs
+Save ~a~s
+.Phrase MSaveAsLoc
+Sav~e~ as
+.Phrase MSaveAll
+Save a~l~l
+.Phrase MSaveAllLoc
+S~a~ve all
+.Phrase MChangeDir
+C~h~ange directory
+.Phrase MDosShell
+~D~OS Shell
+.Phrase MDosCmd
+DOS C~o~mmand
+.Phrase MUserScreen
+~U~ser screen
+.Phrase MExit
+E~x~it
+
+.Phrase MDirectories
+~C~ontents
+.Phrase MAddFileItems
+Add ~i~tems
+.Phrase MAddSubDirs
+Add ~s~ubcontents
+.Phrase MModifyItems
+~M~odify
+.Phrase MDeleteItems
+~D~elete items
+.Phrase MRemoveItems
+~R~emove items and files
+.Phrase MMoveItems
+M~o~ve items
+.Phrase MSelectItem
+S~e~lect item
+.Phrase MTranspose
+T~u~rn
+.Phrase MAnnotate
+~A~nnotate
+.Phrase MTreatment
+~T~reatment
+.Phrase MEditFile
+Edit ~f~ile
+.Phrase MCollectDocument
+C~o~llect document
+.Phrase MInsertReference
+I~n~sert reference
+.Phrase MEditParameters
+Edit ~p~arameters
+.Phrase MCommonParameters
+~C~ommon parameters
+.Phrase MCreateBatch
+Co-t~r~eatment
+.Phrase MGlobalExt
+~G~lobal extension list edit
+.Phrase MGLocalExt
+~L~ocal extension list edit
+.Phrase MDirConfig
+Confi~g~uration
+.Phrase MSetProtect
+Disa~b~le/enable protection
+.Phrase MCompress
+~C~ompress contents
+.Phrase MOpenCopy
+O~p~en a copy
+.Phrase MCrossRef
+Add crossre~f~erence
+.Phrase MHotKeys
+~H~ot keys
+.Phrase MSetHotKey
+~S~et/reset
+.Phrase MHotKeysList
+~L~ist
+.Phrase MHotKeysListLoc
+~H~ot keys list
+
+.Phrase MEdit
+~E~ditor
+.Phrase MUndo
+~U~ndo
+.Phrase MCut
+Cu~t~
+.Phrase MCopy
+~C~opy
+.Phrase MPaste
+~P~aste
+.Phrase MClear
+C~l~ear
+.Phrase MShowClip
+Show Clip~b~oard
+.Phrase MMarkTarget
+~M~ark target
+.Phrase MLastDocument
+L~a~st document
+
+.Phrase MSearch
+~S~earch
+.Phrase MFind
+~F~ind
+.Phrase MReplace
+~R~eplace
+.Phrase MSearchAgain
+Search ~a~gain
+.Phrase MGoToLineNum
+~G~o to line number
+
+.Phrase MWindows
+~W~indow
+.Phrase MVerticalTile
+~V~ertical tile
+.Phrase MHorisontalTile
+~H~orisontal tile
+.Phrase MCascade
+C~a~scade
+.Phrase MCloseAll
+Cl~o~se all
+.Phrase MResize
+~S~ize/Move
+.Phrase MZoom
+~Z~oom
+.Phrase MNext
+~N~ext
+.Phrase MPrevious
+~P~revious
+.Phrase MClose
+~C~lose
+.Phrase MAnnWindow
+Annotation's ~w~indow
+.Phrase MAnnWindowLoc
+Annotation's ~w~indow
+.Phrase MOutputWindow
+O~u~tput window
+.Phrase MRenumber
+~R~enumber
+.Phrase MWinList
+~L~ist
+.Phrase MWinListLoc
+Wi~n~dow list
+
+.Phrase MOptions
+~O~ptions
+.Phrase MMacro_
+~M~acro
+.Phrase MConfig
+~C~onfiguration
+.Phrase MConfigLoc
+Confi~g~uration
+.Phrase MPreferences
+~P~references
+.Phrase MInterface
+~I~nterface
+.Phrase MMouse
+~M~ouse
+.Phrase MColors
+~C~olors
+.Phrase MLanguage
+~L~anguage
+.Phrase MWorkDir
+~W~ork directory
+.Phrase MSaveDsk
+~S~ave desktop
+.Phrase MRetrDsk
+~R~etrieve desktop
+.Phrase MSaveConf
+S~a~ve configuration
+.Phrase MRetrConf
+R~e~trieve configuration
+.Phrase MSavePal
+Sa~v~e palette
+.Phrase MRetrPal
+Re~t~rieve palette
+.Phrase MLastDesktop
+~L~ast desktop
+.Phrase MDesktopStack
+~D~esktops' stack
+
+
+; Префикс 'C' - для управляющих строк ( строк с тильдой - '~' )
+
+.Phrase COk
+O~K~
+
+.Phrase CYes
+~Y~es
+
+.Phrase CNo
+~N~o
+
+.Phrase CAdd
+~A~dd
+
+.Phrase CReplace
+~R~eplace
+
+.Phrase CDelete
+~D~elete
+
+.Phrase CName
+~N~ame
+
+.Phrase CCommand
+~C~ommand
+
+; *******************************************************
+; *              Окно конфигурации                      *
+; *******************************************************
+.Phrase Preferences
+Preferences
+.Phrase CLook
+~L~ook & sound
+.Phrase CClock
+~C~lock
+.Phrase CHeap
+~H~eap
+.Phrase CShadow
+Shado~w~
+.Phrase CErrBell
+~S~ound
+.Phrase CTimeBeep
+Clock bee~p~
+.Phrase CScreenSize
+Screen ~m~ode
+.Phrase CCGAlines
+~2~5 lines
+.Phrase CEGAlines
+~4~3/50 lines
+.Phrase CSVGAMode1
+S~V~GA Mode 1
+.Phrase CSVGAMode2
+SV~G~A Mode 2
+.Phrase CMode1IL
+SVGA mode 1
+.Phrase CMode2IL
+SVGA mode 2
+.Phrase CAutoSave
+~A~utosave
+.Phrase CASDsk
+~D~esktop
+.Phrase CASConf
+C~o~nfiguration
+.Phrase CEditor
+~E~ditor
+.Phrase CCreateBak
+Crea~t~e bak-files
+.Phrase CAutoIndent
+Auto~i~ndent
+.Phrase CScreenRest
+Screen ~r~est
+.Phrase COffScrRest
+~N~ever
+.Phrase CAfter1m
+After ~1~ min
+.Phrase CAfter3m
+After ~3~ min
+.Phrase CAfter5m
+After ~5~ min
+.Phrase CAfter10m
+After 1~0~ min
+
+; *******************************************************
+; *          Окно настройки интерфейса                  *
+; *******************************************************
+.Phrase Interface
+Interface
+.Phrase COptions
+~O~ptions
+.Phrase CAskExit
+E~x~it confirmation
+.Phrase CEsc4Editor
+Esc closes ~e~ditors
+.Phrase CEsc4DirWin
+Esc closes ~c~ontentses
+.Phrase CAddConfirm
+~R~eaction on addition and modifying
+.Phrase CAddNonExistConfirm
+Co~n~firmate addition of non-existent file
+.Phrase CRestoreCurPos
+Restore c~u~rsor position in reopened file
+.Phrase CDontCompressDir
+~D~o not use contents autocompression
+.Phrase CAlt4Menu
+~A~lt moves to menu
+.Phrase CCalendarInClock
+Clock ~w~ith calendar
+.Phrase CChangeDirOnSelDir
+Chan~g~e directory when contents selected
+.Phrase CItemTitleOnEditor
+Show ~i~tem title in the editor window
+.Phrase CCreateFileNames
+Generate random file name~s~
+
+; *******************************************************
+; *          Окно настройки цветов                      *
+; *******************************************************
+.Phrase Desktop
+Desktop
+.Phrase Color
+Color
+
+.Phrase Menus
+Menus
+.Phrase NormalItem
+Normal item
+.Phrase Disabled
+Disabled
+.Phrase Shortcut
+Shortcut
+.Phrase Selected
+Selected
+.Phrase SelectedDisabled
+Selected disabled
+.Phrase ShortcutSelected
+Shortcut selected
+
+.Phrase Dialogs
+Dialogs
+.Phrase FrameBackground
+Frame/background
+.Phrase FrameIcons
+Frame icons
+.Phrase ScrollBarPage
+Scroll bar page
+.Phrase ScrollBarIcons
+Scroll bar icons
+.Phrase StaticText
+Static text
+.Phrase LabelNormal
+Label normal
+.Phrase LabelSelected
+Label selected
+.Phrase LabelShortcut
+Label shortcut
+.Phrase ButtonNormal
+Button normal
+.Phrase ButtonDefault
+Button default
+.Phrase ButtonSelected
+Button selected
+.Phrase ButonDisabled
+Buton disabled
+.Phrase ButtonShortcut
+Button shortcut
+.Phrase ButtonShadow
+Button shadow
+.Phrase ClusterNormal
+Cluster normal
+.Phrase ClusterSelected
+Cluster selected
+.Phrase ClusterShortcut
+Cluster shortcut
+.Phrase InputNormal
+Input normal
+.Phrase InputSelected
+Input selected
+.Phrase InputArrow
+Input arrow
+.Phrase HistoryButton
+History button
+.Phrase HistorySides
+History sides
+.Phrase HistoryBarPage
+History bar page
+.Phrase HistoryBarIcons
+History bar icons
+.Phrase ListNormal
+List normal
+.Phrase ListFocused
+Focused item
+.Phrase ListSelected
+Selected item
+.Phrase ListDivider
+List divider
+.Phrase InformationPane
+Information pane
+.Phrase AnnWindow
+Annotations
+
+.Phrase Editor
+Editor
+.Phrase AsciiTab
+Ascii table
+.Phrase AsciiTabForCS
+Ascii table
+.Phrase Calendar
+Calendar
+.Phrase Calculator
+Calculator
+
+.Phrase FrameActive
+Frame active
+.Phrase FramePassive
+Frame passive
+.Phrase NormalText
+Normal text
+.Phrase SelectedText
+Selected text
+.Phrase CurrentDay
+Current day
+.Phrase NormalKeyword
+Normal keyword
+.Phrase HighlightKeyword
+Highlight keyword
+.Phrase ScreenRest
+Screen rest
+.Phrase Star
+Star
+.Phrase NewStar
+New star
+.Phrase Directories
+Contents
+.Phrase Subdirectory
+Subcontents
+.Phrase ItemType
+Item's type
+.Phrase SelFocused
+Focused selected
+.Phrase HotKey4CS
+Hot key
+
+; *******************************************************
+; *               Разные фразы                          *
+; *******************************************************
+
+.Phrase Help
+Help
+
+.Phrase LastHelp
+Previous topic
+.Phrase HelpIndex
+Help index
+.Phrase Close
+Close
+
+.Phrase Menu
+Menu
+.Phrase LocalMenu
+Local menu
+.Phrase Exit
+Exit
+.Phrase About
+About
+
+.Phrase Cancel
+Cancel
+
+.Phrase End
+End
+
+.Phrase RunPacket
+Run file "Packet.Exe"
+
+.Phrase AskQuit
+\c\ Are You sure You want to exit\
+\m\m\c\ Integrator "Packet" ?
+
+.Phrase OvrReadError
+Error loading overlay
+
+.Phrase RunDosCmd
+DOS Command
+
+.Phrase Inv_drive_or_directory
+\m\c\ Invalid drive or directory.
+
+.Phrase InvFileName
+\m\c\ Invalid file name.
+
+.Phrase InvDirectory
+\m\c\ Invalid path.
+
+.Phrase SaveDsk
+Save desktop
+
+.Phrase RetrDsk
+Retrieve desktop
+
+.Phrase SaveConf
+Save configuration
+
+.Phrase RetrConf
+Retrieve configuration
+
+.Phrase SavePal
+Save palette
+
+.Phrase RetrPal
+Retrieve palette
+
+.Phrase CouldNotCreate
+Could not create
+
+.Phrase CouldNotOpen
+Could not open
+
+.Phrase CouldNotRead
+Could not read
+
+.Phrase InvDsk
+Invalid desktop file
+
+.Phrase ErrReadDsk
+Error reading desktop file
+
+.Phrase ErrReadPal
+Error reading palette
+
+.Phrase InvConf
+Invalid configuration file
+
+.Phrase SaveFileAs
+Save as
+
+.Phrase SearchStrNotFound
+Search string not found
+
+.Phrase NotEnoughMem
+There is not enough memory\m\m\c\
+for this operation
+
+.Phrase ErrorReadingFile
+Error reading file
+
+.Phrase ErrorCreatingFile
+Error creating file
+
+.Phrase HasBeenModified_Save
+has been modified. Save?
+
+.Phrase ErrorWritingFile
+Error writing file
+
+.Phrase LngFileReadError
+Error reading language file
+
+.Phrase SaveUntitledFile
+\m\c\ Save untitled?
+
+.Phrase ReplaceThisOccurence
+Replace this occurence ?
+
+.Phrase OpenAFile
+Open a file or contents
+
+.Phrase Compressing
+Compressing contents file...
+.Phrase Deleting
+Deleting items and subcontents...
+.Phrase Moving
+Moving items and subcontents...
+.Phrase Copying
+Copying items and subcontentses...
+
+.Phrase InvLineNum
+Invalid line number
+.Phrase ValidRange
+Valid range is
+.Phrase InvValue
+Invalid value in the input line
+.Phrase GotoLineNum
+Go to line number
+.Phrase CEnterNewLineNum
+~E~nter new line number
+
+.Phrase Warning
+Warning
+.Phrase Confirm
+Confirm
+.Phrase Error
+Error
+.Phrase Information
+Information
+
+.Phrase TooManyFiles
+Too many files.
+.Phrase CFiles
+~F~iles
+.Phrase CDirs
+~D~irectories
+.Phrase CParamList
+~P~arameters
+.Phrase COpen
+~O~pen
+.Phrase CClear
+~C~lear
+
+.Phrase CReset
+~R~eset
+
+.Phrase ChangeCurrDir
+Change current directory
+.Phrase ChangeWorkDir
+Change work directory
+.Phrase Directory
+Directory
+.Phrase CDirectoryName
+~D~irectory name
+.Phrase CDirectoryTree
+Directory ~t~ree
+.Phrase CChdir
+~E~nter
+.Phrase CRevert
+~R~evert
+
+.Phrase Find
+Find
+.Phrase Replace
+Replace
+.Phrase CText2Find
+~T~ext to find
+.Phrase CNewText
+~N~ew text
+.Phrase CCaseSensitive
+~C~ase sensitive
+.Phrase CWholeWordsOnly
+~W~hole words only
+.Phrase CPromptOnReplace
+~P~rompt on replace
+.Phrase CReplaceAll
+~R~eplace all
+.Phrase SavingFile
+Saving file
+.Phrase LoadingFile
+Loading file
+.Phrase LoadingDesktop
+Loading desktop
+.Phrase Clipboard
+Clipboard
+.Phrase Untitled
+Untitled
+
+.Phrase WindowList
+Window list
+.Phrase CWindows
+~W~indows
+.Phrase CDeleteWin
+~C~lose
+
+.Phrase Normal
+Normal
+.Phrase Highlight
+Highlight
+.Phrase Underline
+Underline
+.Phrase Inverse
+Inverse
+.Phrase Colors
+Colors
+.Phrase CGroup
+~G~roup
+.Phrase CItem
+~I~tem
+.Phrase CForeground
+~F~oreground
+.Phrase CBackground
+~B~ackground
+.Phrase ColorText
+░░░░ Text ░░░░
+.Phrase CColor
+~C~olor
+
+.Phrase MouseOptions
+Mouse options
+.Phrase CMouseDoubleClick
+~M~ouse double click
+.Phrase MouseDlgI
+Fast       Medium      Slow
+.Phrase CReverseMouseButtons
+~R~everse mouse buttons
+.Phrase CSmoothMouse
+~S~mooth mouse
+
+.Phrase ChangeLngFile
+Change language file
+
+.Phrase Zoom
+Zoom
+.Phrase Move
+Move
+.Phrase Resize
+Resize
+.Phrase Done
+Done
+.Phrase Delete
+Delete
+
+; *******************************************************
+; *       Строки для функции Hint                       *
+; *******************************************************
+.Phrase HAboutWin
+Welcome to Integrator "Packet" !
+.Phrase HSystemMenu
+System menu
+.Phrase HFiles
+Files management commands (Open, New, Save, etc.)
+.Phrase HDirectories
+Contents management commands
+.Phrase HEdit
+Text files and contents editing commands
+.Phrase HWindows
+Windows management commands
+.Phrase HOptions
+Change, save and read configuration
+.Phrase HAbout
+Show copyright and version information
+.Phrase HRefreshDisplay
+Redraw the screen
+.Phrase HScreenRest
+Temporarily switch off screen
+.Phrase HAsciiTab
+Open ASCII table window
+.Phrase HCalendar
+Open Calendar window
+.Phrase HCalculator
+Open Calculator window
+.Phrase HAlarmClock
+Set or reset the alarm clock
+.Phrase HNewFile
+Create a new text file in a new Edit window
+.Phrase HNewDir
+Create a new contents file and open a window
+.Phrase HOpen
+Locate and open file or contents in a window
+.Phrase HSave
+Save the file in the active Edit window
+.Phrase HSaveAs
+Save the current text file under new name or path
+.Phrase HSaveAll
+Save all modified text files
+.Phrase HChangeDir
+Change current directory or drive
+.Phrase HDosShell
+Temporarily exit to DOS
+.Phrase HDosCommand
+Execute single DOS command
+.Phrase HUserScreen
+Show DOS screen
+.Phrase HExit
+Exit Integrator "Packet"
+.Phrase HClosedFile
+Open indicated file in a new editor window
+.Phrase HUndo
+Undo the previous editor operation
+.Phrase HSearch
+Search & replace operations
+.Phrase HFind
+Context search
+.Phrase HReplace
+Context search & replace
+.Phrase HSearchAgain
+Repeat the last Find or Replace command
+.Phrase HGoToLine
+Move the cursor to a specified line number
+.Phrase HCut
+Move block into the Clipboard or target contents window
+.Phrase HCopy
+Copy block into the Clipboard or target contents window
+.Phrase HPaste
+Insert selected text from the Clipboard
+.Phrase HClear
+Delete the selected text
+.Phrase HInsRef
+Insert reference to the document item
+.Phrase HShowClip
+Open the Clipboard edit window
+.Phrase HMarkTarget
+Mark the target contents window for copy and cut operations
+.Phrase HLastDocument
+Edit the last collected document
+.Phrase HVerticalTile
+Arrange windows on desktop by vertical tiling
+.Phrase HHorisontalTile
+Arrange windows on desktop by horisontal tiling
+.Phrase HCascade
+Arrange windows on desktop by cascading
+.Phrase HCloseAll
+Close all windows on the desktop
+.Phrase HResize
+Change the size or position of the active window
+.Phrase HZoom
+Enlarge or restore the size of the active window
+.Phrase HNext
+Make the next window active
+.Phrase HPrevious
+Make the previous window active
+.Phrase HClose
+Close the active window
+.Phrase HOpenAnnWin
+Open the Annotation's window
+.Phrase HOpenOutputWin
+Open the Output window
+.Phrase HRenumber
+Change numbers of open windows to condense them
+.Phrase HWinList
+Show a list of all open windows
+.Phrase HConfig
+Change the configuration of Integrator "Packet"
+.Phrase HPreferences
+Specify desktop settings
+.Phrase HInterface
+Change some details of interface
+.Phrase HMouse
+Specify mouse settings
+.Phrase HColors
+Customize Integrator colors
+.Phrase HLanguage
+Set the language file to change language
+.Phrase HWorkDir
+Specify the work directory for temporary files
+.Phrase HSaveConfig
+Save configuration to a file
+.Phrase HRetrieveConfig
+Load configuration file
+.Phrase HSaveDesktop
+Save desktop to a file
+.Phrase HRetrieveDesktop
+Load desktop file
+.Phrase HSavePalette
+Save customized color palette to a file
+.Phrase HRetrievePalette
+Read color palette of Integrator from a file
+.Phrase HAddFileItems
+Add new items into the current subcontents
+.Phrase HAddSubDirs
+Add new subcontents into the current subcontents
+.Phrase HModifyItems
+Modify the item's description
+.Phrase HDeleteItems
+Delete selected items and/or subcontents
+.Phrase HMoveItems
+Move selected items and/or subcontents
+.Phrase HSelectItem
+Select item for group operations
+.Phrase HTranspose
+Turn the item into the subcontents or backward
+.Phrase HCrossRef
+Add crossreference to subcontents
+.Phrase HOpenCopy
+Open a copy of the active contents
+.Phrase HTreatment
+Items treatment management commands
+.Phrase HEditFile
+Edit file in the built-in text editor
+.Phrase HCollectDocument
+Collect a text document from selected items
+.Phrase HEditParameters
+Create or edit the list of item's parameters
+.Phrase HCommonParameters
+Specify default parameters for the active contents
+.Phrase HAnnotate
+Create or edit annotation for the item
+.Phrase HDirConfig
+Change the configuration of the active contents
+.Phrase HSetProtect
+Disable or enable protection of the active contents
+.Phrase HGlobalExt
+Edit global list
+.Phrase HLocalExt
+Edit local list
+.Phrase HCompressDir
+Delete unused space from the contents file
+.Phrase HHotKeys
+Contents' hot keys management commands
+.Phrase HSetHotKey
+Set or reset a hot key for the contents' item
+.Phrase HHotKeysList
+Show a list of available contents' hot keys
+.Phrase HLastDesktop
+Retrieve last desktop
+.Phrase HDesktopStack
+View last ten desktop files' names
+
+.Phrase Hm_CreateMacro
+Start macro recording
+.Phrase Hm_StopMacro
+Stop macro recording
+.Phrase Hm_PlayMacro
+Select and play macro
+.Phrase Hm_RemoveMacro
+Select and delete macro
+.Phrase Hm_DeleteMacros
+Delete all saved macros
+.Phrase HMacro
+Recording and playback of keyboard macros
+.Phrase HRegisterNow
+Don't forget to register your copy of Integrator !
+
+.Phrase Directory_O
+Contents
+.Phrase DirFile
+Contents file
+.Phrase CreateDir
+Create new contents file
+.Phrase FileExist_Overvrite
+\c\ File\m\
+\c\ %s already exists. Overwrite it ?
+.Phrase AskDeleteItems
+\cAre You sure to delete\
+\m\m\c\ %d
+.Phrase Items_1
+item ?
+.Phrase Items_2
+items ?
+.Phrase Items_3
+items ?
+.Phrase Items_4
+items ?
+
+.Phrase AskSave
+\m\c\ Save changes ?
+
+.Phrase ItemPrefix
+ ∙
+.Phrase EmptyItemPrefix
+ -
+
+.Phrase ErrorOpenDirFile
+Invalid contents file
+
+; Диалоговое окно добавления пунктов
+.Phrase AddFileItems
+Add item
+.Phrase ReplFileItem
+Modify item
+.Phrase AddSubDir
+Add subcontents
+.Phrase ReplSubDir
+Modify subcontents
+.Phrase CItemTitle
+~T~itle
+.Phrase CSubDirTitle
+~T~itle
+.Phrase CFileName
+F~i~le name
+.Phrase CParameters
+~P~arameters
+.Phrase CStartDir
+~S~tart directory
+.Phrase CAttributes
+Attrib~u~tes
+.Phrase CModes
+~M~odes
+.Phrase CSearchBeforeProcess
+S~e~arch before run
+.Phrase CNotRunWithoutParams
+Enter ~=~ Ctrl+Enter
+.Phrase CRestCD
+Rest~o~re current directory
+.Phrase CDelayScreen
+Dela~y~ screen
+.Phrase CClearKbd
+~C~lear keyboard buffer
+.Phrase CAutoSaveEdFiles
+Autosa~v~e editor files
+.Phrase CDontNumberItem
+Do not nu~m~ber item in the document
+.Phrase CDontPutInContents
+Do ~n~ot put in the table of contents
+.Phrase SelectFile
+Select the file
+.Phrase SelectStartDir
+Select the start directory
+.Phrase SelectDir
+Select the directory
+.Phrase AddItem_FileNotFound
+\c\ File not found.
+.Phrase AddItem_EmptyTitle
+\c\ Item has not title.
+.Phrase AddItem_AskAdd
+\m\m\c\ Add this item ?
+.Phrase AddItem_AskReplace
+\m\m\c\ Replace with this item ?
+.Phrase AddSubDir_EmptyTitle
+\c\ Subcontents has not title.
+.Phrase AddSubDir_AskAdd
+\m\m\c\ Add this subcontents ?
+.Phrase AddSubDir_AskReplace
+\m\m\c\ Replace with this subcontents ?
+.Phrase Added
+Added
+.Phrase Replaced
+Replaced
+.Phrase Annotate
+Annotate
+.Phrase CAnnotation
+~A~nnotation
+.Phrase Annotation
+Annotation
+.Phrase EditParams
+Edit list of parameters
+.Phrase RunWithParams
+Run with parameters
+.Phrase CComStr
+~C~ommand line
+.Phrase ParamList
+List of parameters
+
+; Сообщения об ошибках
+.Phrase PathNotFound
+Path not found
+.Phrase FileNotFound
+File not found
+.Phrase DiskIsWP
+Disk is write protected
+.Phrase CompressError
+Error compressing contents file
+.Phrase WrongPalette
+\c\ Color palette may not be \
+\m\c\ used in current videomode.
+.Phrase CommonParameters
+Common parameters
+.Phrase AskReload4Mouse
+Mouse mode will be changed only after restart of Integrator.\
+ Do You wish to restart now ?
+.Phrase CDirectory
+~D~irectory
+.Phrase MoveItems
+Move items
+.Phrase ErrorProcessDirFile
+Error processing contents file
+.Phrase AskInsertBefore
+Insert in the top ?
+.Phrase Ask4OverwriteHK
+Hot key "%c" is already assigned to item "%s".
+.Phrase SetHotKey
+Set a hot key
+.Phrase CHotKey
+~H~ot key
+.Phrase HotKeysList
+Hot keys list
+.Phrase CHotKeysList
+~H~ot keys
+.Phrase ActionIsntSpecified
+Action is not specified for this item
+
+.Phrase DirConf
+Contents' configuration
+.Phrase CDirTitle
+~T~itle
+.Phrase CProtectType
+P~r~otection type
+.Phrase CNoneProtection
+~N~one
+.Phrase CWriteProtect
+~W~rite protection
+.Phrase CFullProtect
+~F~ull protection
+.Phrase CPassword
+~P~assword
+.Phrase CExtEditor
+~E~xternal text editor
+.Phrase CRandNameTpl4Dir
+~R~andom file name template
+.Phrase CStartDir4Dir
+~S~tart directory
+.Phrase InputPW
+Input password
+.Phrase InvalidPassword
+Invalid password
+.Phrase AskSetProtect
+Do You wish to enable protection ?
+.Phrase ExtEditorNotFound
+External editor not found. Do You wish to edit in built-in editor ?
+
+.Phrase PleaseRegister
+\c\ Integrator "Packet" is not freeware.\
+\m\c\ You can evaluate it for 30 days.\
+\m\c\ After that You should to register it.
+
+.Phrase TargetIsntSpecified
+\c\ Target contents window is not marked. \
+Use command "Editor│Mark target".
+.Phrase CantCopy2Itself
+\c\ You may not copy or move subcontents to itself.
+
+; *******************************************************
+; *                Печать документа                     *
+; *******************************************************
+.Phrase CollectDocument
+Collect document
+.Phrase CTargetDocFile
+~T~arget document file name
+.Phrase CTitPageFile
+Title pa~g~e file name
+.Phrase CPageNumbers
+~P~age numbers
+.Phrase CAnnotations
+~A~nnotations
+.Phrase CNone
+~N~one
+.Phrase CInTop
+~I~n the top
+.Phrase CInBottom
+In the ~b~ottom
+.Phrase CNone1
+N~o~ne
+.Phrase CInContents
+In the content~s~
+.Phrase CInText
+In the te~x~t
+.Phrase CLeftMargin
+~L~eft margin
+.Phrase CRightMargin
+Right margin
+.Phrase CDocContents
+~C~ontents
+.Phrase CAbsent
+Do not c~r~eate
+.Phrase CInBegin
+A~f~ter title
+.Phrase CInEnd
+In the en~d~
+.Phrase CLinesPerPage
+Page si~z~e
+.Phrase CDocModes
+Other ~m~odes
+.Phrase CNumber1stPage
+Number first page
+.Phrase CCentreTitles
+Centre headlines
+.Phrase CNumberTitles
+Number headlines
+.Phrase CMakeOnlyCont
+Make only contents
+.Phrase CMakeHelpFile
+Make help file
+.Phrase CUseFilter
+Use filter
+.Phrase CShowProtocol
+Show protocol
+.Phrase CIndentWidth
+Indents ~w~idth
+.Phrase CUnderlines
+~U~nderlines
+.Phrase CUpMargin
+Upp~e~r indent
+.Phrase CPageBeg
+Pages from
+.Phrase CNumBeg
+Numbers from
+
+.Phrase CollectingDoc
+Creating document
+.Phrase ErrorCreateDoc
+Error creating document
+
+.Phrase SetAlarmClock
+Set alarm clock
+.Phrase CAlarmTime
+~A~larm time
+.Phrase CAlarmInfo
+R~e~minder text
+.Phrase DoNotForget
+Don't forget !
+
+.Phrase InputDoesNotConform
+Invalid value in the input line
+
+.Phrase UnregisteredShareware
+UNREGISTERED Shareware version
+.Phrase UserName
+User    :
+.Phrase UserCompany
+Company :
+.Phrase UserNum
+Reg. No :
+
+.Phrase EditLocalExt
+Edit local extension list
+.Phrase RoundingSubdirs
+Rounding subcontentses
+.Phrase CReplTitles
+Change t~i~tles
+.Phrase CReplFNames
+Change ~f~ile names
+.Phrase CReplParams
+Change ~p~arameters
+.Phrase CReplStartDir
+Change ~s~tart directory
+
+.Phrase OutputWinTitle
+Output
+
+.Phrase File
+File
+.Phrase Line
+Line
+.Phrase CreatingProtocol
+Creating the protocol
+.Phrase ProtocolHeader
+Filtration protocol. Following characters were deleted:
+
+.Phrase DskStackDlgTitle
+Desktops' stack
+.Phrase CDskStackList
+~D~esktops' list
+
+.Phrase CantEditAnn
+Too big annotation for this version of Integrator.\
+ Use DPMI-version.
+
+.Phrase Sunday
+Sunday
+.Phrase Monday
+Monday
+.Phrase Tuesday
+Tuesday
+.Phrase Wednesday
+Wednesday
+.Phrase Thursday
+Thursday
+.Phrase Friday
+Friday
+.Phrase Saturday
+Saturday
+
+.Phrase AskTransposeFile
+This item refers to a file. Do You wish to continue?
+.Phrase CantTranspFullDir
+This subcontents is not empty. You can not turn it into the item.
+.Phrase ItemHasntName
+Item hasn't name
+.Phrase UndefinedRef
+Undefined reference "%s" in the item "%s"
+.Phrase InsRef
+Insert reference to item
+.Phrase RedefinedName
+The name already defined :
+.Phrase Item
+Item
+
+.Phrase m_NothingDelete
+\C\ There is nothing to delete !
+.Phrase m_ExistanceMacro
+\C\ Macro already exists. Overwrite ?
+.Phrase m_NotSavedMacros
+\C\ There is no saved macro !
+.Phrase m_WarningForDeleteMacros
+\C\ Are you sure to delete all macro ?
+.Phrase m_WinCreateMacro
+\C\ Press hot key\
+\M\C\ to assign macro to
+.Phrase m_NameWinRemoveMacro
+Delete macro
+.Phrase m_NameWinPlayMacro
+Play macro
+.Phrase m_Macro
+~M~acro
+.Phrase m_CreateMacro
+~C~reate...
+.Phrase m_StopMacro
+~S~top
+.Phrase m_PlayMacro
+~P~lay...
+.Phrase m_RemoveMacro
+~R~emove...
+.Phrase m_DeleteMacros
+~D~elete all...
+
+.Phrase RecMacro
+Record
+.Phrase MaxUnregDocSize
+Too big document for UNREGISTERED version !
+
+.Phrase SelSD4CrossRef
+Select subcontents for reference
+.Phrase WithFiles
+with files
+.Phrase UseWinClip
+Windows Clipboard is used

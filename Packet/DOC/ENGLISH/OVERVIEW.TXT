@@ -1,0 +1,94 @@
+         The general items of information on the Integrator "Packet"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Purpose of the Integrator
+  - Ordering of the programs and information
+  - Development of the textual documents
+  - Creation of own integrated environments
+
+2. For the decision of these problems are used Contentses
+  - Hierarchical structure of the contentses without restrictions on a
+    depth of a enclosure
+  - Items of the contentses - program or any files, reference on enclosed
+    subcontentses, contentses and desktop files
+  - Name of items - up to 250 any symbols
+  - Summary to items - up to 4 K (in the DPMI-version - up to 20 K)
+  - Simultaneous work with the several contentses
+
+3. Navigation under the contentses and processing of items
+  - With the help of a keyboard or mouse
+  - Access to item on a hot key
+  - Viewing of the list of hot keys
+  - Start of the items-programs (the resident part of a Integrator - 17 K,
+    it is possible to load in the high memory)
+  - Editing of items-files in built-in or external editor or processing
+    pursuant to expansion or mask of a file name
+  - Local menu of item on a mask of a file name
+
+4. Formation and updating of the contentses in the interactive mode
+  - Creation of the new contents
+  - Creation of the subcontents
+  - Addition of items
+  - Assigning to items of hot keys
+  - Updating of items and subcontentses
+  - Removal of items and subcontentses
+  - Copying and carry of items and подоглавлений (including between the
+    various contentses)
+  - Editing of the summary to item or subcontentses
+  - Contextual replacement on subcontentses
+  - Parol protection of the contentses against change or opening
+
+5. Transfer of parameters to the programs
+  - Hand-operated input at start
+  - Parameters by default for item
+  - Parameters by default for the contentses
+  - Choice from the list of files
+  - Choice from the list of parameters for this purpose item
+
+6. Construction of the textual documents
+  - Under the hierarchical contents list with textual files connected
+    as items it is possible to construct the linear textual document
+  - Automatic dividing on pages
+  - Automatic numbering of items
+  - Automatically made contents list of the document
+  - Opportunity not to break on pages given fragments of text (tables,
+    drawings etc.)
+  - Opportunity to include a title sheet
+  - Set of set up parameters
+  - Opportunity of group work over various parts of the document with
+    the subsequent merge and construction of the general document
+
+7. Work with desktop files
+  - It is possible to connect as items of the contentses
+  - Choice of such item results in restoration of a desktop and
+    configuration (arrangement of windows, colour, history of input lines
+    and other )
+  - Opportunity of return to the previous desktop
+
+8. Built-in text editor
+  - Cancellation of the last action
+  - Operation with blocks through common Clipboard
+  - Search/replacement
+
+9. Opportunity of user screen view in a window or in the full screen
+
+10. The distribution kit includes the version under a protected mode
+  - Requires 386SX and above
+  - Uses up to 16 M RAM
+  - Annotations to items up to 20 K
+
+11. Convenient multi-windowing interface
+  - Opportunity of choice of language - Russian or English
+  - Hierarchical menu of commands
+  - Local menu of commands
+  - Support of a mouse (including emulation of a graphic mouse in a textual
+    mode)
+  - Support of SVGA-modes
+  - Help in a status line
+  - Complete situational help
+  - Clock-calendar
+  - Sheet-calendar
+  - Accounting calculator
+  - Alarm clock
+  - ASCII Table
+  - Built-in Screen-Saver (is similar on NC 3.0)

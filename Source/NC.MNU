@@ -1,0 +1,5 @@
+F1: Archive Sources Only
+  arj a pack_src packet\pas
+F2: Archive Packet
+  del bin\*.tpu
+  arj a -r -p1 -i1 packet

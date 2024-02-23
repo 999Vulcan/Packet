@@ -1,0 +1,856 @@
+
+
+
+
+ 1. ANNOTATE.PAS ................................................... 2
+ 2. ANN_WIND.PAS ................................................... 4
+ 3. EDITRES.PAS .................................................... 9
+ 4. PACK_DLG.PAS .................................................. 12
+
+
+                                 -2-
+
+
+                           1. ANNOTATE.PAS
+                           ===============
+procedure TDirectoryBox.Annotate;
+var
+  R, ZoomRect: TRect;
+  Num: Word;
+  AnnW: PAnnWindow;
+  EdWin: PAnnEdWindow;
+  DirWind: PDirWindow;
+  Cur: PView;
+  MemoData: TShortMemoData;
+  ResName: TResIndex;
+  Resource: PTextResource;
+  Cmd: Word;
+begin
+  if CountItems = 0 then Exit;
+
+  Desktop^.Lock;  {!}
+  Message(Application, evCommand, cmUnlockDesktop, nil);
+
+  Cur := Desktop^.Current;
+  AnnW := SearchAnnWindow;
+  if not Assigned(AnnW)
+    then begin
+      Desktop^.GetExtent(R);
+      R.A.X := R.B.X div 2;
+      Application^.InsertWindow(New(PAnnWindow, Init(R)));
+      AnnW := SearchAnnWindow;
+    end;
+  if not Assigned(AnnW) then Exit;
+
+  MemoData.Length := 0;
+  Resource := nil;
+  GetAnnIndex(GetFocusedItem, ResName);
+  if GetStr(ResName.Name) <> ''
+    then begin
+      Resource := Pointer(GetDirPtr^.ReadObj(ResName.Name^));
+      MemoData.Length := Resource^.Length;
+      if MemoData.Length > MaxTextResSize
+        then begin
+          DisposeObj(Resource);
+          DoneResIndex(ResName);
+          MessageBox(^C + Ph(phCantEditAnn), nil, mfError + mfOkButton,
+                        hcCantEditAnn);
+          Exit;
+        end;
+      if MemoData.Length > 0
+        then Move(Resource^.Text^, MemoData.Buffer, MemoData.Length);
+      DisposeObj(Resource);
+    end;
+
+  AnnW^.GetBounds(R);
+  Num := AnnW^.Number;
+  ZoomRect := AnnW^.ZoomRect;
+  if Cur = PView(AnnW)
+    then Cur := nil;
+
+
+
+                                 -3-
+
+  Message(AnnW, evCommand, cmClose, nil);
+
+  EdWin := New(PAnnEdWindow, Init(R, Num));
+  EdWin^.ZoomRect := ZoomRect;
+  EdWin^.SetData(MemoData);
+  Cmd := Desktop^.ExecView(EdWin); { <------| }
+  EdWin^.GetData(MemoData);
+  EdWin^.GetBounds(R);
+  ZoomRect := EdWin^.ZoomRect;
+  DisposeObj(EdWin);
+
+  Case Cmd of
+    cmCancel: DoneResIndex(ResName);
+    cmDelRes: begin
+                if (not ResName.InhFlag) and (Assigned(ResName.Name))
+                  then GetDirPtr^.DelObj(ResName.Name^);
+                DoneResIndex(ResName);
+                ResName.Place := pfNowhere;
+                ResName.InhFlag := False;
+                SetAnnIndex(GetFocusedItem, ResName);
+                GetDirPtr^.UpdateHotKey(GetFocusedItem);
+              end;
+        cmOk: begin
+                New(Resource, Init(MemoData.Length, MemoData.Buffer));
+                if not Assigned(ResName.Name)
+                  then begin
+                    ResName.Place := pfDirFile;
+                    ResName.InhFlag := False;
+                    ResName.Name := NewStr(GetDirPtr^.GetNewIndex(
+                                           tsAnnIndex, IndLen));
+                    SetAnnIndex(GetFocusedItem, ResName);
+                    GetDirPtr^.UpdateHotKey(GetFocusedItem);
+                  end;
+                GetDirPtr^.WriteObj(Resource, ResName.Name^);
+                DoneResIndex(ResName);
+                DisposeObj(Resource);
+              end;
+  end;
+
+  Application^.InsertWindow(New(PAnnWindow, Init(R)));
+
+  AnnW := SearchAnnWindow;
+  AnnW^.Number := Num;
+  AnnW^.ChangeBounds(R);
+  AnnW^.ZoomRect := ZoomRect;
+
+  if Assigned(Cur)
+    then Cur^.Select;
+  Desktop^.Redraw;
+  Message(Application, evCommand, cmUnlockDesktop, nil);
+  GetDirPtr^.Flush;
+  ChangeAnn;
+end;
+
+
+
+                                 -4-
+
+                           2. ANN_WIND.PAS
+                           ===============
+(**********************************************************)
+(*                                                        *)
+(* Интегратор "Packet"                                    *)
+(*                                                        *)
+(* Модуль Ann_Wind                                        *)
+(* Окно аннотаций                                         *)
+(*                                                        *)
+(* Автор : Константин Вулах                               *)
+(* Copyright (C) 1994 by VULCAN                           *)
+(*                                                        *)
+(* Начат         : 2.11.1994                              *)
+(*                                                        *)
+(**********************************************************)
+
+{$A+,B-,E-,F+,N-,O+,V-,X+,I-}
+
+unit Ann_Wind;
+
+interface
+
+uses
+
+  Objects, Views, Drivers, Memory, MyMsgBox, App, Items, Dirs,
+  BaseApp, StreamId, LineColl, Language, PackLng, StrServ, Pack_Cmd,
+  Disp_Obj, Pack_Hlp, PackText,
+{$ifdef ForPacket}
+  RepMChrs,
+{$endif}
+  Editors, EditRes;
+
+type
+
+  { TAnnViewer }
+  PAnnViewer = ^TAnnViewer;
+  TAnnViewer = object(TScroller)
+    Lines: PCollection;
+    OldName: PString;
+    OldDirWin: Pointer;
+    constructor Init(var Bounds: TRect; AHScrollBar, AVScrollBar: PScrollBar);
+    constructor Load(var S: TStream);
+    destructor Done; virtual;
+    procedure Draw; virtual;
+    procedure HandleEvent(var Event: TEvent); virtual;
+    procedure NewAnnotation(AnnIndex: String);
+  end;
+
+  { TAnnWindow }
+  PAnnWindow = ^TAnnWindow;
+  TAnnWindow = object(TWindow)
+    constructor Init(R: TRect);
+    function GetTitle(MaxSize: Integer): TTitleStr; virtual;
+    procedure Scroll(Key: Word);
+  end;
+
+  { TAnnEdWindow }
+  PAnnEdWindow = ^TAnnEdWindow;
+
+
+                                 -5-
+
+  TAnnEdWindow = object(TWindow)
+    constructor Init(var R: TRect; ANumber: Word);
+    procedure HandleEvent(var Event: TEvent); virtual;
+  end;
+
+const
+
+  RAnnViewer: TStreamRec = (
+     ObjType: idAnnViewer;
+     VmtLink: Ofs(TypeOf(TAnnViewer)^);
+     Load:    @TAnnViewer.Load;
+     Store:   @TAnnViewer.Store
+  );
+
+  RAnnWindow: TStreamRec = (
+     ObjType: idAnnWindow;
+     VmtLink: Ofs(TypeOf(TAnnWindow)^);
+     Load:    @TAnnWindow.Load;
+     Store:   @TAnnWindow.Store
+  );
+
+procedure RegisterAnn;
+function SearchAnnWindow: PAnnWindow;
+
+implementation
+
+uses
+{$ifdef ForPacket}
+  Conf_Var,
+{$endif}
+  Dir_Wind;
+
+{ TAnnViewer }
+constructor TAnnViewer.Init(var Bounds: TRect; AHScrollBar,
+  AVScrollBar: PScrollBar);
+begin
+  inherited Init(Bounds, AHScrollbar, AVScrollBar);
+  GrowMode := gfGrowHiX + gfGrowHiY;
+  HelpCtx := hcAnnWindow;
+  Lines := nil;
+  OldName := nil;
+  NewAnnotation('');
+end;
+
+constructor TAnnViewer.Load(var S: TStream);
+begin
+  inherited Load(S);
+  OldName := nil;
+  Lines := nil;
+end;
+
+destructor TAnnViewer.Done;
+begin
+  DisposeObj(Lines);
+  DispStr(OldName);
+  inherited Done;
+end;
+
+
+
+                                 -6-
+
+procedure TAnnViewer.Draw;
+var
+  B: TDrawBuffer;
+  C: Byte;
+  I: Integer;
+  S: String;
+  P: PString;
+begin
+  C := GetColor(1);
+  for I := 0 to Size.Y - 1 do
+  begin
+    MoveChar(B, ' ', C, Size.X);
+    if Assigned(Lines) and (Delta.Y + I < Lines^.Count)
+    then begin
+      P := Lines^.At(Delta.Y + I);
+      if Assigned(P)
+        then S := Copy(P^, Delta.X + 1, Length(P^) - Delta.X + 1)
+      else S := '';
+{$ifdef ForPacket}
+      ReplCharsInStr(S);
+{$endif}
+      S := Copy(S, 1, Size.X);
+      MoveStr(B, S, C);
+    end;
+    WriteLine(0, I, Size.X, 1, B);
+  end;
+end;
+
+procedure TAnnViewer.NewAnnotation(AnnIndex: String);
+var
+  Line: String;
+  MaxWidth: Integer;
+  DirWin: PDirWindow;
+  Reader: PResReader;
+begin
+  DirWin := FirstDirWindow;
+  if (GetStr(OldName) = AnnIndex) and (DirWin = OldDirWin)
+    then Exit;
+  OldDirWin := DirWin;
+  SetNewStr(OldName, AnnIndex);
+  Reader := nil;
+  DisposeObj(Lines);
+  MaxWidth := 0;
+  if (Assigned(DirWin)) and (AnnIndex <> '')
+    then New(Reader, Init(DirWin^.GetDirPtr, AnnIndex));
+  if not Assigned(Reader)
+    then begin
+      SetLimit(0, 0);
+      ScrollTo(0, 0);
+      if Assigned(Owner) and (Owner^.State and sfVisible <> 0)
+        then Owner^.Redraw;
+      Exit;
+    end;
+  Lines := New(PLineCollection, Init(5,5));
+  while not (Reader^.EndOfRes or LowMemory) do
+  begin
+    Line := Reader^.ReadString;
+    if Length(Line) > MaxWidth then MaxWidth := Length(Line);
+
+
+                                 -7-
+
+    Lines^.Insert(NewStr(Line));
+  end;
+  DisposeObj(Reader);
+  SetLimit(MaxWidth + 1, Lines^.Count);
+  ScrollTo(0, 0);
+  if Assigned(Owner) and (Owner^.State and sfVisible <> 0)
+    then Owner^.Redraw;
+end;
+
+procedure TAnnViewer.HandleEvent(var Event: TEvent);
+begin
+  inherited HandleEvent(Event);
+
+  if Event.What = evBroadcast
+    then begin
+      Case Event.Command of
+        cmNewAnn: NewAnnotation(GetStr(PString(Event.InfoPtr)));
+        cmSearchAnnViewer: Event.InfoPtr := @Self;
+        cmSearchAnnWindow: Event.InfoPtr := Owner;
+      else Exit
+      end;
+      Event.What := evNothing;
+    end;
+
+  if Event.What = evCommand
+    then begin
+      Case Event.Command of
+        cmAnnotate: Message(FirstDirWindow, evCommand, cmAnnotate, nil);
+      else Exit
+      end;
+      ClearEvent(Event);
+      Event.InfoPtr := Owner;
+    end;
+end;
+
+{ TAnnWindow }
+constructor TAnnWindow.Init(R: TRect);
+begin
+  inherited Init(R, '', BaseApplication^.FirstFreeWin);
+  Options := Options or (ofTileable + ofFirstClick);
+  Palette := wpGrayWindow;
+  GetExtent(R);
+  R.Grow(-1, -1);
+  Insert(New(PAnnViewer, Init(R,
+    StandardScrollBar(sbHorizontal + sbHandleKeyboard),
+    StandardScrollBar(sbVertical + sbHandleKeyboard))));
+end;
+
+function TAnnWindow.GetTitle(MaxSize: Integer): TTitleStr;
+begin
+  GetTitle := Ph(phAnnotation)
+end;
+
+procedure TAnnWindow.Scroll(Key: Word);
+var
+  AnnViewer: PView;
+begin
+  AnnViewer := Message(Desktop, evBroadcast, cmSearchAnnViewer, nil);
+
+
+                                 -8-
+
+  Message(PAnnViewer(AnnViewer)^.HScrollBar, evKeyDown, Key, nil);
+  Message(PAnnViewer(AnnViewer)^.VScrollBar, evKeyDown, Key, nil);
+end;
+
+constructor TAnnEdWindow.Init(var R: TRect; ANumber: Word);
+var
+  HScrollBar: PScrollBar;
+  Indicator: PIndicator;
+begin
+  inherited Init(R, Ph(phAnnotation), ANumber);
+  Palette := wpGrayWindow;
+  HelpCtx := hcAnnotateWin;
+
+  HScrollBar := StandardScrollBar(sbHorizontal + sbHandleKeyboard);
+  Inc(HScrollBar^.Origin.X, 14);
+  Dec(HScrollBar^.Size.X, 14);
+
+  R.Assign(2, Size.Y - 1, 16, Size.Y);
+  Indicator := New(PIndicator, Init(R));
+  Indicator^.Hide;
+  Insert(Indicator);
+
+  GetExtent(R);
+  R.Grow(-1, -1);
+  Insert(New(PResEditor, Init(R,
+    HScrollBar,
+    StandardScrollBar(sbVertical + sbHandleKeyboard),
+    Indicator,
+    MaxTextResSize)));
+end;
+
+procedure TAnnEdWindow.HandleEvent(var Event: TEvent);
+begin
+  inherited HandleEvent(Event);
+
+  if Event.What = evCommand
+  then Case Event.Command of
+    cmCancel, cmOk, cmDelRes: begin
+                                Desktop^.Lock;  {!}
+                                EndModal(Event.Command);
+                                ClearEvent(Event);
+                              end;
+  end;
+end;
+
+function SearchAnnWindow: PAnnWindow;
+begin
+  SearchAnnWindow :=
+    PAnnWindow(Message(Desktop, evBroadcast, cmSearchAnnWindow, nil));
+end;
+
+procedure RegisterAnn;
+begin
+  RegisterType(RAnnViewer);
+  RegisterType(RAnnWindow);
+end;
+
+end.
+
+
+                                 -9-
+
+
+                           3. EDITRES.PAS
+                           ==============
+(**********************************************************)
+(*                                                        *)
+(* Интегратор "Packet"                                    *)
+(*                                                        *)
+(* Модуль EditResg                                        *)
+(* Диалоговое окно редактирования текстовых ресурсов      *)
+(*                                                        *)
+(* Автор : Константин Вулах                               *)
+(* Copyright (C) 1994 by VULCAN                           *)
+(*                                                        *)
+(* Начат         : 12.05.1994                             *)
+(*                                                        *)
+(**********************************************************)
+
+{$A+,B-,E-,F+,N-,O+,V-,X+,I-}
+
+Unit EditRes;
+
+interface
+
+uses
+  Objects, Memory, App, BaseApp, Dialogs, Drivers, Views, Language,
+  PackLng, PackText, Pack_Hlp, Pack_Cmd, Hist_Ind, Dirs, SubDirs, Items,
+  StrServ, StdDlg, Disp_Obj, Editors, MyMsgBox, Dos, FileOps,
+{$ifdef ForPacket}
+  Conf_Var,
+{$endif}
+  Pack_Dlg;
+
+type
+
+  { TResEditor }
+  PResEditor = ^TResEditor;
+  TResEditor = object(TMemo)
+    constructor Init(var Bounds: TRect; AHScrollBar, AVScrollBar:
+                     PScrollBar; AIndicator: PIndicator; ABufSize: Word);
+    procedure HandleEvent(var Event: TEvent); virtual;
+    function GetPalette: PPalette; virtual;
+  end;
+
+  PEditResDlg = ^TEditResDlg;
+  TEditResDlg = object(TWindow)
+    Memo: PResEditor;
+
+    constructor Init(ATitle: TTitleStr; AHelpCtx: Word);
+    destructor Done; virtual;
+    procedure HandleEvent(var Event: TEvent); virtual;
+  end;
+
+  { Объект для чтения строк из текстовых ресурсов }
+  PResReader = ^TResReader;
+  TResReader = object(TObject)
+    MemoData: TShortMemoData;
+    Dir: PDirectory;
+    CurPos: Word;
+
+
+                                 -10-
+
+
+    constructor Init(ADir: PDirectory; Name: String);
+    function ReadString: String;
+    function EndOfRes: boolean;
+  end;
+
+const
+
+  CResEditor   = #6#7;
+
+implementation
+
+{  Методы объекта TEditResDlg  }
+constructor TEditResDlg.Init
+  (ATitle: TTitleStr; AHelpCtx: Word);
+var
+  R: TRect;
+  HSB, VSB: PScrollBar;
+  Ind: PIndicator;
+begin
+  Desktop^.GetExtent(R);
+  inherited Init(R, ATitle, wnNoNumber);
+  HelpCtx := AHelpCtx;
+  if EditResCoord.A.Y <> -1
+    then ChangeBounds(EditResCoord);
+
+  HSB := StandardScrollBar(sbHorizontal + sbHandleKeyboard);
+  Inc(HSB^.Origin.X, 14);
+  Dec(HSB^.Size.X, 14);
+  VSB := StandardScrollBar(sbVertical + sbHandleKeyboard);
+
+  GetExtent(R);
+  R.A.Y := R.B.Y - 1;
+  R.A.X := 2;
+  R.B.X := R.A.X + 11;
+  New(Ind, Init(R));
+
+  GetExtent(R);
+  R.Grow(-1, -1);
+  New(Memo, Init(R, HSB, VSB, Ind, MaxTextResSize));
+{$ifdef ForPacket}
+  Memo^.Autoindent := Config.Autoindent;
+{$else}
+  Memo^.Autoindent := True;
+{$endif}
+  Insert(Memo);
+
+  Insert(Ind);
+
+  Memo^.Select;
+end;
+
+destructor TEditResDlg.Done;
+begin
+  GetBounds(EditResCoord);
+  inherited Done;
+end;
+
+
+
+                                 -11-
+
+procedure TEditResDlg.HandleEvent(var Event: TEvent);
+begin
+  inherited HandleEvent(Event);
+
+  if Event.What = evCommand
+  then Case Event.Command of
+    cmCancel, cmOk, cmDelRes: begin
+                                EndModal(Event.Command);
+                                ClearEvent(Event);
+                              end;
+  end;
+end;
+
+constructor TResEditor.Init(var Bounds: TRect; AHScrollBar, AVScrollBar:
+                 PScrollBar; AIndicator: PIndicator; ABufSize: Word);
+begin
+  inherited Init(Bounds, AHScrollBar, AVScrollBar, AIndicator, ABufSize);
+{$ifdef ForPacket}
+  Autoindent := Config.Autoindent;
+{$else}
+  Autoindent := True;
+{$endif}
+end;
+
+procedure TResEditor.HandleEvent(var Event: TEvent);
+begin
+  if (Event.What = evCommand) and (Event.Command = cmCancel)
+    and Modified
+    then begin
+      Case MessageBox(Ph(phAskSave), nil,
+           mfConfirmation + mfYesNoCancel + mfInsertInApp, hcAskSave)
+      of
+        cmCancel: ClearEvent(Event);
+        cmYes: Event.Command := cmOk;
+      end;
+    end;
+
+  inherited HandleEvent(Event);
+end;
+
+function TResEditor.GetPalette: PPalette;
+const
+  P: String[Length(CResEditor)] = CResEditor;
+begin
+  GetPalette := @P;
+end;
+
+{-----------------------------------------------------------------}
+
+constructor TResReader.Init(ADir: PDirectory; Name: String);
+var
+  Resource: PTextResource;
+begin
+  inherited Init;
+  CurPos := 0;
+  Dir := ADir;
+  Resource := Pointer(Dir^.ReadObj(Name));
+  if Assigned(Resource)
+
+
+                                 -12-
+
+    then MemoData.Length := Resource^.Length
+  else Fail;
+  if MemoData.Length > MaxTextResSize
+    then MemoData.Length := MaxTextResSize;
+  if MemoData.Length > 0
+    then Move(Resource^.Text^, MemoData.Buffer, MemoData.Length);
+  DisposeObj(Resource);
+end;
+
+function TResReader.ReadString: String;
+var
+  s: String;
+begin
+  s := '';
+  while (CurPos <= MaxTextResSize) and (CurPos < MemoData.Length) and (MemoData.Buffer[CurPos] <> 13) do
+  begin
+    s := s + chr(MemoData.Buffer[CurPos]);
+    Inc(CurPos);
+  end;
+  Inc(CurPos, 2);
+  ReadString := s;
+end;
+
+function TResReader.EndOfRes: boolean;
+begin
+  EndOfRes := CurPos >= MemoData.Length;
+end;
+
+end.
+
+                           4. PACK_DLG.PAS
+                           ===============
+(**********************************************************)
+(*                                                        *)
+(* Интегратор "Packet"                                    *)
+(*                                                        *)
+(* Модуль Pack_Dlg                                        *)
+(*                                                        *)
+(* Автор : Константин Вулах                               *)
+(* Copyright (C) 1994 by VULCAN                           *)
+(*                                                        *)
+(* Начат         : 12.05.1994                             *)
+(*                                                        *)
+(**********************************************************)
+
+{$A+,B-,E-,F+,N-,O+,V-,X+,I-}
+
+Unit Pack_Dlg;
+
+interface
+
+uses
+  Objects, Memory, App, BaseApp, Dialogs, Drivers, Views, Language,
+  PackLng, PackText, Pack_Hlp, Pack_Cmd, Hist_Ind, SubDirs, Items, Crt,
+  StrServ, StdDlg, Disp_Obj, Editors, MyMsgBox, Dos,
+{$ifdef ForPacket}
+  PackConf,
+{$endif}
+
+
+                                 -13-
+
+  FileOps;
+
+const
+  wtAdd           = 1;
+  wtReplace       = 2;
+  wtRunWithParams = 3;
+  wtComParams     = 4;
+
+  AddFileItemCoord: TPoint = (X: -1; Y: -1);
+  AddSubDirCoord: TPoint = (X: -1; Y: -1);
+  EditResCoord: TRect = (A:(X: -1; Y: -1));
+  ParamsCoord: TPoint = (X: -1; Y: -1);
+  ParamListCoord: TPoint = (X: -1; Y: -1);
+
+type
+
+  TShortMemoData = record
+    Length: Word;
+    Buffer: array[0..MaxTextResSize + 5] of byte;
+  end;
+
+  PCombHistory = ^TCombHistory;
+  TCombHistory = object(THistory)
+    Command: Word;
+    constructor Init(var Bounds: TRect;
+      ALink: PInputLine; AHistoryId: Word; Cmd: Word);
+    procedure HandleEvent(var Event: TEvent); virtual;
+    procedure Draw; virtual;
+  end;
+
+  PInfoWin = ^TInfoWin;
+  TInfoWin = object(TDialog)
+    constructor Init(Mess: String);
+    function Execute: Word; virtual;
+  end;
+
+  procedure InitPackDlgCoord;
+  procedure InsertText(P: PInputLine; Text: String);
+  procedure PutInfoWindow(Mess: String);
+
+const
+
+  cmAdd       = 11000;
+  cmRepl      = 11001;
+  cmFileList  = 11002;
+  cmDirList   = 11003;
+  cmExtParams = 11004;
+  cmParamList = 251;
+
+implementation
+
+{  Методы объекта TCombHistory  }
+constructor TCombHistory.Init(var Bounds: TRect;
+  ALink: PInputLine; AHistoryId: Word; Cmd: Word);
+begin
+  inherited Init(Bounds, ALink, AHistoryId);
+  Command := Cmd;
+end;
+
+
+                                 -14-
+
+
+procedure TCombHistory.HandleEvent(var Event: TEvent);
+begin
+  if ((Event.What = evMouseDown) and (Event.Buttons = mbRightButton))
+   or ((Event.What = evKeyDown) and (Event.KeyCode = kbUp) and
+      (Link^.State and sfFocused <> 0))
+    then begin
+      Link^.Select;
+      Message(Owner, evCommand, Command, nil);
+      ClearEvent(Event);
+    end;
+
+  inherited HandleEvent(Event);
+end;
+
+procedure TCombHistory.Draw;
+var
+  B: TDrawBuffer;
+begin
+  MoveCStr(B, #222'~'#18'~'#221, GetColor($0102));
+  WriteLine(0, 0, Size.X, Size.Y, B);
+end;
+
+procedure InsertText(P: PInputLine; Text: String);
+begin
+  if (not Assigned(P)) or (Text = '') then Exit;
+  with P^ do
+  begin
+    if SelEnd <> SelStart
+      then Data^ := Copy(FullTrim(Copy(Data^, 1, SelStart) + ' '
+                                + Text + ' ' + Copy(Data^, SelEnd + 1, 255)),
+                         1, MaxLen - 1)
+    else Data^ := Copy(FullTrim(Copy(Data^, 1, CurPos) + ' '
+                                + Text + ' ' + Copy(Data^, CurPos + 1, 255)),
+                       1, MaxLen - 1);
+    Select;
+    SelectAll(True);
+  end;
+end;
+
+constructor TInfoWin.Init(Mess: String);
+var
+  R: TRect;
+begin
+  R.Assign(0, 0, 20, 5);
+  inherited Init(R, '');
+  Flags := 0;
+  EventMask := evCommand;
+  Options := Options or ofCentered;
+  R.Grow(-1, -1);
+  Insert(New(PStaticText, Init(R, ^M^C + Mess)));
+end;
+
+function TInfoWin.Execute: Word;
+var
+  i: byte;
+begin
+  for i := 1 to 30 do
+
+
+                                 -15-
+
+  begin
+    KeyPressed;
+    Delay(10);
+  end;
+  Message(@Self, evCommand, cmCancel, nil);
+end;
+
+procedure PutInfoWindow(Mess: String);
+var
+  P: PView;
+begin
+{$ifdef ForPacket}
+  if not AddConfirm then
+{$endif}
+    Exit;
+  P := New(PInfoWin, Init(Mess));
+  Application^.ExecView(P);
+  DisposeObj(P);
+end;
+
+procedure InitPackDlgCoord;
+begin
+  AddFileItemCoord.X := -1;
+  AddFileItemCoord.Y := -1;
+
+  AddSubDirCoord.X := -1;
+  AddSubDirCoord.Y := -1;
+
+  EditResCoord.A.X := -1;
+  EditResCoord.A.Y := -1;
+  EditResCoord.B.X := -1;
+  EditResCoord.B.Y := -1;
+
+  ParamsCoord.X := -1;
+  ParamsCoord.Y := -1;
+
+  ParamListCoord.X := -1;
+  ParamListCoord.Y := -1;
+end;
+
+end.
+

@@ -1,0 +1,1502 @@
+;
+; Copyright (C) 1994-96 by VULCAN
+;
+; Интегратор "Packet"
+;
+; Файл сообщений на русском языке
+;
+
+; ***************************************************
+; * При переводе на другой язык не менять сигнатуру *
+; * и порядок следования фраз                       *
+; ***************************************************
+
+; Префикс 'C' - для управляющих строк ( строк с тильдой - '~' )
+
+
+.Sign Integrator "Packet". Version 4.1. Language File.
+
+; *******************************************************
+; *                  Имя файла помощи                   *
+; *******************************************************
+.Phrase HelpFileName
+PACKET.HLP
+
+; *******************************************************
+; *                Соответствие клавиш                  *
+; *******************************************************
+
+.Phrase LatUp
+QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./~
+.Phrase CyrUp
+ЙЦУКЕНГШЩЗХ]ФЫВАПРОЛДЖЭЯЧСМИТЬБЮ/Ъ
+.Phrase CyrLow
+йцукенгшщзх]фывапролджэячсмитьбю/ъ
+;.Phrase AltKeys
+;ЙЦУКЕНГШЩЗХЪ  ФЫВАПРОЛДЖЭ   ЯЧСМИТЬ
+
+; *******************************************************
+; *                  Названия клавиш                    *
+; *******************************************************
+
+.Phrase KF1
+F1
+.Phrase KF2
+F2
+.Phrase KF3
+F3
+.Phrase KF4
+F4
+.Phrase KF5
+F5
+.Phrase KF6
+F6
+.Phrase KF7
+F7
+.Phrase KF8
+F8
+.Phrase KF9
+F9
+.Phrase KF10
+F10
+
+.Phrase KAltF1
+Alt+F1
+.Phrase KAltF2
+Alt+F2
+.Phrase KAltF3
+Alt+F3
+.Phrase KAltF4
+Alt+F4
+.Phrase KAltF5
+Alt+F5
+.Phrase KAltF6
+Alt+F6
+.Phrase KAltF7
+Alt+F7
+.Phrase KAltF8
+Alt+F8
+.Phrase KAltF9
+Alt+F9
+.Phrase KAltF10
+Alt+F10
+
+.Phrase KAlt0
+Alt+0
+
+.Phrase KAltBksp
+Alt+Bksp
+.Phrase KAltEqual
+Alt+Equal
+.Phrase KAltMinus
+Alt+Minus
+
+.Phrase KCtrlF1
+Ctrl+F1
+.Phrase KCtrlF2
+Ctrl+F2
+.Phrase KCtrlF3
+Ctrl+F3
+.Phrase KCtrlF4
+Ctrl+F4
+.Phrase KCtrlF5
+Ctrl+F5
+.Phrase KCtrlF6
+Ctrl+F6
+.Phrase KCtrlF7
+Ctrl+F7
+.Phrase KCtrlF8
+Ctrl+F8
+.Phrase KCtrlF9
+Ctrl+F9
+.Phrase KCtrlF10
+Ctrl+F10
+
+.Phrase KCtrlP
+Ctrl+P
+
+.Phrase KShiftF1
+Shift+F1
+.Phrase KShiftF2
+Shift+F2
+.Phrase KShiftF3
+Shift+F3
+.Phrase KShiftF4
+Shift+F4
+.Phrase KShiftF5
+Shift+F5
+.Phrase KShiftF6
+Shift+F6
+.Phrase KShiftF7
+Shift+F7
+.Phrase KShiftF8
+Shift+F8
+.Phrase KShiftF9
+Shift+F9
+.Phrase KShiftF10
+Shift+F10
+.Phrase KShiftIns
+Shift+Ins
+.Phrase KShiftDel
+Shift+Del
+.Phrase KCtrlIns
+Ctrl+Ins
+.Phrase KCtrlDel
+Ctrl+Del
+.Phrase KCtrlQF
+Ctrl+Q+F
+.Phrase KCtrlQA
+Ctrl+Q+A
+.Phrase KCtrlL
+Ctrl+L
+.Phrase KAltX
+Alt+X
+.Phrase KShift
+Shift
+.Phrase KEnter
+Enter
+.Phrase KEsc
+Esc
+.Phrase KIns
+Ins
+.Phrase KDel
+Del
+.Phrase KGrayPlus
+Gray Plus
+.Phrase KCtrlAlt
+Ctrl+Alt
+.Phrase KShiftSlash
+Shift+/
+
+.Phrase Days
+Вс Пн Вт Ср Чт Пт Сб
+
+.Phrase January
+Январь
+.Phrase February
+Февраль
+.Phrase March
+Март
+.Phrase April
+Апрель
+.Phrase May
+Май
+.Phrase June
+Июнь
+.Phrase July
+Июль
+.Phrase August
+Август
+.Phrase September
+Сентябрь
+.Phrase October
+Октябрь
+.Phrase November
+Ноябрь
+.Phrase December
+Декабрь
+
+; *******************************************************
+; *                   Пункты меню                       *
+; *******************************************************
+.Phrase M_
+~Ё~
+.Phrase MAbout
+~О~ программе
+.Phrase MRefreshDisplay
+О~с~вежить экран
+.Phrase MScreenRest
+От~д~ых экрана
+.Phrase MAsciiTab
+~Т~аблица кодировки
+.Phrase MCalculator
+~К~алькулятор
+.Phrase MCalendar
+Ка~л~ендарь
+.Phrase MAlarmClock
+~Б~удильник
+
+.Phrase MFiles
+~Ф~айлы
+.Phrase MNewFile
+Новый ~ф~айл
+.Phrase MNewDir
+Новое о~г~лавление
+.Phrase MOpen
+~О~ткрыть
+.Phrase MOpenLoc
+Откр~ы~ть
+.Phrase MSave
+~З~аписать
+.Phrase MSaveLoc
+Записа~т~ь
+.Phrase MSaveAs
+Записать ~к~ак
+.Phrase MSaveAsLoc
+Записат~ь~ как
+.Phrase MSaveAll
+Записать ~в~се
+.Phrase MSaveAllLoc
+Зап~и~сать все
+.Phrase MChangeDir
+~И~зменить каталог
+.Phrase MDosShell
+~Д~ОС временно
+.Phrase MDosCmd
+Ко~м~анда ДОС
+.Phrase MUserScreen
+~Э~кран ДОС
+.Phrase MExit
+~В~ыход
+
+.Phrase MDirectories
+О~г~лавления
+.Phrase MAddFileItems
+Добавить ~п~ункты
+.Phrase MAddSubDirs
+Добавить под~о~главления
+.Phrase MModifyItems
+~М~одифицировать
+.Phrase MDeleteItems
+~У~далить пункты
+.Phrase MRemoveItems
+Удалить пункты и фа~й~лы
+.Phrase MMoveItems
+П~е~ренести пункты
+.Phrase MSelectItem
+О~т~метить пункт
+.Phrase MTranspose
+Превратит~ь~
+.Phrase MAnnotate
+~А~ннотировать
+.Phrase MTreatment
+Об~р~аботка
+.Phrase MEditFile
+Редактировать ~ф~айл
+.Phrase MCollectDocument
+~С~обрать документ
+.Phrase MInsertReference
+Вставить ссылк~у~
+.Phrase MEditParameters
+Редактировать ~п~араметры
+.Phrase MCommonParameters
+~О~бщие параметры
+.Phrase MCreateBatch
+~С~овместная обработка
+.Phrase MGlobalExt
+~Г~лобальные обработчики
+.Phrase MLocalExt
+~Л~окальные обработчики
+.Phrase MDirConfig
+Кон~ф~игурация
+.Phrase MSetProtect
+Снять/восстановить за~щ~иту
+.Phrase MCompress
+С~ж~ать оглавление
+.Phrase MOpenCopy
+Откр~ы~ть копию оглавления
+.Phrase MCrossRef
+~Д~обавить ссылку
+.Phrase MHotKeys
+~Г~орячие клавиши
+.Phrase MSetHotKey
+~У~становить/снять
+.Phrase MHotKeysList
+~С~писок
+.Phrase MHotKeysListLoc
+Список горячих клави~ш~
+
+.Phrase MEdit
+~Р~едактор
+.Phrase MUndo
+~О~ткат
+.Phrase MCut
+~В~ырезать
+.Phrase MCopy
+~С~копировать
+.Phrase MPaste
+П~р~иклеить
+.Phrase MClear
+О~ч~истить
+.Phrase MShowClip
+Пока~з~ать Карман
+.Phrase MMarkTarget
+~У~казать мишень
+.Phrase MLastDocument
+Пос~л~едний документ
+
+.Phrase MSearch
+~П~оиск
+.Phrase MFind
+~Н~айти
+.Phrase MReplace
+Найти и ~з~аменить
+.Phrase MSearchAgain
+~И~скать опять
+.Phrase MGoToLineNum
+~П~ерейти по номеру
+
+.Phrase MWindows
+~О~кна
+.Phrase MVerticalTile
+Вертикальная ~ч~ерепица
+.Phrase MHorisontalTile
+~Г~оризонтальная черепица
+.Phrase MCascade
+~К~аскад
+.Phrase MCloseAll
+Закрыть ~в~се
+.Phrase MResize
+Р~а~змер/Движение
+.Phrase MZoom
+~Р~аспахнуть
+.Phrase MNext
+~С~ледующее
+.Phrase MPrevious
+~П~редыдущее
+.Phrase MClose
+~З~акрыть
+.Phrase MAnnWindow
+~О~кно аннотаций
+.Phrase MAnnWindowLoc
+Окно аннота~ц~ий
+.Phrase MOutputWindow
+Ок~н~о DOS
+.Phrase MRenumber
+П~е~ренумеровать
+.Phrase MWinList
+Сп~и~сок
+.Phrase MWinListLoc
+Списо~к~ окон
+
+.Phrase MOptions
+О~п~ции
+.Phrase MMacro_
+~М~акро
+.Phrase MConfig
+~К~онфигурация
+.Phrase MConfigLoc
+Конфиг~у~рация
+.Phrase MPreferences
+~Р~ежимы
+.Phrase MInterface
+~И~нтерфейс
+.Phrase MMouse
+~М~ышь
+.Phrase MColors
+~Ц~вета
+.Phrase MLanguage
+~Я~зык
+.Phrase MWorkDir
+~Р~абочий каталог
+.Phrase MSaveDsk
+~З~аписать состояние
+.Phrase MRetrDsk
+~В~осстановить состояние
+.Phrase MSaveConf
+З~а~писать конфигурацию
+.Phrase MRetrConf
+В~о~сстановить конфигурацию
+.Phrase MSavePal
+За~п~исать палитру
+.Phrase MRetrPal
+Про~ч~итать палитру
+.Phrase MLastDesktop
+Пр~е~дыдущее состояние
+.Phrase MDesktopStack
+~С~тек состояний
+
+
+; Префикс 'C' - для управляющих строк ( строк с тильдой - '~' )
+
+.Phrase COk
+O~K~
+
+.Phrase CYes
+~Д~а
+
+.Phrase CNo
+~Н~ет
+
+.Phrase CAdd
+~Д~обавить
+
+.Phrase CReplace
+~З~аменить
+
+.Phrase CDelete
+~У~далить
+
+.Phrase CName
+~И~мя
+
+.Phrase CCommand
+~К~оманда
+
+; *******************************************************
+; *              Окно конфигурации                      *
+; *******************************************************
+.Phrase Preferences
+Режимы
+.Phrase CLook
+~К~артинка и звук
+.Phrase CClock
+~Ч~асы
+.Phrase CHeap
+~П~амять
+.Phrase CShadow
+~Т~ень
+.Phrase CErrBell
+~З~вук
+.Phrase CTimeBeep
+С~и~гнал часов
+.Phrase CScreenSize
+Режи~м~ экрана
+.Phrase CCGAlines
+~2~5 строк
+.Phrase CEGAlines
+~4~3/50 строк
+.Phrase CSVGAMode1
+~В~идеорежим 1
+.Phrase CSVGAMode2
+Вид~е~орежим 2
+.Phrase CMode1IL
+Видеорежим 1
+.Phrase CMode2IL
+Видеорежим 2
+.Phrase CAutoSave
+~А~втозапись
+.Phrase CASDsk
+~С~остояние
+.Phrase CASConf
+Кон~ф~игурация
+.Phrase CEditor
+~Р~едактор
+.Phrase CCreateBak
+Соз~д~авать bak-файлы
+.Phrase CAutoIndent
+Авто~о~тступ
+.Phrase CScreenRest
+~Г~ашение экрана
+.Phrase COffScrRest
+~Н~е надо
+.Phrase CAfter1m
+Через ~1~ минуту
+.Phrase CAfter3m
+Через ~3~ минуты
+.Phrase CAfter5m
+Через ~5~ минут
+.Phrase CAfter10m
+Через 1~0~ минут
+
+; *******************************************************
+; *          Окно настройки интерфейса                  *
+; *******************************************************
+.Phrase Interface
+Интерфейс
+.Phrase COptions
+~О~пции
+.Phrase CAskExit
+~З~апрос на подтверждение выхода
+.Phrase CEsc4Editor
+Esc закрывает окна р~е~дакторов
+.Phrase CEsc4DirWin
+Esc закрывает окна о~г~лавлений
+.Phrase CAddConfirm
+~Р~еакция на добавление и замену
+.Phrase CAddNonExistConfirm
+З~а~прос если добавляемый файл не найден
+.Phrase CRestoreCurPos
+За~п~оминать позицию курсора при закрытии
+.Phrase CDontCompressDir
+~Н~е выполнять автосжатие оглавлений
+.Phrase CAlt4Menu
+Alt для перехода в ~м~еню
+.Phrase CCalendarInClock
+~Ч~асы с календарем
+.Phrase CChangeDirOnSelDir
+~И~зменять каталог при выборе оглавления
+.Phrase CItemTitleOnEditor
+О~т~ображать название пункта в редакторе
+.Phrase CCreateFileNames
+Генерировать случайные имена ~ф~айлов
+
+; *******************************************************
+; *          Окно настройки цветов                      *
+; *******************************************************
+.Phrase Desktop
+Обои
+.Phrase Color
+Цвет
+
+.Phrase Menus
+Меню
+.Phrase NormalItem
+Обычный пункт
+.Phrase Disabled
+Запрещенный пункт
+.Phrase Shortcut
+Выделенная буква
+.Phrase Selected
+Подсвеченный пункт
+.Phrase SelectedDisabled
+Подсвеч. запрещ.
+.Phrase ShortcutSelected
+Подсвеченная буква
+
+.Phrase Dialogs
+Окна диалогов
+.Phrase FrameBackground
+Рамка/фон
+.Phrase FrameIcons
+Иконки окна
+.Phrase ScrollBarPage
+Страница скроллера
+.Phrase ScrollBarIcons
+Иконки скроллера
+.Phrase StaticText
+Текст
+.Phrase LabelNormal
+Метка обычная
+.Phrase LabelSelected
+Метка подсвеченная
+.Phrase LabelShortcut
+Метка выделенная
+.Phrase ButtonNormal
+Кнопка обычная
+.Phrase ButtonDefault
+Кнопка по умолчанию
+.Phrase ButtonSelected
+Кнопка выбранная
+.Phrase ButonDisabled
+Кнопка запрещенная
+.Phrase ButtonShortcut
+Сокращение кнопки
+.Phrase ButtonShadow
+Тень кнопки
+.Phrase ClusterNormal
+Группа обычная
+.Phrase ClusterSelected
+Группа подсвеченная
+.Phrase ClusterShortcut
+Сокращение группы
+.Phrase InputNormal
+Ввод обычный
+.Phrase InputSelected
+Ввод подсвеченный
+.Phrase InputArrow
+Стрелка ввода
+.Phrase HistoryButton
+Кнопка истории
+.Phrase HistorySides
+Стороны истории
+.Phrase HistoryBarPage
+Страница истории
+.Phrase HistoryBarIcons
+Иконки истории
+.Phrase ListNormal
+Обычный список
+.Phrase ListFocused
+Подсвеченный пункт
+.Phrase ListSelected
+Отмеченный пункт
+.Phrase ListDivider
+Разделитель списка
+.Phrase InformationPane
+Панель информации
+.Phrase AnnWindow
+Окно аннотаций
+
+.Phrase Editor
+Редактор
+.Phrase AsciiTab
+Таблица кодировки
+.Phrase AsciiTabForCS
+Таблица кодов
+.Phrase Calendar
+Календарь
+.Phrase Calculator
+Калькулятор
+
+.Phrase FrameActive
+Рамка активная
+.Phrase FramePassive
+Рамка пассивная
+.Phrase NormalText
+Обычный текст
+.Phrase SelectedText
+Выделенный текст
+.Phrase CurrentDay
+Сегодняшнее число
+.Phrase NormalKeyword
+Ссылка
+.Phrase HighlightKeyword
+Подсвеченная ссылка
+
+.Phrase ScreenRest
+Отдых экрана
+.Phrase Star
+Звезда
+.Phrase NewStar
+Сверхновая
+
+.Phrase Directories
+Оглавления
+.Phrase Subdirectory
+Подоглавление
+.Phrase ItemType
+Тип пункта
+.Phrase SelFocused
+Подсвеч. отмеченный
+.Phrase HotKey4CS
+Горячая клавиша
+
+; *******************************************************
+; *               Разные фразы                          *
+; *******************************************************
+
+.Phrase Help
+Помощь
+.Phrase LastHelp
+Прошлая тема
+.Phrase HelpIndex
+Содержание
+
+.Phrase Close
+Закрыть
+.Phrase Menu
+Меню
+.Phrase LocalMenu
+Лок. меню
+.Phrase Exit
+Выход
+.Phrase About
+О программе
+
+.Phrase Cancel
+Отмена
+
+.Phrase End
+Конец
+
+.Phrase RunPacket
+Запускайте файл "Packet.Exe"
+
+.Phrase AskQuit
+\c\ Вы действительно хотите выйти\
+\m\m\c\ из Интегратора "Packet" ?
+
+.Phrase OvrReadError
+Ошибка загрузки оверлея
+
+.Phrase RunDosCmd
+Команда ДОС
+
+.Phrase Inv_drive_or_directory
+\m\c\ Неверный каталог или имя диска.
+
+.Phrase InvFileName
+\m\c\ Неверное имя файла.
+
+.Phrase InvDirectory
+\m\c\ Неверный подкаталог.
+
+.Phrase SaveDsk
+Записать состояние
+
+.Phrase RetrDsk
+Восстановить состояние
+
+.Phrase SaveConf
+Записать конфигурацию
+
+.Phrase RetrConf
+Восстановить конфигурацию
+
+.Phrase SavePal
+Записать палитру
+
+.Phrase RetrPal
+Прочитать палитру
+
+.Phrase CouldNotCreate
+Не могу создать
+
+.Phrase CouldNotOpen
+Не могу открыть
+
+.Phrase CouldNotRead
+Не могу прочитать
+
+.Phrase InvDsk
+Неверный файл состояния
+
+.Phrase ErrReadDsk
+Ошибка при чтении файла состояния
+
+.Phrase ErrReadPal
+Ошибка при чтении палитры
+
+.Phrase InvConf
+Неверный файл конфигурации
+
+.Phrase SaveFileAs
+Записать как
+
+.Phrase SearchStrNotFound
+Строка не найдена
+
+.Phrase NotEnoughMem
+Недостаточно памяти\m\m\c\
+для этой операции
+
+.Phrase ErrorReadingFile
+Ошибка чтения файла
+
+.Phrase ErrorCreatingFile
+Ошибка создания файла
+
+.Phrase HasBeenModified_Save
+был модифицирован. Записать?
+
+.Phrase ErrorWritingFile
+Ошибка записи файла
+
+.Phrase LngFileReadError
+Ошибка при чтении файла языка
+
+.Phrase SaveUntitledFile
+\c\ Новый файл не записан.\m\
+\m\c\ Записать?
+
+.Phrase ReplaceThisOccurence
+Заменить это вхождение ?
+
+.Phrase OpenAFile
+Открыть файл или оглавление
+
+.Phrase Compressing
+Сжатие файла оглавления...
+.Phrase Deleting
+Удаление пунктов и подоглавлений...
+.Phrase Moving
+Перенос пунктов и подоглавлений...
+.Phrase Copying
+Копирование пунктов и подоглавлений...
+
+.Phrase InvLineNum
+Недопустимый номер строки
+.Phrase ValidRange
+Допустимый диапазон
+.Phrase InvValue
+Недопустимое значение в строке ввода
+.Phrase GotoLineNum
+Перейти по номеру строки
+.Phrase CEnterNewLineNum
+~В~ведите номер строки
+
+.Phrase Warning
+Предупреждение
+.Phrase Confirm
+Подтвердите
+.Phrase Error
+Ошибка
+.Phrase Information
+Информация
+
+.Phrase TooManyFiles
+Слишком много файлов.
+.Phrase CFiles
+~Ф~айлы
+.Phrase CDirs
+~К~аталоги
+.Phrase CParamList
+~П~араметры
+.Phrase COpen
+~О~ткрыть
+.Phrase CClear
+~О~чистить
+
+.Phrase CReset
+~С~бросить
+
+.Phrase ChangeCurrDir
+Изменить текущий каталог
+.Phrase ChangeWorkDir
+Изменить рабочий каталог
+.Phrase Directory
+Каталог
+.Phrase CDirectoryName
+~И~мя подкаталога
+.Phrase CDirectoryTree
+~Д~ерево подкаталогов
+.Phrase CChdir
+~В~ойти
+.Phrase CRevert
+~Н~азад
+
+.Phrase Find
+Поиск
+.Phrase Replace
+Замена
+.Phrase CText2Find
+~Т~екст для поиска
+.Phrase CNewText
+~Н~овый текст
+.Phrase CCaseSensitive
+~Р~азличать регистры
+.Phrase CWholeWordsOnly
+Только целые ~с~лова
+.Phrase CPromptOnReplace
+~З~апрос на замену
+.Phrase CReplaceAll
+Заменить ~в~се
+.Phrase SavingFile
+Запись файла
+.Phrase LoadingFile
+Чтение файла
+.Phrase LoadingDesktop
+Чтение состояния
+.Phrase Clipboard
+Карман
+.Phrase Untitled
+Новый
+
+.Phrase WindowList
+Список окон
+.Phrase CWindows
+~О~кна
+.Phrase CDeleteWin
+~З~акрыть
+
+.Phrase Normal
+Обычный
+.Phrase Highlight
+Яркий
+.Phrase Underline
+Подчерк
+.Phrase Inverse
+Инверсный
+.Phrase Colors
+Цвета
+.Phrase CGroup
+~Г~руппа
+.Phrase CItem
+~Э~лемент
+.Phrase CForeground
+~Ц~вет
+.Phrase CBackground
+~Ф~он
+.Phrase ColorText
+░░░░ Text ░░░░
+.Phrase CColor
+~Ц~вет
+
+.Phrase MouseOptions
+Опции мышки
+.Phrase CMouseDoubleClick
+~Д~войной щелчок мышкой
+.Phrase MouseDlgI
+Быстрый  Средний  Медленный
+.Phrase CReverseMouseButtons
+~Р~еверсировать кнопки
+.Phrase CSmoothMouse
+~П~лавная мышь
+
+.Phrase ChangeLngFile
+Изменить язык
+
+.Phrase Zoom
+Распахнуть
+.Phrase Move
+Двигать
+.Phrase Resize
+Менять
+.Phrase Done
+Завершить
+.Phrase Delete
+Удалить
+
+; *******************************************************
+; *       Строки для функции Hint                       *
+; *******************************************************
+.Phrase HAboutWin
+Добро пожаловать в Интегратор "Packet" !
+.Phrase HSystemMenu
+Системное меню
+.Phrase HFiles
+Манипуляции с файлами
+.Phrase HDirectories
+Модификация и использование оглавлений
+.Phrase HEdit
+Редактирование текстовых файлов и оглавлений
+.Phrase HWindows
+Манипуляции с окнами
+.Phrase HOptions
+Изменение, запись и чтение конфигурации
+.Phrase HAbout
+Информация о версии и авторских правах
+.Phrase HRefreshDisplay
+Перерисовка экрана
+.Phrase HScreenRest
+Временное гашение экрана (чтобы не выгорал)
+.Phrase HAsciiTab
+Открыть окно таблицы кодов
+.Phrase HCalendar
+Открыть окно календаря
+.Phrase HCalculator
+Открыть окно калькулятора
+.Phrase HAlarmClock
+Установить или сбросить будильник
+.Phrase HNewFile
+Открыть новое пустое окно редактора
+.Phrase HNewDir
+Создать новый файл оглавления и открыть окно
+.Phrase HOpen
+Открыть окно текстового файла или оглавления
+.Phrase HSave
+Записать текстовый файл из активного окна
+.Phrase HSaveAs
+Записать текстовый файл под новым именем
+.Phrase HSaveAll
+Записать все измененные текстовые файлы
+.Phrase HChangeDir
+Изменить текущий каталог или дисковод
+.Phrase HDosShell
+Временный выход в ДОС
+.Phrase HDosCommand
+Выполнить одну команду ДОС
+.Phrase HUserScreen
+Показать экран ДОС
+.Phrase HExit
+Завершить работу с Интегратором "Packet"
+.Phrase HClosedFile
+Загрузить указанный файл в новое окно редактора
+.Phrase HUndo
+Отменить последнюю операцию редактора
+.Phrase HSearch
+Операции поиска и замены
+.Phrase HFind
+Контекстный поиск
+.Phrase HReplace
+Контекстная замена
+.Phrase HSearchAgain
+Повторить контекстный поиск или замену
+.Phrase HGoToLine
+Переход к строке с заданным номером
+.Phrase HCut
+Перенести отмеченный блок в Карман или целевое оглавление
+.Phrase HCopy
+Скопировать блок в Карман или целевое оглавление
+.Phrase HPaste
+Скопировать отмеченный блок из Кармана
+.Phrase HClear
+Удалить отмеченный блок
+.Phrase HInsRef
+Вставить ссылку на пункт документа
+.Phrase HShowClip
+Открыть окно Кармана текстов
+.Phrase HMarkTarget
+Задать целевое окно оглавления для копирования и переноса
+.Phrase HLastDocument
+Редактировать последний построенный документ
+
+.Phrase HVerticalTile
+Расположить окна вертикальной черепицей
+.Phrase HHorisontalTile
+Расположить окна горизонтальной черепицей
+.Phrase HCascade
+Расположить окна каскадом
+.Phrase HCloseAll
+Закрыть все открытые окна
+.Phrase HResize
+Изменить размер или положение активного окна
+.Phrase HZoom
+Распахнуть активное окно
+.Phrase HNext
+Сделать следующее окно активным
+.Phrase HPrevious
+Сделать предыдущее окно активным
+.Phrase HClose
+Закрыть активное окно
+.Phrase HOpenAnnWin
+Открыть окно аннотаций
+.Phrase HOpenOutputWin
+Открыть окно DOS
+.Phrase HRenumber
+Изменить номера открытых окон так, чтобы они шли подряд
+.Phrase HWinList
+Получить список всех открытых окон
+.Phrase HConfig
+Изменить конфигурацию Интегратора "Packet"
+.Phrase HPreferences
+Изменить режимы редактора, вид экрана и др.
+.Phrase HInterface
+Изменить некоторые тонкости интерфейса
+.Phrase HMouse
+Изменить режимы работы мышки
+.Phrase HColors
+Изменить цветовую гамму Интегратора
+.Phrase HLanguage
+Задать или изменить файл текстовых сообщений
+.Phrase HWorkDir
+Задать рабочий каталог Интегратора "Packet"
+.Phrase HSaveConfig
+Записать конфигурацию в файл
+.Phrase HRetrieveConfig
+Прочитать конфигурацию из файла
+.Phrase HSaveDesktop
+Записать в файл расположение окон
+.Phrase HRetrieveDesktop
+Прочитать из файла расположение окон
+.Phrase HSavePalette
+Записать в файл текущие установленные цвета
+.Phrase HRetrievePalette
+Прочитать из файла цвета
+.Phrase HAddFileItems
+Добавить новые пункы в текущее подоглавление
+.Phrase HAddSubDirs
+Добавить новые подоглавления в текущее подоглавление
+.Phrase HModifyItems
+Изменить описание пункта оглавления
+.Phrase HDeleteItems
+Удалить отмеченные пункты и/или подоглавления
+.Phrase HMoveItems
+Перенести отмеченные пункты и/или подоглавления
+.Phrase HSelectItem
+Отметить пункт для групповых операций
+.Phrase HTranspose
+Превратить пункт в подоглавление и наоборот
+.Phrase HCrossRef
+Вставка перекрестной ссылки на подоглавление
+.Phrase HOpenCopy
+Открыть копию активного оглавления
+.Phrase HTreatment
+Управление обработкой пунктов оглавлений
+.Phrase HEditFile
+Редактировать файл встроенным редактором
+.Phrase HCollectDocument
+Собрать текстовый документ из отмеченных пунктов
+.Phrase HEditParameters
+Редактировать список параметров пункта
+.Phrase HCommonParameters
+Задать для активного оглавления параметры по умолчанию
+.Phrase HAnnotate
+Создать или отредактировать аннотацию к пункту
+.Phrase HDirConfig
+Изменить конфигурацию активного оглавления
+.Phrase HSetProtect
+Снять или восстановить защиту активного оглавления
+.Phrase HGlobalExt
+Редактировать глобальный список обработчиков
+.Phrase HLocalExt
+Редактировать локальный список обработчиков
+.Phrase HCompressDir
+Удалить пустые места из файла оглавления
+.Phrase HHotKeys
+Управление горячими клавишами для оглавления
+.Phrase HSetHotKey
+Назначить или отменить горячую клавишу
+.Phrase HHotKeysList
+Получить список доступных горячих клавиш
+.Phrase HLastDesktop
+Вернуться к предыдущему состоянию
+.Phrase HDesktopStack
+Просмотр имен последних десяти файлов состояния
+.Phrase Hm_CreateMacro
+Начать запись клавиатурного макро
+.Phrase Hm_StopMacro
+Остановить запись клавиатурного макро
+.Phrase Hm_PlayMacro
+Выбрать макро из списка для воспроизведения
+.Phrase Hm_RemoveMacro
+Выбрать макро из списка для удаления
+.Phrase Hm_DeleteMacros
+Удалить все макро
+.Phrase HMacro
+Запись и воспроизведение клавиатурных макросов
+.Phrase HRegisterNow
+Не забудьте зарегистрировать свою копию Интегратора !
+
+.Phrase Directory_O
+Оглавление
+.Phrase DirFile
+Файл оглавления
+.Phrase CreateDir
+Создать новое оглавление
+.Phrase FileExist_Overvrite
+\c\ Файл\m\
+\c\ %s уже существует. Удалить его ?
+.Phrase AskDeleteItems
+\cВы действительно хотите удалить\
+\m\m\c\ %d
+.Phrase Items_1
+пункт ?
+.Phrase Items_2
+пункт ?
+.Phrase Items_3
+пункта ?
+.Phrase Items_4
+пунктов ?
+
+.Phrase AskSave
+\m\c\ Сохранить изменения ?
+
+.Phrase ItemPrefix
+ ∙
+.Phrase EmptyItemPrefix
+ -
+
+.Phrase ErrorOpenDirFile
+Неверный файл оглавления
+
+; Диалоговое окно добавления пунктов
+.Phrase AddFileItems
+Добавить пункт
+.Phrase ReplFileItem
+Модифицировать пункт
+.Phrase AddSubDir
+Добавить подоглавление
+.Phrase ReplSubDir
+Модифицировать подоглавление
+.Phrase CItemTitle
+~Н~азвание пункта
+.Phrase CSubDirTitle
+~Н~азвание подоглавления
+.Phrase CFileName
+~И~мя файла
+.Phrase CParameters
+~П~араметры командной строки
+.Phrase CStartDir
+~С~тартовый каталог
+.Phrase CAttributes
+~А~трибуты
+.Phrase CModes
+~Р~ежимы
+.Phrase CSearchBeforeProcess
+Искать перед зап~у~ском
+.Phrase CNotRunWithoutParams
+Enter ~=~ Ctrl+Enter
+.Phrase CRestCD
+~В~осстанавливать каталог
+.Phrase CDelayScreen
+Зад~е~ржка экрана
+.Phrase CClearKbd
+~О~чистить буфер клавиатуры
+.Phrase CAutoSaveEdFiles
+Ав~т~озапись файлов редактора
+.Phrase CDontNumberItem
+Не нуме~р~овать пункт в документе
+.Phrase CDontPutInContents
+Не вклю~ч~ать в оглавление документа
+.Phrase SelectFile
+Выберите файл
+.Phrase SelectStartDir
+Выберите стартовый каталог
+.Phrase SelectDir
+Выберите каталог
+.Phrase AddItem_FileNotFound
+\c\ Файл не найден.
+.Phrase AddItem_EmptyTitle
+\c\ Пункт не имеет названия.
+.Phrase AddItem_AskAdd
+\m\m\c\ Добавлять этот пункт ?
+.Phrase AddItem_AskReplace
+\m\m\c\ Заменять на этот пункт ?
+.Phrase AddSubDir_EmptyTitle
+\c\ Подоглавление не имеет названия.
+.Phrase AddSubDir_AskAdd
+\m\m\c\ Добавлять это подоглавление ?
+.Phrase AddSubDir_AskReplace
+\m\m\c\ Заменять на это подоглавление ?
+.Phrase Added
+Добавлено
+.Phrase Replaced
+Заменено
+.Phrase Annotate
+Редактирование аннотации
+.Phrase CAnnotation
+~А~ннотация
+.Phrase Annotation
+Аннотация
+.Phrase EditParams
+Редактирование списка параметров
+.Phrase RunWithParams
+Запуск с параметрами
+.Phrase CComStr
+~К~омандная строка
+.Phrase ParamList
+Список параметров
+
+; Сообщения об ошибках
+.Phrase PathNotFound
+Неверный подкаталог
+.Phrase FileNotFound
+Файл не найден
+.Phrase DiskIsWP
+Диск защищен от записи
+.Phrase CompressError
+Ошибка при сжатии файла оглавления
+.Phrase WrongPalette
+\c\ Цветная палитра не может \
+\m\c\ быть использована в этом видеорежиме.
+.Phrase CommonParameters
+Общие параметры
+.Phrase AskReload4Mouse
+Режим работы мыши будет изменен только после\
+ перезапуска Интегратора. Желаете перезапустить сейчас ?
+.Phrase CDirectory
+~О~главление
+.Phrase MoveItems
+Перенос пунктов
+.Phrase ErrorProcessDirFile
+Ошибка при работе с файлом оглавления
+.Phrase AskInsertBefore
+Вставлять в самый верх ?
+.Phrase Ask4OverwriteHK
+Горячая клавиша "%c" уже назначена пункту "%s".
+.Phrase SetHotKey
+Задать горячую клавишу
+.Phrase CHotKey
+~Г~орячая клавиша
+.Phrase HotKeysList
+Список горячих клавиш
+.Phrase CHotKeysList
+~Г~орячие клавиши
+.Phrase ActionIsntSpecified
+Не задано имя файла для пункта
+.Phrase DirConf
+Конфигурация оглавления
+.Phrase CDirTitle
+~Н~азвание
+.Phrase CProtectType
+~Т~ип защиты
+.Phrase CNoneProtection
+Н~и~какой
+.Phrase CWriteProtect
+От и~з~менения
+.Phrase CFullProtect
+П~о~лная
+.Phrase CPassword
+~П~ароль
+.Phrase CExtEditor
+~В~нешний текстовый редактор
+.Phrase CRandNameTpl4Dir
+~Ш~аблон случайного имени файла
+.Phrase CStartDir4Dir
+~С~тартовый каталог
+.Phrase InputPW
+Введите пароль
+.Phrase InvalidPassword
+Неверный пароль
+.Phrase AskSetProtect
+Вы желаете восстановить защиту ?
+.Phrase ExtEditorNotFound
+Внешний редактор не найден. Желаете редактировать встроенным ?
+
+.Phrase PleaseRegister
+\c\ Интегратор "Packet" является Shareware.\
+\m\c\ Вы можете бесплатно использовать его 30 дней.\
+\m\c\ По истечении этого срока Вы должны зарегистрировать его.
+
+.Phrase TargetIsntSpecified
+\c\ Не задано целевое окно оглавления. \
+Воспользуйтесь командой "Редактор│Указать мишень".
+.Phrase CantCopy2Itself
+\c\ Невозможно скопировать или перенести подоглавление в себя.
+
+; *******************************************************
+; *                Печать документа                     *
+; *******************************************************
+.Phrase CollectDocument
+Собрать документ
+.Phrase CTargetDocFile
+~И~мя файла документа
+.Phrase CTitPageFile
+Им~я~ файла титульного листа
+.Phrase CPageNumbers
+~Н~омера страниц
+.Phrase CAnnotations
+Анно~т~ации
+.Phrase CNone
+Н~е~ надо
+.Phrase CInTop
+Ввер~х~у
+.Phrase CInBottom
+Вниз~у~
+.Phrase CNone1
+Не н~а~до
+.Phrase CInContents
+В о~г~лавлении
+.Phrase CInText
+В тек~с~те
+.Phrase CLeftMargin
+Ле~в~ое поле
+.Phrase CRightMargin
+Правое поле
+.Phrase CDocContents
+~О~главление
+.Phrase CAbsent
+Не со~з~давать
+.Phrase CInBegin
+В на~ч~але
+.Phrase CInEnd
+В кон~ц~е
+.Phrase CLinesPerPage
+Раз~м~ер страницы
+.Phrase CDocModes
+~Д~ругие режимы
+.Phrase CNumber1stPage
+Нумеровать первый лист
+.Phrase CCentreTitles
+Центрировать заголовки
+.Phrase CNumberTitles
+Нумеровать заголовки
+.Phrase CMakeOnlyCont
+Не строить текст
+.Phrase CMakeHelpFile
+Создать help-~ф~айл
+.Phrase CUseFilter
+Использовать фильтр
+.Phrase CShowProtocol
+Выдать протокол
+.Phrase CIndentWidth
+~Ш~ирина отступов
+.Phrase CUnderlines
+~П~одчеркивания
+.Phrase CUpMargin
+Верхни~й~ отступ
+.Phrase CPageBeg
+Страниц~ы~ с
+.Phrase CNumBeg
+Номе~р~а с
+
+.Phrase CollectingDoc
+Формирование документа
+.Phrase ErrorCreateDoc
+Ошибка при создании документа
+
+.Phrase SetAlarmClock
+Установите будильник
+.Phrase CAlarmTime
+~В~ремя звонка
+.Phrase CAlarmInfo
+~Т~екст напоминания
+.Phrase DoNotForget
+Не забудьте !
+
+.Phrase InputDoesNotConform
+Значение в строке ввода неверно
+
+.Phrase UnregisteredShareware
+НЕЗАРЕГИСТРИРОВАННАЯ Shareware версия
+.Phrase UserName
+Владелец   :
+.Phrase UserCompany
+Компания   :
+.Phrase UserNum
+Рег. номер :
+
+.Phrase EditLocalExt
+Локальный список обработчиков
+.Phrase RoundingSubdirs
+Обход подоглавлений
+.Phrase CReplTitles
+Заменять н~а~звания
+.Phrase CReplFNames
+Заменять ~и~мена файлов
+.Phrase CReplParams
+Заменять ~п~араметры
+.Phrase CReplStartDir
+Заменять ~с~тартовый каталог
+
+.Phrase OutputWinTitle
+ДОС
+
+.Phrase File
+Файл
+.Phrase Line
+Строка
+.Phrase CreatingProtocol
+Формирование протокола
+.Phrase ProtocolHeader
+Протокол фильтрации. Удалены следующие символы:
+
+.Phrase DskStackDlgTitle
+Стек состояний
+.Phrase CDskStackList
+~С~писок состояний
+
+.Phrase CantEditAnn
+Размер аннотации превышает максимально возможный для этой версии Интегратора.\
+ Используйте версию для DPMI.
+
+.Phrase Sunday
+Воскресенье
+.Phrase Monday
+Понедельник
+.Phrase Tuesday
+Вторник
+.Phrase Wednesday
+Среда
+.Phrase Thursday
+Четверг
+.Phrase Friday
+Пятница
+.Phrase Saturday
+Суббота
+
+.Phrase AskTransposeFile
+К пункту подключен файл. Продолжать?
+.Phrase CantTranspFullDir
+Это подоглавление не пусто. Вы не можете превратить его в пункт.
+.Phrase ItemHasntName
+Пункт не имеет имени
+.Phrase UndefinedRef
+Неразрешенная ссылка "%s" в пункте "%s"
+.Phrase InsRef
+Вставка ссылки на пункт
+.Phrase RedefinedName
+Имя уже определено :
+.Phrase Item
+Пункт
+
+.Phrase m_NothingDelete
+\C\ Нечего больше удалять !
+.Phrase m_ExistanceMacro
+\C\ Макро существует. Перезаписать ?
+.Phrase m_NotSavedMacros
+\C\ Еще нет записанных макро !
+.Phrase m_WarningForDeleteMacros
+\C\ Вы действительно хотите удалить\
+\M\C\ все макро ?
+.Phrase m_WinCreateMacro
+\C\ Нажмите горячую клавишу макро
+.Phrase m_NameWinRemoveMacro
+Удалить макро
+.Phrase m_NameWinPlayMacro
+Воспроизвести макро
+.Phrase m_Macro
+~М~акро
+.Phrase m_CreateMacro
+~С~оздать...
+.Phrase m_StopMacro
+~О~становить
+.Phrase m_PlayMacro
+~В~оспроизвести...
+.Phrase m_RemoveMacro
+~У~далить...
+.Phrase m_DeleteMacros
+У~д~алить все...
+
+.Phrase RecMacro
+Запись
+.Phrase MaxUnregDocSize
+Слишком большой документ для НЕЗАРЕГИСТРИРОВАННОЙ версии !
+
+.Phrase SelSD4CrossRef
+Выберите подоглавление для установки ссылки
+.Phrase WithFiles
+вместе с файлами
+.Phrase UseWinClip
+Используется буфер обмена Windows

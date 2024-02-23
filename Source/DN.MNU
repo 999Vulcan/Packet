@@ -1,0 +1,29 @@
+>1 ~A~rchive Packet
+  del bin\*.tp?
+  del bin\packmain.ovr
+  del bin\p*.exe
+  del bin\*.hlp
+  del work\*.psm
+  rar a -r ..\packet
+>1 Archive ~S~ources Only
+  rar a ..\pack_src pas\*.* obj\*.*
+>1 Archive Packet via AIN
+  del bin\*.tpu
+  del work\*.psm
+  ain a -r -p1 -i1 ..\packet
+>1 Archive Packet via RAR
+  del bin\*.tpu
+  del work\*.psm
+  rar a -r ..\packet
+>1 Archive Packet via Limit
+  del bin\*.tpu
+  del work\*.psm
+  limit a -r ..\packet
+>1 Archive Packet via PKZip
+  del bin\*.tpu
+  del work\*.psm
+  pkzip -r ..\packet
+>1 Archive Packet via LHA
+  del bin\*.tpu
+  del work\*.psm
+  lha a /rxpl ..\packet
